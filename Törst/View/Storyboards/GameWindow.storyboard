@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sjr-LN-los">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Window View-->
+        <scene sceneID="Yu5-wt-kQ2">
+            <objects>
+                <viewController id="sjr-LN-los" customClass="GameWindowView" customModule="To_rst" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2GF-BY-ewb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" canCancelContentTouches="NO" bouncesZoom="NO" keyboardDismissMode="interactive" editable="NO" text="Vem har gjort de sjukaste sakerna på fyllan" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Sc-es-1vF">
+                                <rect key="frame" x="16" y="373" width="382" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="xs8-rn-z2j"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leh-5X-N5t">
+                                <rect key="frame" x="344" y="60" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="FZr-J4-22i"/>
+                                    <constraint firstAttribute="height" constant="40" id="dU7-wi-H6I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="i">
+                                    <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="X5U-ml-oOn" firstAttribute="trailing" secondItem="3Sc-es-1vF" secondAttribute="trailing" constant="16" id="I3c-tK-bdQ"/>
+                            <constraint firstItem="3Sc-es-1vF" firstAttribute="centerX" secondItem="2GF-BY-ewb" secondAttribute="centerX" id="JBS-T3-LI7"/>
+                            <constraint firstItem="X5U-ml-oOn" firstAttribute="trailing" secondItem="leh-5X-N5t" secondAttribute="trailing" constant="30" id="KJE-Gf-eds"/>
+                            <constraint firstItem="leh-5X-N5t" firstAttribute="top" secondItem="2GF-BY-ewb" secondAttribute="top" constant="60" id="c2H-f0-jwc"/>
+                            <constraint firstItem="3Sc-es-1vF" firstAttribute="centerY" secondItem="2GF-BY-ewb" secondAttribute="centerY" id="coP-eh-mQZ"/>
+                            <constraint firstItem="3Sc-es-1vF" firstAttribute="leading" secondItem="X5U-ml-oOn" secondAttribute="leading" constant="16" id="sEX-8D-OuY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X5U-ml-oOn"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoBtnOutlet" destination="leh-5X-N5t" id="3JN-pR-cDq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xx2-K6-MGX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="102"/>
+        </scene>
+    </scenes>
+</document>

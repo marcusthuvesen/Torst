@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1q2-jk-HeP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Decision View-->
+        <scene sceneID="LhN-L0-4l3">
+            <objects>
+                <viewController id="1q2-jk-HeP" customClass="HomeDecisionView" customModule="To_rst" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dC7-tv-fjj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-y2-zmL">
+                                <rect key="frame" x="20" y="239" width="374" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUy-fk-Mum">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="105.5"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Jag har aldrig">
+                                            <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="OSE-xp-C4K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCo-rd-XvO">
+                                        <rect key="frame" x="0.0" y="124.5" width="374" height="105.5"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Pekleken">
+                                            <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="kpx-56-hFe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3P-yG-HUn">
+                                        <rect key="frame" x="0.0" y="249" width="374" height="105"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Rygg mot rygg">
+                                            <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="dvS-kf-JNo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-Gh-FeN">
+                                        <rect key="frame" x="0.0" y="373" width="374" height="105.5"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Utmaningar">
+                                            <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="o2w-5X-BB3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpu-ra-If7">
+                                        <rect key="frame" x="0.0" y="497.5" width="374" height="105.5"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Mix">
+                                            <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="k1r-JO-oWJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TÖRST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ou-dw-9qj">
+                                <rect key="frame" x="99.5" y="94" width="215" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="NMv-wz-yIZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="55"/>
+                                <color key="textColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UJX-y2-zmL" firstAttribute="leading" secondItem="xJw-6Z-txp" secondAttribute="leading" constant="20" id="2Xb-eC-d1g"/>
+                            <constraint firstItem="6Ou-dw-9qj" firstAttribute="centerX" secondItem="dC7-tv-fjj" secondAttribute="centerX" id="7fq-g9-NLc"/>
+                            <constraint firstItem="6Ou-dw-9qj" firstAttribute="top" secondItem="xJw-6Z-txp" secondAttribute="top" constant="50" id="GBJ-Dc-zCy"/>
+                            <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="UJX-y2-zmL" secondAttribute="trailing" constant="20" id="LKj-Ol-FYn"/>
+                            <constraint firstItem="UJX-y2-zmL" firstAttribute="top" secondItem="6Ou-dw-9qj" secondAttribute="bottom" constant="60" id="bJu-lz-feK"/>
+                            <constraint firstItem="xJw-6Z-txp" firstAttribute="bottom" secondItem="UJX-y2-zmL" secondAttribute="bottom" constant="20" id="n5L-HA-jFk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xJw-6Z-txp"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="decisionBtnOutlets" destination="RUy-fk-Mum" collectionClass="NSMutableArray" id="oxt-Xf-iWN"/>
+                        <outletCollection property="decisionBtnOutlets" destination="YCo-rd-XvO" collectionClass="NSMutableArray" id="yRs-2z-NG3"/>
+                        <outletCollection property="decisionBtnOutlets" destination="c3P-yG-HUn" collectionClass="NSMutableArray" id="F78-Sz-nzI"/>
+                        <outletCollection property="decisionBtnOutlets" destination="CHY-Gh-FeN" collectionClass="NSMutableArray" id="DmP-3M-XIw"/>
+                        <outletCollection property="decisionBtnOutlets" destination="fpu-ra-If7" collectionClass="NSMutableArray" id="FRJ-oP-d19"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ut3-dQ-1Yg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179.71014492753625" y="-104.46428571428571"/>
+        </scene>
+    </scenes>
+</document>
