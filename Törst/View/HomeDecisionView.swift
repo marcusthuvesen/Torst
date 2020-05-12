@@ -7,25 +7,29 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
-
+    
     @IBOutlet var decisionBtnOutlets: [UIButton]!
     
     let homeDecisionViewDelegate = HomeDecisionPresenter()
+    //var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHomeDecisionDelegate()
+//        ref = Database.database().reference()
+//        ref.child("users").setValue(["username": "Erik"])
     }
     
     func setupHomeDecisionDelegate(){
-           print("setting up HomeDecision Delegate")
         homeDecisionViewDelegate.setHomeDecisionViewDelegate(homeDecisionViewDelegate : self)
-       }
+    }
     
     @IBAction func decisionBtnClicked(_ sender: UIButton) {
         homeDecisionViewDelegate.decisionBtnSelected(senderTag: sender.tag)
+        FetchGameTexts.init()
     }
     
 }

@@ -18,6 +18,10 @@
 		2568FF4F2469E1BD00B77C2B /* Button_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF4E2469E1BD00B77C2B /* Button_UI.swift */; };
 		2568FF512469E1D700B77C2B /* GlobalColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF502469E1D700B77C2B /* GlobalColors.swift */; };
 		2568FF542469E6F100B77C2B /* HomeDecisionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF532469E6F100B77C2B /* HomeDecisionPresenter.swift */; };
+		2568FF58246AC0EF00B77C2B /* FetchGameTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF57246AC0EF00B77C2B /* FetchGameTexts.swift */; };
+		2568FF5A246AC1EE00B77C2B /* ProvideGameTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF59246AC1EE00B77C2B /* ProvideGameTexts.swift */; };
+		2568FF5C246AC67900B77C2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2568FF5B246AC67900B77C2B /* GoogleService-Info.plist */; };
+		4DEC18E49A8F14B5DB94BE1C /* Pods_To_rst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D878DDA3C4253CB7CE5717 /* Pods_To_rst.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +32,17 @@
 		2568FF4E2469E1BD00B77C2B /* Button_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Button_UI.swift; path = ../Button_UI.swift; sourceTree = "<group>"; };
 		2568FF502469E1D700B77C2B /* GlobalColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlobalColors.swift; path = ../GlobalColors.swift; sourceTree = "<group>"; };
 		2568FF532469E6F100B77C2B /* HomeDecisionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDecisionPresenter.swift; sourceTree = "<group>"; };
+		2568FF57246AC0EF00B77C2B /* FetchGameTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FetchGameTexts.swift; path = ../Model/FetchGameTexts.swift; sourceTree = "<group>"; };
+		2568FF59246AC1EE00B77C2B /* ProvideGameTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvideGameTexts.swift; sourceTree = "<group>"; };
+		2568FF5B246AC67900B77C2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25C97BDC2460643600DEE132 /* Törst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Törst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C97BDF2460643600DEE132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		25C97BE12460643600DEE132 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
 		25C97BE82460643F00DEE132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25C97BED2460643F00DEE132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		8EE9BE211DDE0AA6DCFB2277 /* Pods-Törst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Törst.debug.xcconfig"; path = "Target Support Files/Pods-Törst/Pods-Törst.debug.xcconfig"; sourceTree = "<group>"; };
+		F33FA4E04028DDE4B162F216 /* Pods-Törst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Törst.release.xcconfig"; path = "Target Support Files/Pods-Törst/Pods-Törst.release.xcconfig"; sourceTree = "<group>"; };
+		F4D878DDA3C4253CB7CE5717 /* Pods_To_rst.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_rst.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DEC18E49A8F14B5DB94BE1C /* Pods_To_rst.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +71,8 @@
 			children = (
 				25C97BDE2460643600DEE132 /* Törst */,
 				25C97BDD2460643600DEE132 /* Products */,
+				5A551562A64AEF359077FA7F /* Pods */,
+				9160587969857248E1C3DB3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +111,7 @@
 		25C97BF624614F9A00DEE132 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2568FF59246AC1EE00B77C2B /* ProvideGameTexts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,6 +127,7 @@
 		25C97BF824614FAA00DEE132 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2568FF57246AC0EF00B77C2B /* FetchGameTexts.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -120,6 +135,7 @@
 		25C97BF924614FCB00DEE132 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				2568FF5B246AC67900B77C2B /* GoogleService-Info.plist */,
 				25C97BDF2460643600DEE132 /* AppDelegate.swift */,
 				25C97BE12460643600DEE132 /* SceneDelegate.swift */,
 				25C97BED2460643F00DEE132 /* Info.plist */,
@@ -136,6 +152,24 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		5A551562A64AEF359077FA7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8EE9BE211DDE0AA6DCFB2277 /* Pods-Törst.debug.xcconfig */,
+				F33FA4E04028DDE4B162F216 /* Pods-Törst.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9160587969857248E1C3DB3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4D878DDA3C4253CB7CE5717 /* Pods_To_rst.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25C97BF02460643F00DEE132 /* Build configuration list for PBXNativeTarget "Törst" */;
 			buildPhases = (
+				8EA66E70CDE64DD9053AA776 /* [CP] Check Pods Manifest.lock */,
 				25C97BD82460643600DEE132 /* Sources */,
 				25C97BD92460643600DEE132 /* Frameworks */,
 				25C97BDA2460643600DEE132 /* Resources */,
+				53367371676179A995D3439B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,12 +231,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				2568FF3C246153F400B77C2B /* Assets.xcassets in Resources */,
+				2568FF5C246AC67900B77C2B /* GoogleService-Info.plist in Resources */,
 				2568FF412461926600B77C2B /* Main.storyboard in Resources */,
 				2568FF4B2469DC8B00B77C2B /* GameWindow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53367371676179A995D3439B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Törst/Pods-Törst-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Törst/Pods-Törst-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Törst/Pods-Törst-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA66E70CDE64DD9053AA776 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Törst-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		25C97BD82460643600DEE132 /* Sources */ = {
@@ -209,12 +288,14 @@
 			files = (
 				2568FF512469E1D700B77C2B /* GlobalColors.swift in Sources */,
 				2568FF37246153A000B77C2B /* Info.plist in Sources */,
+				2568FF5A246AC1EE00B77C2B /* ProvideGameTexts.swift in Sources */,
 				2568FF4F2469E1BD00B77C2B /* Button_UI.swift in Sources */,
 				2568FF362461539C00B77C2B /* SceneDelegate.swift in Sources */,
 				2568FF352461539800B77C2B /* AppDelegate.swift in Sources */,
 				2568FF542469E6F100B77C2B /* HomeDecisionPresenter.swift in Sources */,
 				2568FF4D2469DD4A00B77C2B /* GameWindowView.swift in Sources */,
 				2568FF452469B60300B77C2B /* HomeDecisionView.swift in Sources */,
+				2568FF58246AC0EF00B77C2B /* FetchGameTexts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +418,7 @@
 		};
 		25C97BF12460643F00DEE132 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EE9BE211DDE0AA6DCFB2277 /* Pods-Törst.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -355,6 +437,7 @@
 		};
 		25C97BF22460643F00DEE132 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F33FA4E04028DDE4B162F216 /* Pods-Törst.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
