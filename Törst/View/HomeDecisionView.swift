@@ -27,9 +27,13 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         homeDecisionViewDelegate.setHomeDecisionViewDelegate(homeDecisionViewDelegate : self)
     }
     
+    func sendToGameWindow() {
+        presentPopup(UIStoryboardName: "GameWindow", WithIdentifier: "GameWindow", VC: self)
+    }
+    
     @IBAction func decisionBtnClicked(_ sender: UIButton) {
         homeDecisionViewDelegate.decisionBtnSelected(senderTag: sender.tag)
-        FetchGameTexts.init()
+        
     }
     
 }

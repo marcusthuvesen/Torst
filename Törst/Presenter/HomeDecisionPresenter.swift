@@ -11,6 +11,7 @@ import UIKit
 
 protocol HomeDecisionViewDelegate : NSObjectProtocol{
     //func decisionBtnSelected(sender : UIButton)
+    func sendToGameWindow()
 }
 
 class HomeDecisionPresenter{
@@ -41,6 +42,16 @@ class HomeDecisionPresenter{
     
     func fetch_JagHarAldrig() {
         print("Jag har aldrig")
+//        let FetchGameText = FetchGameTexts()
+//        FetchGameText.fetchGameTexts(gameType : "JagHarAldrig") { fetchedArray in
+//            print("inside completion handler : \(fetchedArray)")
+//        }
+        let provideGameTexts = ProvideGameTexts()
+        let gameTextArray = provideGameTexts.fetchFromFB_OrLoadLocally()
+        
+        print("fetched : \(gameTextArray)")
+        GameWindowView.gameTextArray = gameTextArray
+        homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_Pekleken() {
@@ -59,9 +70,7 @@ class HomeDecisionPresenter{
         print("Mix")
     }
     
-    func sendToGameWindow() {
-        
-    }
+    
     
 }
 
