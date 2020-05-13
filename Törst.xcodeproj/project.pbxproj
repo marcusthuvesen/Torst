@@ -22,6 +22,9 @@
 		2568FF5A246AC1EE00B77C2B /* ProvideGameTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF59246AC1EE00B77C2B /* ProvideGameTexts.swift */; };
 		2568FF5C246AC67900B77C2B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2568FF5B246AC67900B77C2B /* GoogleService-Info.plist */; };
 		2568FF5E246C577C00B77C2B /* OpenNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF5D246C577C00B77C2B /* OpenNewView.swift */; };
+		2568FF60246C73FA00B77C2B /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF5F246C73FA00B77C2B /* GlobalVariables.swift */; };
+		2568FF64246C759C00B77C2B /* GameWindowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF63246C759C00B77C2B /* GameWindowPresenter.swift */; };
+		2568FF66246C857C00B77C2B /* TextView_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF65246C857C00B77C2B /* TextView_UI.swift */; };
 		4DEC18E49A8F14B5DB94BE1C /* Pods_To_rst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D878DDA3C4253CB7CE5717 /* Pods_To_rst.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,9 @@
 		2568FF59246AC1EE00B77C2B /* ProvideGameTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvideGameTexts.swift; sourceTree = "<group>"; };
 		2568FF5B246AC67900B77C2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2568FF5D246C577C00B77C2B /* OpenNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNewView.swift; sourceTree = "<group>"; };
+		2568FF5F246C73FA00B77C2B /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		2568FF63246C759C00B77C2B /* GameWindowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWindowPresenter.swift; sourceTree = "<group>"; };
+		2568FF65246C857C00B77C2B /* TextView_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView_UI.swift; sourceTree = "<group>"; };
 		25C97BDC2460643600DEE132 /* Törst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Törst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C97BDF2460643600DEE132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		25C97BE12460643600DEE132 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +70,7 @@
 			children = (
 				2568FF502469E1D700B77C2B /* GlobalColors.swift */,
 				2568FF4E2469E1BD00B77C2B /* Button_UI.swift */,
+				2568FF65246C857C00B77C2B /* TextView_UI.swift */,
 			);
 			path = UI_Extensions;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2568FF532469E6F100B77C2B /* HomeDecisionPresenter.swift */,
+				2568FF63246C759C00B77C2B /* GameWindowPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -142,6 +150,7 @@
 				25C97BE12460643600DEE132 /* SceneDelegate.swift */,
 				25C97BED2460643F00DEE132 /* Info.plist */,
 				2568FF5D246C577C00B77C2B /* OpenNewView.swift */,
+				2568FF5F246C73FA00B77C2B /* GlobalVariables.swift */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -294,7 +303,10 @@
 				2568FF4F2469E1BD00B77C2B /* Button_UI.swift in Sources */,
 				2568FF362461539C00B77C2B /* SceneDelegate.swift in Sources */,
 				2568FF352461539800B77C2B /* AppDelegate.swift in Sources */,
+				2568FF60246C73FA00B77C2B /* GlobalVariables.swift in Sources */,
+				2568FF66246C857C00B77C2B /* TextView_UI.swift in Sources */,
 				2568FF542469E6F100B77C2B /* HomeDecisionPresenter.swift in Sources */,
+				2568FF64246C759C00B77C2B /* GameWindowPresenter.swift in Sources */,
 				2568FF5E246C577C00B77C2B /* OpenNewView.swift in Sources */,
 				2568FF4D2469DD4A00B77C2B /* GameWindowView.swift in Sources */,
 				2568FF452469B60300B77C2B /* HomeDecisionView.swift in Sources */,

@@ -17,7 +17,7 @@ struct ProvideGameTexts {
     
     func fetchFromFB_OrLoadLocally() -> [String] {
         //Try Fetching, if not working, load locally
-        
+        GlobalVariables.gameTextArray = jagHarAldrig
         return jagHarAldrigLocalText()
     }
     

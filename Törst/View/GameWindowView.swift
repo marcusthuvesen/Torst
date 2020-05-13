@@ -8,27 +8,44 @@
 
 import UIKit
 
-class GameWindowView: UIViewController {
+class GameWindowView: UIViewController, GameWindowViewDelegate {
     
     @IBOutlet weak var infoBtnOutlet: UIButton!
     @IBOutlet weak var gameTextView: UITextView!
     
-    public static var gameTextArray = [""]
-   
+    let gameWindowViewDelegate = GameWindowPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        //print(GameWindowView.gameTextArray)
+        setupGameWindowDelegate()
     }
     
-   
+    func setupGameWindowDelegate(){
+        gameWindowViewDelegate.setGameWindowViewDelegate(gameWindowViewDelegate : self)
+    }
     
     func setupUI() {
         infoBtnOutlet.infoOutlet_UI()
-        gameTextView.text = GameWindowView.gameTextArray[0]
+        gameTextView.centerText()
+    }
+    
+    func changeStatementUI(statement : String) {
+        gameTextView.text = statement
     }
     
     
+    @IBAction func previousStatement(_ sender: UIButton) {
+        gameWindowViewDelegate.previousStatement()
+    }
     
-
+    @IBAction func nextStatement(_ sender: UIButton) {
+        gameWindowViewDelegate.nextStatement()
+    }
+    
+    @IBAction func backBtnClicked(_ sender: UIButton) {
+    }
+    
 }
+
+

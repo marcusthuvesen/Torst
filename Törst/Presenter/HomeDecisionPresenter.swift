@@ -47,10 +47,7 @@ class HomeDecisionPresenter{
 //            print("inside completion handler : \(fetchedArray)")
 //        }
         let provideGameTexts = ProvideGameTexts()
-        let gameTextArray = provideGameTexts.fetchFromFB_OrLoadLocally()
-        
-        print("fetched : \(gameTextArray)")
-        GameWindowView.gameTextArray = gameTextArray
+        provideGameTexts.fetchFromFB_OrLoadLocally()
         homeDecisionViewDelegate?.sendToGameWindow()
     }
     
