@@ -12,6 +12,7 @@ import UIKit
 protocol HomeDecisionViewDelegate : NSObjectProtocol{
     //func decisionBtnSelected(sender : UIButton)
     func sendToGameWindow()
+    func sendToPremiumPopup()
 }
 
 class HomeDecisionPresenter{
@@ -67,6 +68,7 @@ class HomeDecisionPresenter{
     }
     
     func fetch_Mix() {
+        if !isSubscriber() { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
         print("Mix")
     }
     

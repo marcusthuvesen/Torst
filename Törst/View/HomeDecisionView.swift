@@ -28,6 +28,9 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         presentPopup(UIStoryboardName: "GameWindow", WithIdentifier: "GameWindow", VC: self)
     }
     
+    func sendToPremiumPopup() {
+        presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
+    }
     @IBAction func decisionBtnClicked(_ sender: UIButton) {
         homeDecisionViewDelegate.decisionBtnSelected(senderTag: sender.tag)
         
