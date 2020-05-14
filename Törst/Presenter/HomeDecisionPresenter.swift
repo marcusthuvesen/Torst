@@ -66,6 +66,8 @@ class HomeDecisionPresenter{
     
     func fetch_Utmaningar() {
         print("Utmaningar")
+        provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Utmaningar")
+        homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_Mix() {

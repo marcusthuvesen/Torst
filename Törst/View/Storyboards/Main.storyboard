@@ -15,6 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="5dz-5v-nEJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-y2-zmL">
                                 <rect key="frame" x="20" y="239" width="374" height="603"/>
                                 <subviews>
@@ -91,7 +94,11 @@
                             <constraint firstItem="6Ou-dw-9qj" firstAttribute="centerX" secondItem="dC7-tv-fjj" secondAttribute="centerX" id="7fq-g9-NLc"/>
                             <constraint firstItem="6Ou-dw-9qj" firstAttribute="top" secondItem="xJw-6Z-txp" secondAttribute="top" constant="50" id="GBJ-Dc-zCy"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="UJX-y2-zmL" secondAttribute="trailing" constant="20" id="LKj-Ol-FYn"/>
+                            <constraint firstAttribute="bottom" secondItem="5dz-5v-nEJ" secondAttribute="bottom" id="SSS-KL-1g7"/>
+                            <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="5dz-5v-nEJ" secondAttribute="trailing" id="XtH-dI-Y8Y"/>
                             <constraint firstItem="UJX-y2-zmL" firstAttribute="top" secondItem="6Ou-dw-9qj" secondAttribute="bottom" constant="60" id="bJu-lz-feK"/>
+                            <constraint firstItem="5dz-5v-nEJ" firstAttribute="leading" secondItem="xJw-6Z-txp" secondAttribute="leading" id="eh4-yl-1jw"/>
+                            <constraint firstItem="5dz-5v-nEJ" firstAttribute="top" secondItem="dC7-tv-fjj" secondAttribute="top" id="kpm-Mv-gBV"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="bottom" secondItem="UJX-y2-zmL" secondAttribute="bottom" constant="20" id="n5L-HA-jFk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xJw-6Z-txp"/>
@@ -109,4 +116,7 @@
             <point key="canvasLocation" x="179.71014492753625" y="-104.46428571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg1" width="563" height="1001"/>
+    </resources>
 </document>
