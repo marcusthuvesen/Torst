@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Premium Popup View-->
+        <scene sceneID="xzj-mK-b4c">
+            <objects>
+                <viewController storyboardIdentifier="PremiumPopup" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sEw-OY-rhY" customClass="PremiumPopupView" customModule="To_rst" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KRF-V7-PW4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Köp Törst Premium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqT-3m-GlR">
+                                <rect key="frame" x="46" y="424" width="322" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkl-dt-aTc">
+                                <rect key="frame" x="16" y="54" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rca-Fx-055"/>
+                                    <constraint firstAttribute="width" constant="40" id="dmh-fc-031"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="x">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="closePopupAction:" destination="sEw-OY-rhY" eventType="touchUpInside" id="Qht-kH-SB7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WqT-3m-GlR" firstAttribute="centerX" secondItem="KRF-V7-PW4" secondAttribute="centerX" id="GRx-L9-Q9N"/>
+                            <constraint firstItem="WqT-3m-GlR" firstAttribute="centerY" secondItem="KRF-V7-PW4" secondAttribute="centerY" id="U5Z-mS-NHa"/>
+                            <constraint firstItem="Rkl-dt-aTc" firstAttribute="top" secondItem="2c4-l3-Dzt" secondAttribute="top" constant="10" id="iWC-1K-4GN"/>
+                            <constraint firstItem="Rkl-dt-aTc" firstAttribute="leading" secondItem="2c4-l3-Dzt" secondAttribute="leading" constant="16" id="vb4-RI-m4V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2c4-l3-Dzt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ta4-5E-chX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="-75"/>
+        </scene>
+    </scenes>
+</document>

@@ -43,11 +43,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpc-ZP-neC">
-                                <rect key="frame" x="344" y="74" width="50" height="50"/>
+                                <rect key="frame" x="354" y="74" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="5Si-Dk-rTd"/>
-                                    <constraint firstAttribute="height" constant="50" id="OqT-AG-Mbn"/>
+                                    <constraint firstAttribute="width" constant="40" id="5Si-Dk-rTd"/>
+                                    <constraint firstAttribute="height" constant="40" id="OqT-AG-Mbn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="i">

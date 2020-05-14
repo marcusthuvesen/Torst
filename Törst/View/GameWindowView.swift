@@ -33,7 +33,9 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     func changeStatementUI(statement : String) {
         gameTextView.text = statement
     }
-    
+    func sendToPopup() {
+        presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
+    }
     
     @IBAction func previousStatement(_ sender: UIButton) {
         gameWindowViewDelegate.previousStatement()

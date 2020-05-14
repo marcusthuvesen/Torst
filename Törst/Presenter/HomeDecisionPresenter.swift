@@ -42,7 +42,6 @@ class HomeDecisionPresenter{
     }
     
     func fetch_JagHarAldrig() {
-        print("Jag har aldrig")
 //        let FetchGameText = FetchGameTexts()
 //        FetchGameText.fetchGameTexts(gameType : "JagHarAldrig") { fetchedArray in
 //            print("inside completion handler : \(fetchedArray)")
@@ -53,19 +52,16 @@ class HomeDecisionPresenter{
     }
     
     func fetch_Pekleken() {
-        print("Pekleken")
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Pekleken")
         homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_RyggMotRygg() {
-        print("Rygg mot rygg")
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "RyggMotRygg")
         homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_Utmaningar() {
-        print("Utmaningar")
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Utmaningar")
         homeDecisionViewDelegate?.sendToGameWindow()
     }

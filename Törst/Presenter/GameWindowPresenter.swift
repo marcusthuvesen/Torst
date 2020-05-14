@@ -11,6 +11,7 @@ import UIKit
 
 protocol GameWindowViewDelegate : NSObjectProtocol{
     func changeStatementUI(statement : String)
+    func sendToPopup()
 }
 
 class GameWindowPresenter{
@@ -47,6 +48,9 @@ class GameWindowPresenter{
     }
     
     func nextStatement() {
+        //If not subscriber only show 15
+        if !isSubscriber() && counter == 14 { self.gameWindowViewDelegate?.sendToPopup(); return}
+        
         if counter < gameTextArray.count - 1 {
             counter += 1
             self.gameWindowViewDelegate?.changeStatementUI(statement : preGameText + self.gameTextArray[counter])

@@ -11,10 +11,16 @@ import UIKit
 
 func presentPopup(UIStoryboardName : String, WithIdentifier : String, VC: UIViewController?){
     if VC != nil{
-        if UIStoryboardName == "GameWindow"{
+        if UIStoryboardName == "GameWindow" {
             let sendToVC = UIStoryboard(name: UIStoryboardName, bundle: nil).instantiateViewController(withIdentifier: WithIdentifier) as! GameWindowView
             sendToVC.modalPresentationStyle = .overCurrentContext
             VC!.present(sendToVC, animated: true)
         }
+        if UIStoryboardName == "PremiumPopup" {
+            let sendToVC = UIStoryboard(name: UIStoryboardName, bundle: nil).instantiateViewController(withIdentifier: WithIdentifier) as! PremiumPopupView
+            sendToVC.modalPresentationStyle = .overCurrentContext
+            VC!.present(sendToVC, animated: true)
+        }
     }
+    
 }
