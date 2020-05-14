@@ -16,6 +16,7 @@ protocol HomeDecisionViewDelegate : NSObjectProtocol{
 
 class HomeDecisionPresenter{
     weak private var homeDecisionViewDelegate : HomeDecisionViewDelegate?
+    let provideGameTexts = ProvideGameTexts()
     
     func setHomeDecisionViewDelegate(homeDecisionViewDelegate : HomeDecisionViewDelegate){
         self.homeDecisionViewDelegate = homeDecisionViewDelegate
@@ -46,17 +47,21 @@ class HomeDecisionPresenter{
 //        FetchGameText.fetchGameTexts(gameType : "JagHarAldrig") { fetchedArray in
 //            print("inside completion handler : \(fetchedArray)")
 //        }
-        let provideGameTexts = ProvideGameTexts()
-        provideGameTexts.fetchFromFB_OrLoadLocally()
+        
+        provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "JagHarAldrig")
         homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_Pekleken() {
         print("Pekleken")
+        provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Pekleken")
+        homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_RyggMotRygg() {
         print("Rygg mot rygg")
+        provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "RyggMotRygg")
+        homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_Utmaningar() {

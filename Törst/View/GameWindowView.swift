@@ -44,6 +44,7 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     }
     
     @IBAction func backBtnClicked(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
 }

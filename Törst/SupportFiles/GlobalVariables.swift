@@ -10,5 +10,6 @@ import Foundation
 
 struct GlobalVariables {
     public static var gameTextArray = [""]
+    public static var gameType = ""
 }
 
