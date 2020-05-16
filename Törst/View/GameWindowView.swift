@@ -10,8 +10,10 @@ import UIKit
 
 class GameWindowView: UIViewController, GameWindowViewDelegate {
     
+    
     @IBOutlet weak var infoBtnOutlet: UIButton!
     @IBOutlet weak var gameTextView: UITextView!
+    @IBOutlet var backgroundView: UIView!
     
     let gameWindowViewDelegate = GameWindowPresenter()
     
@@ -30,9 +32,28 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         gameTextView.centerText()
     }
     
+    func changeBackgroundColor(colorString : String) {
+        switch colorString {
+        case "green":
+            backgroundView.backgroundColor = .jagHarAldrigGreen
+        case "beige":
+           backgroundView.backgroundColor = .peklekenBeige
+        case "red":
+            backgroundView.backgroundColor = .ryggMotRyggRed
+        case "pink":
+            backgroundView.backgroundColor = .utmaningarPink
+        case "purple":
+            backgroundView.backgroundColor = .mixPurple
+        default:
+            backgroundView.backgroundColor = .utmaningarPink
+        }
+    }
+    
+    
     func changeStatementUI(statement : String) {
         gameTextView.text = statement
     }
+    
     func sendToPopup() {
         presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
     }

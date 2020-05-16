@@ -69,7 +69,11 @@ class HomeDecisionPresenter{
     
     func fetch_Mix() {
         if !isSubscriber() { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
-        print("Mix")
+        else {
+            provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Mix")
+            GlobalVariables.gameTextArray.shuffle()
+            homeDecisionViewDelegate?.sendToGameWindow()
+        }
     }
     
     

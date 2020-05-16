@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="5dz-5v-nEJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg17" translatesAutoresizingMaskIntoConstraints="NO" id="wmU-WN-Gq0">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-y2-zmL">
@@ -23,7 +23,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUy-fk-Mum">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="105.5"/>
-                                        <color key="backgroundColor" red="0.44705882352941173" green="0.87058823529411766" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.41960784313725491" green="0.82352941176470584" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                         <state key="normal" title="Jag har aldrig">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -79,12 +79,12 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TÖRST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ou-dw-9qj">
-                                <rect key="frame" x="99.5" y="94" width="215" height="85"/>
+                                <rect key="frame" x="97.5" y="94" width="219.5" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="NMv-wz-yIZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="55"/>
-                                <color key="textColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="68"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="jUJ-YQ-tHw">
@@ -101,15 +101,15 @@
                         <constraints>
                             <constraint firstItem="UJX-y2-zmL" firstAttribute="leading" secondItem="xJw-6Z-txp" secondAttribute="leading" constant="20" id="2Xb-eC-d1g"/>
                             <constraint firstItem="6Ou-dw-9qj" firstAttribute="centerX" secondItem="dC7-tv-fjj" secondAttribute="centerX" id="7fq-g9-NLc"/>
+                            <constraint firstItem="wmU-WN-Gq0" firstAttribute="leading" secondItem="dC7-tv-fjj" secondAttribute="leading" id="84W-9V-Mxl"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="jUJ-YQ-tHw" secondAttribute="trailing" constant="25" id="Bbs-eF-imv"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="bottom" secondItem="jUJ-YQ-tHw" secondAttribute="bottom" constant="97" id="BpF-qa-tRq"/>
                             <constraint firstItem="6Ou-dw-9qj" firstAttribute="top" secondItem="xJw-6Z-txp" secondAttribute="top" constant="50" id="GBJ-Dc-zCy"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="UJX-y2-zmL" secondAttribute="trailing" constant="20" id="LKj-Ol-FYn"/>
-                            <constraint firstAttribute="bottom" secondItem="5dz-5v-nEJ" secondAttribute="bottom" id="SSS-KL-1g7"/>
-                            <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="5dz-5v-nEJ" secondAttribute="trailing" id="XtH-dI-Y8Y"/>
                             <constraint firstItem="UJX-y2-zmL" firstAttribute="top" secondItem="6Ou-dw-9qj" secondAttribute="bottom" constant="60" id="bJu-lz-feK"/>
-                            <constraint firstItem="5dz-5v-nEJ" firstAttribute="leading" secondItem="xJw-6Z-txp" secondAttribute="leading" id="eh4-yl-1jw"/>
-                            <constraint firstItem="5dz-5v-nEJ" firstAttribute="top" secondItem="dC7-tv-fjj" secondAttribute="top" id="kpm-Mv-gBV"/>
+                            <constraint firstItem="wmU-WN-Gq0" firstAttribute="top" secondItem="dC7-tv-fjj" secondAttribute="top" id="kpN-jK-KPv"/>
+                            <constraint firstAttribute="bottom" secondItem="wmU-WN-Gq0" secondAttribute="bottom" id="kyj-5u-jeN"/>
+                            <constraint firstAttribute="trailing" secondItem="wmU-WN-Gq0" secondAttribute="trailing" id="mpa-iv-3iV"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="bottom" secondItem="UJX-y2-zmL" secondAttribute="bottom" constant="20" id="n5L-HA-jFk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xJw-6Z-txp"/>
@@ -128,7 +128,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg1" width="563" height="1001"/>
+        <image name="bg17" width="236" height="419"/>
         <image name="lock" width="24" height="24"/>
     </resources>
 </document>

@@ -18,8 +18,6 @@ struct ProvideGameTexts {
     
     var utmaningar = ["Måla av personen mitt emot dig utan att kolla på pappret under 20 sek", "Ta en bodyshot på valfri person", "Demonstrera din favoritsexställning med personen till höger om dig", "Byt dricka med personen till vänster", "Du ser törstig ut, svep din dricka", "Gör 10 armhävningar", "Läs upp ditt senaste tindermeddelande", "Pussa den som ser bäst ut i rummet på kinden", "Dela ut 5 klunkar till någon som ser törstig ut", "Ta en shot med personen i rummet du känt under kortast tid", "Dansa magdans", "Sätt på en passande låt och visa dina twerkskills", "Smiska den som sitter två stolar bort från dig", "Byt ett klädesplagg med någon av de motsatta könet", "Ta av dig bh:n", "Säg en mening med skånsk dialekt", "Berätta om första gången du hade sex", "Säg två sanningar och en lögn om dig själv, de andra ska gissa vilken som är lögn", "Välj en kategori och gå varvet runt till någon inte kommer på någon mer(t.ex. ölmärken)", "Vattenfall - du börjar", "Öppna kylen och ät något", "Utmana den till vänster om dig på armbrytning", "Drick en klunk för varje person du är buskis med härinne", "Gå ner i brygga", "Stå på händer och drick tre klunkar ur din dricka (sugrören underlätta)", "Gissa åldern på alla", "Välj två personer som ska dricka 5 klunkar var", "Berätta ett minne du har med någon här inne", "Berätta om en pinsam händelse du varit med om", "Swisha 10kr till ett okänt nummer", "Låt någon lägga ut något på din mystory", "Nämn 5 saker som rimmar på ”snopp” på 10 sek", "Om den senaste du hade sex med sitter i rummet drick 5 klunkar tillsammans med den personen", "Ta ett glas och fyll de med lite av varje persons dricka och sen klunka det", "Sms-roulette, gruppen bestämmer vad som ska skrivas", "Kör din bästa raggningsreplik", "Gruppen väljer en tjej och en kille som ska kyssa dig medans du har ögonbindel, du ska gissa vilken kyss som var från vilket kön", "Ge en lapdance till valfri person", "Låt personen mitt emot dig styla om din frisyr för kvällen", "Ge en kyss på kinden till alla personer av de motsatta könet", "Ge den personen som först räcker upp handen en huvudmassage i två minuter", "Posera som en bodybuilder i en minut", "Byt tröja med den till höger om dig för resten av spelet", "Håll handen med personerna bredvid dig tills de är din tur igen", "Namnge en sak om dig som du redan fått komplimanger för", "Gör den roligaste grimasen du kan komma på", "Berätta om en dejt som inte gick som planerat", "Visa dina armmuskler och låt personen bredvid dig känna", "Låt personen mitt emot dig blanda din nästa grogg", "Skicka en selfie där du putar med läpparna till ett gammalt ligg", "Visa din första och äldsta bild på instagram för gruppen", "Slicka en person på kinden som börjar på samma bokstav som du gör (eller så nära som möjligt)", "Gå ut och sjung en rad ur din favoritlåt så högt du kan", "Beskriv alla i leken med ett ord", "Imitera ett djur och låt de andra gissa vilket", "Lyft upp den minsta personen i rummet", "Gör en moonwalk genom hela rummet", "Imitera någon i gruppen och se om de andra kan gissa vem de är", "Du ser törstig ut, svep din dricka!", "Gör masken", "Läs upp ditt senaste sms", "Ta ett gruppfoto av alla och lägg ut på snapchat story", "Välj två personer som måste kyssas", "Försök hålla pokerface i två minuter medan de andra ska få dig att skratta", "Låna någon i gruppens läppstift och bär de resten av kvällen"]
     
-    var mix = [""]
-    
     //Fetch or load texts locally
     
     //send to FetchGameText, if it doesn't work, load local text
@@ -36,7 +34,7 @@ struct ProvideGameTexts {
         case "Utmaningar":
             GlobalVariables.gameTextArray = utmaningar
         case "Mix":
-            GlobalVariables.gameTextArray = mix
+            GlobalVariables.gameTextArray = jagHarAldrig + pekleken + utmaningar
         default:
             GlobalVariables.gameTextArray = jagHarAldrig
         }
@@ -50,12 +48,3 @@ struct ProvideGameTexts {
         return jagHarAldrig
     }
 }
-
-
-
-var pekLeken = [""]
-
-var ryggMotRygg = [""]
-
-var utmaningar = [""]
-

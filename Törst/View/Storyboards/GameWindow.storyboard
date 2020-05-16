@@ -54,14 +54,15 @@
                                     <color key="titleColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sy-HD-iOA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sy-HD-iOA">
                                 <rect key="frame" x="20" y="74" width="50" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bZf-Yl-chg"/>
                                     <constraint firstAttribute="width" constant="50" id="drY-FI-wiT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="&lt;-">
+                                <color key="tintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="return">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -91,6 +92,7 @@
                         <viewLayoutGuide key="safeArea" id="X5U-ml-oOn"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="2GF-BY-ewb" id="PeC-GX-OuV"/>
                         <outlet property="gameTextView" destination="3Sc-es-1vF" id="HXV-mm-h6P"/>
                         <outlet property="infoBtnOutlet" destination="Cpc-ZP-neC" id="GwU-SL-WJb"/>
                     </connections>
@@ -100,4 +102,7 @@
             <point key="canvasLocation" x="113.04347826086958" y="101.78571428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="return" width="32" height="32"/>
+    </resources>
 </document>

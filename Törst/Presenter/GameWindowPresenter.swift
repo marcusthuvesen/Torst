@@ -12,6 +12,7 @@ import UIKit
 protocol GameWindowViewDelegate : NSObjectProtocol{
     func changeStatementUI(statement : String)
     func sendToPopup()
+    func changeBackgroundColor(colorString : String)
 }
 
 class GameWindowPresenter{
@@ -25,6 +26,7 @@ class GameWindowPresenter{
         print("setup delegate")
         self.gameWindowViewDelegate = gameWindowViewDelegate
         setupPreStatementText()
+        setBackgroundColor()
         setupStatementArray()
     }
     
@@ -38,6 +40,23 @@ class GameWindowPresenter{
             preGameText = "Vem "
         default:
            preGameText = ""
+        }
+    }
+    
+    func setBackgroundColor() {
+        switch GlobalVariables.gameType {
+        case "JagHarAldrig":
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "green")
+        case "Pekleken":
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "beige")
+        case "RyggMotRygg":
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "red")
+        case "Utmaningar":
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "pink")
+        case "Mix":
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "purple")
+        default:
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "purple")
         }
     }
     
@@ -64,7 +83,5 @@ class GameWindowPresenter{
             counter -= 1
             self.gameWindowViewDelegate?.changeStatementUI(statement : preGameText + self.gameTextArray[counter])
         }
-        
-        
     }
 }

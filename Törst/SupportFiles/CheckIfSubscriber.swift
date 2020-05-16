@@ -9,5 +9,5 @@
 import Foundation
 
 func isSubscriber() -> Bool {
-    return false
+    return true
 }
