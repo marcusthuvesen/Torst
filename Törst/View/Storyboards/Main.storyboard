@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg17" translatesAutoresizingMaskIntoConstraints="NO" id="wmU-WN-Gq0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg11" translatesAutoresizingMaskIntoConstraints="NO" id="wmU-WN-Gq0">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-y2-zmL">
@@ -96,6 +96,11 @@
                                     <constraint firstAttribute="height" constant="20" id="mzs-YH-k0e"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfU-fN-sRm">
+                                <rect key="frame" x="357" y="50" width="32" height="32"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="settings"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.51372549019607838" green="0.7803921568627451" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -104,8 +109,10 @@
                             <constraint firstItem="wmU-WN-Gq0" firstAttribute="leading" secondItem="dC7-tv-fjj" secondAttribute="leading" id="84W-9V-Mxl"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="jUJ-YQ-tHw" secondAttribute="trailing" constant="25" id="Bbs-eF-imv"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="bottom" secondItem="jUJ-YQ-tHw" secondAttribute="bottom" constant="97" id="BpF-qa-tRq"/>
+                            <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="vfU-fN-sRm" secondAttribute="trailing" constant="25" id="E5l-Rl-iKx"/>
                             <constraint firstItem="6Ou-dw-9qj" firstAttribute="top" secondItem="xJw-6Z-txp" secondAttribute="top" constant="50" id="GBJ-Dc-zCy"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="UJX-y2-zmL" secondAttribute="trailing" constant="20" id="LKj-Ol-FYn"/>
+                            <constraint firstItem="vfU-fN-sRm" firstAttribute="top" secondItem="dC7-tv-fjj" secondAttribute="top" constant="50" id="Us2-uh-Kg9"/>
                             <constraint firstItem="UJX-y2-zmL" firstAttribute="top" secondItem="6Ou-dw-9qj" secondAttribute="bottom" constant="60" id="bJu-lz-feK"/>
                             <constraint firstItem="wmU-WN-Gq0" firstAttribute="top" secondItem="dC7-tv-fjj" secondAttribute="top" id="kpN-jK-KPv"/>
                             <constraint firstAttribute="bottom" secondItem="wmU-WN-Gq0" secondAttribute="bottom" id="kyj-5u-jeN"/>
@@ -128,7 +135,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg17" width="236" height="419"/>
+        <image name="bg11" width="236" height="419"/>
         <image name="lock" width="24" height="24"/>
+        <image name="settings" width="32" height="32"/>
     </resources>
 </document>
