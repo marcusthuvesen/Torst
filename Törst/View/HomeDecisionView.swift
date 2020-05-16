@@ -18,10 +18,17 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHomeDecisionDelegate()
+        setupHomeDecisionUI()
     }
     
     func setupHomeDecisionDelegate(){
         homeDecisionViewDelegate.setHomeDecisionViewDelegate(homeDecisionViewDelegate : self)
+    }
+    
+    func setupHomeDecisionUI() {
+        for button in decisionBtnOutlets {
+            button.homeDecisionOutlet_UI()
+        }
     }
     
     func sendToGameWindow() {

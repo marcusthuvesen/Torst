@@ -10,10 +10,18 @@ import UIKit
 
 class PremiumPopupView: UIViewController {
 
+    @IBOutlet weak var continueBtnOutlet: UIButton!
+    @IBOutlet weak var topViewCut: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       setupPopupUI()
+    }
+    
+    func setupPopupUI() {
+        continueBtnOutlet.premiumContinueBtn_UI()
+        topViewCut.topCutView_UI()
     }
     
     @IBAction func closePopupAction(_ sender: UIButton) {
