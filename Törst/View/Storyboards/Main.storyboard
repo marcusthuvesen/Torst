@@ -15,18 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg11" translatesAutoresizingMaskIntoConstraints="NO" id="wmU-WN-Gq0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="UJX-y2-zmL">
                                 <rect key="frame" x="20" y="239" width="374" height="603"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUy-fk-Mum">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="105.5"/>
-                                        <color key="backgroundColor" red="0.41960784313725491" green="0.82352941176470584" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.48627450980392156" green="0.54117647058823526" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                         <state key="normal" title="Jag har aldrig">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="OSE-xp-C4K"/>
@@ -34,10 +31,10 @@
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCo-rd-XvO">
                                         <rect key="frame" x="0.0" y="124.5" width="374" height="105.5"/>
-                                        <color key="backgroundColor" red="0.95686274509803915" green="0.70196078431372544" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.74117647058823533" green="0.42352941176470588" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                         <state key="normal" title="Pekleken">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="kpx-56-hFe"/>
@@ -45,10 +42,10 @@
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3P-yG-HUn">
                                         <rect key="frame" x="0.0" y="249" width="374" height="105"/>
-                                        <color key="backgroundColor" red="0.92941176470588238" green="0.47450980392156861" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.49803921568627452" green="0.75294117647058822" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                         <state key="normal" title="Rygg mot rygg">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="dvS-kf-JNo"/>
@@ -56,10 +53,10 @@
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-Gh-FeN">
                                         <rect key="frame" x="0.0" y="373" width="374" height="105.5"/>
-                                        <color key="backgroundColor" red="0.93333333333333335" green="0.65098039215686276" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.95686274509803915" green="0.70196078431372544" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                         <state key="normal" title="Utmaningar">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="o2w-5X-BB3"/>
@@ -67,10 +64,10 @@
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpu-ra-If7">
                                         <rect key="frame" x="0.0" y="497.5" width="374" height="105.5"/>
-                                        <color key="backgroundColor" red="0.74117647058823533" green="0.42352941176470588" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.57647058823529407" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                         <state key="normal" title="Mix">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="k1r-JO-oWJ"/>
@@ -102,11 +99,10 @@
                                 <state key="normal" image="settings"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.51372549019607838" green="0.7803921568627451" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.03021825445606378" green="0.16461215844144253" blue="0.30589774932815761" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UJX-y2-zmL" firstAttribute="leading" secondItem="xJw-6Z-txp" secondAttribute="leading" constant="20" id="2Xb-eC-d1g"/>
                             <constraint firstItem="6Ou-dw-9qj" firstAttribute="centerX" secondItem="dC7-tv-fjj" secondAttribute="centerX" id="7fq-g9-NLc"/>
-                            <constraint firstItem="wmU-WN-Gq0" firstAttribute="leading" secondItem="dC7-tv-fjj" secondAttribute="leading" id="84W-9V-Mxl"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="jUJ-YQ-tHw" secondAttribute="trailing" constant="25" id="Bbs-eF-imv"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="bottom" secondItem="jUJ-YQ-tHw" secondAttribute="bottom" constant="97" id="BpF-qa-tRq"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="vfU-fN-sRm" secondAttribute="trailing" constant="25" id="E5l-Rl-iKx"/>
@@ -114,9 +110,6 @@
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="UJX-y2-zmL" secondAttribute="trailing" constant="20" id="LKj-Ol-FYn"/>
                             <constraint firstItem="vfU-fN-sRm" firstAttribute="top" secondItem="dC7-tv-fjj" secondAttribute="top" constant="50" id="Us2-uh-Kg9"/>
                             <constraint firstItem="UJX-y2-zmL" firstAttribute="top" secondItem="6Ou-dw-9qj" secondAttribute="bottom" constant="60" id="bJu-lz-feK"/>
-                            <constraint firstItem="wmU-WN-Gq0" firstAttribute="top" secondItem="dC7-tv-fjj" secondAttribute="top" id="kpN-jK-KPv"/>
-                            <constraint firstAttribute="bottom" secondItem="wmU-WN-Gq0" secondAttribute="bottom" id="kyj-5u-jeN"/>
-                            <constraint firstAttribute="trailing" secondItem="wmU-WN-Gq0" secondAttribute="trailing" id="mpa-iv-3iV"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="bottom" secondItem="UJX-y2-zmL" secondAttribute="bottom" constant="20" id="n5L-HA-jFk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xJw-6Z-txp"/>
@@ -135,7 +128,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg11" width="236" height="419"/>
         <image name="lock" width="24" height="24"/>
         <image name="settings" width="32" height="32"/>
     </resources>

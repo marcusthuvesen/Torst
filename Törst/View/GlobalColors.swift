@@ -10,9 +10,12 @@ import Foundation
 import UIKit
 
 extension UIColor {
-        static var jagHarAldrigGreen = UIColor(red: 107/255, green: 210/255, blue: 108/255, alpha: 1.0)
+        static var jagHarAldrigBlue = UIColor(red: 124/255, green: 138/255, blue: 188/255, alpha: 1.0)
+        static var peklekenPurple = UIColor(red: 189/255, green: 108/255, blue: 226/255, alpha: 1.0)
         static var peklekenBeige = UIColor(red: 244/255, green: 179/255, blue: 109/255, alpha: 1.0)
-        static var ryggMotRyggRed = UIColor(red: 237/255, green: 121/255, blue: 105/255, alpha: 1.0)
-        static var utmaningarPink = UIColor(red: 288/255, green: 166/255, blue: 245/255, alpha: 1.0)
-        static var mixPurple = UIColor(red: 189/255, green: 108/255, blue: 226/255, alpha: 1.0)
+        static var ryggMotRyggGreen = UIColor(red: 127/255, green: 192/255, blue: 163/255, alpha: 1.0)
+        static var utmaningarOrange = UIColor(red: 244/255, green: 179/255, blue: 108/255, alpha: 1.0)
+        static var mixRed = UIColor(red: 239/255, green: 147/255, blue: 128/255, alpha: 1.0)
+        static var premiumBlue = UIColor(red: 132/255, green: 198/255, blue: 237/255, alpha: 1.0)
+        static var premiumLightBlue = UIColor(red: 189/255, green: 108/255, blue: 226/255, alpha: 1.0)
 }
