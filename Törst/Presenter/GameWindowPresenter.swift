@@ -45,17 +45,17 @@ class GameWindowPresenter{
     func setBackgroundColor() {
         switch GlobalVariables.gameType {
         case "JagHarAldrig":
-            gameWindowViewDelegate?.changeBackgroundColor(colorString: "green")
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "blue")
         case "Pekleken":
-            gameWindowViewDelegate?.changeBackgroundColor(colorString: "beige")
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "purple")
         case "RyggMotRygg":
-            gameWindowViewDelegate?.changeBackgroundColor(colorString: "red")
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "green")
         case "Utmaningar":
-            gameWindowViewDelegate?.changeBackgroundColor(colorString: "pink")
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "beige")
         case "Mix":
-            gameWindowViewDelegate?.changeBackgroundColor(colorString: "purple")
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "red")
         default:
-            gameWindowViewDelegate?.changeBackgroundColor(colorString: "purple")
+            gameWindowViewDelegate?.changeBackgroundColor(colorString: "red")
         }
     }
     
@@ -74,8 +74,18 @@ class GameWindowPresenter{
     
     func setupStatementArray() {
         //Check if subscriber, if so randomize array and go, else use first 15 always
-        
+        setCategoryText(text : self.gameTextArray[counter])
         self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
+    }
+    
+    
+    
+    func previousStatement() {
+        if counter != 0 {
+            counter -= 1
+            setCategoryText(text : self.gameTextArray[counter])
+            self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
+        }
     }
     
     func nextStatement() {
@@ -98,19 +108,12 @@ class GameWindowPresenter{
         var categoryText = ""
         
         if gameTexts.handuppräckning.contains(text) { categoryText = "Handuppräckning" }
-        if gameTexts.jagHarAldrig.contains(text) { categoryText = "Jag har aldrig" }
+        if gameTexts.jagHarAldrig.contains(text) { categoryText = "Jag har aldrig..." }
         if gameTexts.pekleken.contains(text) { categoryText = "Pekleken" }
         if gameTexts.ryggMotRygg.contains(text) { categoryText = "Rygg mot rygg" }
         if gameTexts.utmaningar.contains(text) { categoryText = "Utmaningar" }
-        if gameTexts.kategorier.contains(text) { categoryText = "Kategorier" }
+        if gameTexts.kategorier.contains(text) { categoryText = "Kategorin är..." }
         
         self.gameWindowViewDelegate?.setCategoryTextOnLabel(categoryText: categoryText)
-    }
-    
-    func previousStatement() {
-        if counter != 0 {
-            counter -= 1
-            self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
-        }
     }
 }

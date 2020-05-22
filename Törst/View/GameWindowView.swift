@@ -34,18 +34,18 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     
     func changeBackgroundColor(colorString : String) {
         switch colorString {
-        case "green":
+        case "blue":
             backgroundView.backgroundColor = .jagHarAldrigBlue
-        case "beige":
-           backgroundView.backgroundColor = .peklekenBeige
-        case "red":
-            backgroundView.backgroundColor = .ryggMotRyggGreen
-        case "pink":
-            backgroundView.backgroundColor = .utmaningarOrange
         case "purple":
+           backgroundView.backgroundColor = .peklekenPurple
+        case "green":
+            backgroundView.backgroundColor = .ryggMotRyggGreen
+        case "beige":
+            backgroundView.backgroundColor = .utmaningarOrange
+        case "red":
             backgroundView.backgroundColor = .mixRed
         default:
-            backgroundView.backgroundColor = .utmaningarOrange
+            backgroundView.backgroundColor = .mixRed
         }
     }
     

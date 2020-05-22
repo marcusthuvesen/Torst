@@ -49,6 +49,13 @@ class HomeDecisionPresenter{
 //        }
         
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "JagHarAldrig")
+        for i in 0 ... GlobalVariables.gameTextArray.count - 1{
+            let originalText = GlobalVariables.gameTextArray[i]
+            print(originalText)
+            GlobalVariables.gameTextArray.remove(at: i)
+            GlobalVariables.gameTextArray.insert("Jag har aldrig...\n" + originalText, at: i)
+            print(GlobalVariables.gameTextArray[i])
+        }
         homeDecisionViewDelegate?.sendToGameWindow()
     }
     
