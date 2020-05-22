@@ -10,10 +10,10 @@ import UIKit
 
 class GameWindowView: UIViewController, GameWindowViewDelegate {
     
-    
     @IBOutlet weak var infoBtnOutlet: UIButton!
     @IBOutlet weak var gameTextView: UITextView!
     @IBOutlet var backgroundView: UIView!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     let gameWindowViewDelegate = GameWindowPresenter()
     
@@ -35,17 +35,17 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     func changeBackgroundColor(colorString : String) {
         switch colorString {
         case "green":
-            backgroundView.backgroundColor = .jagHarAldrigGreen
+            backgroundView.backgroundColor = .jagHarAldrigBlue
         case "beige":
            backgroundView.backgroundColor = .peklekenBeige
         case "red":
-            backgroundView.backgroundColor = .ryggMotRyggRed
+            backgroundView.backgroundColor = .ryggMotRyggGreen
         case "pink":
-            backgroundView.backgroundColor = .utmaningarPink
+            backgroundView.backgroundColor = .utmaningarOrange
         case "purple":
-            backgroundView.backgroundColor = .mixPurple
+            backgroundView.backgroundColor = .mixRed
         default:
-            backgroundView.backgroundColor = .utmaningarPink
+            backgroundView.backgroundColor = .utmaningarOrange
         }
     }
     
@@ -54,8 +54,16 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         gameTextView.text = statement
     }
     
-    func sendToPopup() {
+    func sendToPremiumPopup() {
         presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
+    }
+    
+    func sendToInfoPopup() {
+        presentPopup(UIStoryboardName: "InfoPopup", WithIdentifier: "InfoPopup", VC: self)
+    }
+    
+    @IBAction func infoBtnClicked(_ sender: UIButton) {
+        gameWindowViewDelegate.infoBtnActions()
     }
     
     @IBAction func previousStatement(_ sender: UIButton) {

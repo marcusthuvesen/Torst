@@ -11,7 +11,8 @@ import UIKit
 
 protocol GameWindowViewDelegate : NSObjectProtocol{
     func changeStatementUI(statement : String)
-    func sendToPopup()
+    func sendToPremiumPopup()
+    func sendToInfoPopup()
     func changeBackgroundColor(colorString : String)
 }
 
@@ -31,16 +32,11 @@ class GameWindowPresenter{
     }
     
     func setupPreStatementText() {
-        switch GlobalVariables.gameType {
-        case "JagHarAldrig":
-           preGameText = "Jag har aldrig... \n"
-        case "Pekleken":
-            preGameText = "Vem "
-        case "RyggMotRygg":
-            preGameText = "Vem "
-        default:
-           preGameText = ""
-        }
+        
+    }
+    
+    func infoBtnActions() {
+        self.gameWindowViewDelegate?.sendToInfoPopup()
     }
     
     func setBackgroundColor() {
@@ -68,7 +64,7 @@ class GameWindowPresenter{
     
     func nextStatement() {
         //If not subscriber only show 15
-        if !isSubscriber() && counter == 14 { self.gameWindowViewDelegate?.sendToPopup(); return}
+        if !isSubscriber() && counter == 14 { self.gameWindowViewDelegate?.sendToPremiumPopup(); return}
         
         if counter < gameTextArray.count - 1 {
             counter += 1

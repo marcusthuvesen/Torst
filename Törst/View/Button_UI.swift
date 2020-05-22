@@ -15,11 +15,14 @@ extension UIButton {
         self.layer.masksToBounds = true
         self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.white.cgColor
+        self.tintColor = .white
+        self.titleColor(for: .normal)
     }
     
     func homeDecisionOutlet_UI() {
         self.layer.cornerRadius = 20
         self.layer.masksToBounds = true
+        //self.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
     }
     
     func premiumContinueBtn_UI() {
@@ -35,5 +38,13 @@ extension UIView {
        self.layer.cornerRadius = 75
         self.layer.masksToBounds = true
         self.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+    }
+}
+
+extension UIImageView {
+    func infoImage_UI() {
+        self.layer.cornerRadius = self.frame.height/2
+        self.layer.masksToBounds = true
+        self.layer.masksToBounds = true
     }
 }
