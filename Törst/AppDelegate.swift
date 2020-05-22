@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import Firebase
 
 @UIApplicationMain
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UIApplication.shared.isIdleTimerDisabled = true
         FirebaseApp.configure()
         //Load game texts from FireBase
         return true

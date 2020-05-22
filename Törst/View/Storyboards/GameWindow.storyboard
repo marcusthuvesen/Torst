@@ -106,7 +106,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="2GF-BY-ewb" id="PeC-GX-OuV"/>
-                        <outlet property="categoryLabel" destination="TMs-bt-ecH" id="k6X-4o-bbO"/>
+                        <outlet property="categoryLabel" destination="TMs-bt-ecH" id="QmA-LO-xPs"/>
                         <outlet property="gameTextView" destination="3Sc-es-1vF" id="HXV-mm-h6P"/>
                         <outlet property="infoBtnOutlet" destination="Cpc-ZP-neC" id="GwU-SL-WJb"/>
                     </connections>

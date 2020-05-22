@@ -14,6 +14,9 @@ protocol GameWindowViewDelegate : NSObjectProtocol{
     func sendToPremiumPopup()
     func sendToInfoPopup()
     func changeBackgroundColor(colorString : String)
+    func showCategoryLabel()
+    func hideCategoryLabel()
+    func setCategoryTextOnLabel(categoryText : String)
 }
 
 class GameWindowPresenter{
@@ -21,14 +24,14 @@ class GameWindowPresenter{
     weak private var gameWindowViewDelegate : GameWindowViewDelegate?
     var counter = 0
     let gameTextArray = GlobalVariables.gameTextArray
-    var preGameText = ""
+
     
     func setGameWindowViewDelegate(gameWindowViewDelegate : GameWindowViewDelegate){
-        print("setup delegate")
         self.gameWindowViewDelegate = gameWindowViewDelegate
         setupPreStatementText()
         setBackgroundColor()
         setupStatementArray()
+        showOrHideCategoryLabel()
     }
     
     func setupPreStatementText() {
@@ -56,10 +59,23 @@ class GameWindowPresenter{
         }
     }
     
+    func showOrHideCategoryLabel() {
+        switch GlobalVariables.gameType {
+        case "Mix":
+            self.gameWindowViewDelegate?.showCategoryLabel()
+        default:
+            self.gameWindowViewDelegate?.hideCategoryLabel()
+        }
+    }
+    
+    func showCategoryLabel() {
+        self.gameWindowViewDelegate?.showCategoryLabel()
+    }
+    
     func setupStatementArray() {
         //Check if subscriber, if so randomize array and go, else use first 15 always
         
-        self.gameWindowViewDelegate?.changeStatementUI(statement : preGameText + self.gameTextArray[counter])
+        self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
     }
     
     func nextStatement() {
@@ -68,16 +84,33 @@ class GameWindowPresenter{
         
         if counter < gameTextArray.count - 1 {
             counter += 1
-            self.gameWindowViewDelegate?.changeStatementUI(statement : preGameText + self.gameTextArray[counter])
+            //If statement is same as in any of the arrays set pre defined category
+            setCategoryText(text : self.gameTextArray[counter])
+            self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
         } else {
             counter = 0
         }
     }
     
+    func setCategoryText(text : String) {
+        
+        let gameTexts = ProvideGameTexts()
+        var categoryText = ""
+        
+        if gameTexts.handuppräckning.contains(text) { categoryText = "Handuppräckning" }
+        if gameTexts.jagHarAldrig.contains(text) { categoryText = "Jag har aldrig" }
+        if gameTexts.pekleken.contains(text) { categoryText = "Pekleken" }
+        if gameTexts.ryggMotRygg.contains(text) { categoryText = "Rygg mot rygg" }
+        if gameTexts.utmaningar.contains(text) { categoryText = "Utmaningar" }
+        if gameTexts.kategorier.contains(text) { categoryText = "Kategorier" }
+        
+        self.gameWindowViewDelegate?.setCategoryTextOnLabel(categoryText: categoryText)
+    }
+    
     func previousStatement() {
         if counter != 0 {
             counter -= 1
-            self.gameWindowViewDelegate?.changeStatementUI(statement : preGameText + self.gameTextArray[counter])
+            self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
         }
     }
 }

@@ -49,6 +49,17 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         }
     }
     
+    func showCategoryLabel() {
+        categoryLabel.isHidden = false
+    }
+    
+    func hideCategoryLabel() {
+        categoryLabel.isHidden = true
+    }
+    
+    func setCategoryTextOnLabel(categoryText : String) {
+        categoryLabel.text = categoryText
+    }
     
     func changeStatementUI(statement : String) {
         gameTextView.text = statement

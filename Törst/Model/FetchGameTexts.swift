@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import Firebase
-import Firebase
+import FirebaseDatabase
 
 //When opening application load game texts from Firebase
 
