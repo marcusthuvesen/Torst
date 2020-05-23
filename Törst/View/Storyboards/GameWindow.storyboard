@@ -15,11 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" canCancelContentTouches="NO" bouncesZoom="NO" keyboardDismissMode="interactive" editable="NO" text="Vem har gjort de sjukaste sakerna på fyllan" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Sc-es-1vF">
-                                <rect key="frame" x="16" y="403" width="382" height="150"/>
+                            <textView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" canCancelContentTouches="NO" bouncesZoom="NO" keyboardDismissMode="interactive" editable="NO" text="Vem har gjort de sjukaste sakerna på fyllan" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Sc-es-1vF">
+                                <rect key="frame" x="16" y="398" width="382" height="300"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="xs8-rn-z2j"/>
+                                    <constraint firstAttribute="height" constant="300" id="xs8-rn-z2j"/>
                                 </constraints>
                                 <color key="textColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
@@ -85,7 +85,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="H5s-my-uYG" secondAttribute="bottom" id="7QE-gf-fMz"/>
                             <constraint firstItem="KKf-if-y6z" firstAttribute="top" secondItem="2GF-BY-ewb" secondAttribute="top" id="9df-OA-kpx"/>
-                            <constraint firstItem="3Sc-es-1vF" firstAttribute="centerY" secondItem="2GF-BY-ewb" secondAttribute="centerY" constant="30" id="D4V-tS-bjz"/>
+                            <constraint firstItem="3Sc-es-1vF" firstAttribute="centerY" secondItem="2GF-BY-ewb" secondAttribute="centerY" constant="100" id="D4V-tS-bjz"/>
                             <constraint firstItem="X5U-ml-oOn" firstAttribute="trailing" secondItem="Cpc-ZP-neC" secondAttribute="trailing" constant="20" id="EzS-9k-f2E"/>
                             <constraint firstItem="X5U-ml-oOn" firstAttribute="trailing" secondItem="H5s-my-uYG" secondAttribute="trailing" id="FyX-ji-lHg"/>
                             <constraint firstItem="X5U-ml-oOn" firstAttribute="trailing" secondItem="3Sc-es-1vF" secondAttribute="trailing" constant="16" id="I3c-tK-bdQ"/>
@@ -97,7 +97,7 @@
                             <constraint firstAttribute="bottom" secondItem="KKf-if-y6z" secondAttribute="bottom" id="jIq-q2-jnM"/>
                             <constraint firstItem="H5s-my-uYG" firstAttribute="leading" secondItem="KKf-if-y6z" secondAttribute="trailing" id="jaU-UZ-j87"/>
                             <constraint firstItem="H5s-my-uYG" firstAttribute="top" secondItem="2GF-BY-ewb" secondAttribute="top" id="mvc-mH-KBo"/>
-                            <constraint firstItem="3Sc-es-1vF" firstAttribute="top" secondItem="TMs-bt-ecH" secondAttribute="bottom" constant="10" id="ofX-zH-Zw8"/>
+                            <constraint firstItem="3Sc-es-1vF" firstAttribute="top" secondItem="TMs-bt-ecH" secondAttribute="bottom" constant="5" id="ofX-zH-Zw8"/>
                             <constraint firstItem="TMs-bt-ecH" firstAttribute="centerX" secondItem="2GF-BY-ewb" secondAttribute="centerX" id="pHt-zx-THW"/>
                             <constraint firstItem="3Sc-es-1vF" firstAttribute="leading" secondItem="X5U-ml-oOn" secondAttribute="leading" constant="16" id="sEX-8D-OuY"/>
                             <constraint firstItem="5Sy-HD-iOA" firstAttribute="leading" secondItem="X5U-ml-oOn" secondAttribute="leading" constant="20" id="sRk-bv-2fj"/>

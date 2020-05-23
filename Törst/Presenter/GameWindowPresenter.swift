@@ -17,6 +17,7 @@ protocol GameWindowViewDelegate : NSObjectProtocol{
     func showCategoryLabel()
     func hideCategoryLabel()
     func setCategoryTextOnLabel(categoryText : String)
+    
 }
 
 class GameWindowPresenter{
@@ -28,16 +29,11 @@ class GameWindowPresenter{
     
     func setGameWindowViewDelegate(gameWindowViewDelegate : GameWindowViewDelegate){
         self.gameWindowViewDelegate = gameWindowViewDelegate
-        setupPreStatementText()
         setBackgroundColor()
         setupStatementArray()
         showOrHideCategoryLabel()
     }
-    
-    func setupPreStatementText() {
-        
-    }
-    
+
     func infoBtnActions() {
         self.gameWindowViewDelegate?.sendToInfoPopup()
     }

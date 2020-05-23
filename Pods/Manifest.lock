@@ -76,10 +76,12 @@ PODS:
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.8)
+  - TPInAppReceipt (2.5)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Database
+  - TPInAppReceipt
 
 SPEC REPOS:
   trunk:
@@ -98,6 +100,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - TPInAppReceipt
 
 SPEC CHECKSUMS:
   Firebase: b28e55c60efd98963cd9011fe2fac5a10c2ba124
@@ -115,7 +118,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  TPInAppReceipt: c81e587bb492516b2f5b8f89b56372743343298d
 
-PODFILE CHECKSUM: a2d6bce3375b7f1cd3fea9f9ffb086a45e973977
+PODFILE CHECKSUM: 0959ba03184441c4419d4381a630824159748bcd
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

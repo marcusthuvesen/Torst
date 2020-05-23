@@ -9,4 +9,5 @@ target 'Törst' do
 
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Database'
+	pod 'TPInAppReceipt'
 end

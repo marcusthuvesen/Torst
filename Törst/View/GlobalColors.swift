@@ -16,5 +16,5 @@ extension UIColor {
         static var utmaningarOrange = UIColor(red: 244/255, green: 179/255, blue: 108/255, alpha: 1.0)
         static var mixRed = UIColor(red: 239/255, green: 147/255, blue: 128/255, alpha: 1.0)
         static var premiumBlue = UIColor(red: 132/255, green: 198/255, blue: 237/255, alpha: 1.0)
-        static var premiumLightBlue = UIColor(red: 189/255, green: 108/255, blue: 226/255, alpha: 1.0)
+        static var premiumPurple = UIColor(red: 189/255, green: 108/255, blue: 226/255, alpha: 1.0)
 }

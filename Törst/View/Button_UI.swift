@@ -33,13 +33,6 @@ extension UIButton {
     }
 }
 
-extension UIView {
-    func topCutView_UI() {
-       self.layer.cornerRadius = 75
-        self.layer.masksToBounds = true
-        self.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-    }
-}
 
 extension UIImageView {
     func infoImage_UI() {
