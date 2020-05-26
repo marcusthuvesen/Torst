@@ -10,34 +10,46 @@ import Foundation
 import TPInAppReceipt
 
 func isSubscriber() -> Bool {
-    return true
+    return false
 }
 
 class CheckSubscription{
    static let shared = CheckSubscription()
-    func checkUserSubscription() -> Bool{
-        var hasSubscription = false
+    func checkUserSubscription() -> (Bool, Bool) {
+        
+        var hasFullAccess = false
+        var hasPartialAccess = false
+        
         do {
             let receipt = try InAppReceipt.localReceipt()
-            
-            
-            let purchase = receipt.activeAutoRenewableSubscriptionPurchases(ofProductIdentifier: "se.marcusthuvesen.Tinnitus.1MonthSub", forDate: Date())
-            
-             let purchase2 = receipt.activeAutoRenewableSubscriptionPurchases(ofProductIdentifier: "se.marcusthuvesen.Tinnitus.6MonthSub", forDate: Date())
+            let fullAccessPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.FullAccess")
+             let partialAccessPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.PartialAccess")
         
-            if purchase != nil || purchase2 != nil{
-                hasSubscription = true
-                print("Has subscription \(purchase)")
+            if fullAccessPurchase.count != 0 {
+                hasFullAccess = true
+                print("Has purchase \(fullAccessPurchase)")
+            }
+            
+            if partialAccessPurchase.count != 0 {
+                hasPartialAccess = true
+                print("Has purchase \(partialAccessPurchase)")
+                //Find out what category was chosen from Firebase
+                
             }
             
         } catch {
-            print(error)
-            if error != nil{
-                print("No subscription")
-            }
-            hasSubscription = false
+            
+            print("no Purhase \(error)")
+            hasFullAccess = false
+            hasPartialAccess = false
+            
         }
-       return hasSubscription
+       return (hasPartialAccess, hasFullAccess)
     }
+    
+    func fetchCategoryChosen() {
+        
+    }
+    
     
 }

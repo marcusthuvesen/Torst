@@ -22,8 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Load game texts from FireBase
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
+    
+//   var orientationLock = UIInterfaceOrientationMask.all
+//
+//   func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+//           return self.orientationLock
+//   }
+//    // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

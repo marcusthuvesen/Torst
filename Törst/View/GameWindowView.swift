@@ -49,8 +49,6 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         }
     }
     
-    
-    
     func showCategoryLabel() {
         categoryLabel.isHidden = false
     }

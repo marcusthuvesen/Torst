@@ -10,7 +10,9 @@ import UIKit
 
 class PremiumPopupView: UIViewController {
 
-    @IBOutlet weak var continueBtnOutlet: UIButton!
+    
+    @IBOutlet var continueToPaymentOutlet: [UIButton]!
+    
     @IBOutlet weak var topViewCut: UIView!
     
     override func viewDidLoad() {
@@ -20,7 +22,9 @@ class PremiumPopupView: UIViewController {
     }
     
     func setupPopupUI() {
-        continueBtnOutlet.premiumContinueBtn_UI()
+        for button in continueToPaymentOutlet {
+            button.premiumContinueBtn_UI()
+        }
         topViewCut.topCutView_UI()
     }
     

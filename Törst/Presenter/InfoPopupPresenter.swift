@@ -53,8 +53,4 @@ class InfoPopupPresenter{
         self.infoPopupViewDelegate?.setRulesTextToTextView(rulesText: rulesText)
         self.infoPopupViewDelegate?.setRulesLabelTextToLabel(rulesLabelText: rulesLabelText)
     }
-    
-    
-    
-    
 }
