@@ -24,7 +24,7 @@ struct ProvideGameRules {
     }
     
     func ryggMotRyggRules() -> String{
-        let ryggMotRyggRules = "Två spelare placerar stolar med ryggarna mot varandra och sätter sig så att de inte kan se den andre personen.\n\nEn annan person med telefonen läser upp påståenden och spelarna på stolen ska peka på den person som de tycker att det stämmer bäst in på. Om båda pekar på samma ska resten av deltagarna dricka, annars dricker de två spelarna."
+        let ryggMotRyggRules = "Två spelare sitter på stolar med ryggarna mot varandra så att de inte kan se varandra.\n\nEn annan person med telefonen läser upp påståenden och spelarna på stolen ska peka på den person som de tycker att det stämmer bäst in på. Om båda pekar på samma ska resten av deltagarna dricka, annars dricker de två spelarna."
         return ryggMotRyggRules
     }
     
