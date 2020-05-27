@@ -17,7 +17,8 @@ protocol GameWindowViewDelegate : NSObjectProtocol{
     func showCategoryLabel()
     func hideCategoryLabel()
     func setCategoryTextOnLabel(categoryText : String)
-    
+    func hideRulesIcon()
+    func showRulesIcon()
 }
 
 class GameWindowPresenter{
@@ -32,6 +33,7 @@ class GameWindowPresenter{
         setBackgroundColor()
         setupStatementArray()
         showOrHideCategoryLabel()
+        showOrHideRules()
     }
 
     func infoBtnActions() {
@@ -74,7 +76,21 @@ class GameWindowPresenter{
         self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
     }
     
+    func showOrHideRules() {
+        if GlobalVariables.gameType != "Mix" {
+            showRules()
+        } else {
+            hideRules()
+        }
+    }
     
+    func hideRules() {
+        self.gameWindowViewDelegate?.hideRulesIcon()
+    }
+    
+    func showRules() {
+        self.gameWindowViewDelegate?.showRulesIcon()
+    }
     
     func previousStatement() {
         if counter != 0 {

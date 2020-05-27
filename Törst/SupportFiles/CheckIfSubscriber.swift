@@ -10,7 +10,7 @@ import Foundation
 import TPInAppReceipt
 
 func isSubscriber() -> Bool {
-    return false
+    return true
 }
 
 class CheckSubscription{

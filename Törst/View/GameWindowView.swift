@@ -65,6 +65,14 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         gameTextView.text = statement
     }
     
+    func showRulesIcon() {
+        infoBtnOutlet.isHidden = false
+    }
+    
+    func hideRulesIcon() {
+        infoBtnOutlet.isHidden = true
+    }
+    
     func sendToPremiumPopup() {
         presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
     }
