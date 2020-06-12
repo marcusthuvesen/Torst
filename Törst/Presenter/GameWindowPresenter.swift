@@ -61,12 +61,16 @@ class GameWindowPresenter{
         switch GlobalVariables.gameType {
         case "Mix":
             self.gameWindowViewDelegate?.showCategoryLabel()
+        case "JagHarAldrig":
+            print("show or hide categorylabel")
+            self.gameWindowViewDelegate?.showCategoryLabel()
         default:
             self.gameWindowViewDelegate?.hideCategoryLabel()
         }
     }
     
     func showCategoryLabel() {
+        print("show")
         self.gameWindowViewDelegate?.showCategoryLabel()
     }
     
@@ -115,7 +119,7 @@ class GameWindowPresenter{
     }
     
     func setCategoryText(text : String) {
-        
+        print("show set category: \(text)")
         let gameTexts = ProvideGameTexts()
         var categoryText = ""
         

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings Popup View-->
+        <scene sceneID="bWZ-8k-Ac8">
+            <objects>
+                <viewController storyboardIdentifier="SettingsPopup" modalTransitionStyle="crossDissolve" id="803-1P-4yR" customClass="SettingsPopupView" customModule="To_rst" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yro-dB-psr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzY-WV-Iwm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dismissPopupBtn:" destination="803-1P-4yR" eventType="touchUpInside" id="UKO-tm-oW4"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osM-cG-dPJ">
+                                <rect key="frame" x="182" y="235.5" width="50" height="25"/>
+                                <color key="backgroundColor" red="0.63137254901960782" green="0.59607843137254901" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Rum-Lq-jZE"/>
+                                    <constraint firstAttribute="height" constant="25" id="cmS-TY-n17"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlV-2a-ExK">
+                                <rect key="frame" x="57" y="260.5" width="300" height="375"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAw-lZ-Oar">
+                                        <rect key="frame" x="5" y="8" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="TP0-cm-DyA"/>
+                                            <constraint firstAttribute="height" constant="40" id="s33-fF-wes"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissPopupBtn:" destination="803-1P-4yR" eventType="touchUpInside" id="Ud6-Rl-EHR"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="QRn-M2-G48">
+                                        <rect key="frame" x="20" y="78" width="260" height="277"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITT-Xc-xYm">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="56"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <state key="normal" title="Villkor">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="settingsBtnAction:" destination="803-1P-4yR" eventType="touchUpInside" id="moq-Cm-eBT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO8-oc-aVh">
+                                                <rect key="frame" x="0.0" y="74" width="260" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <state key="normal" title="Integritetspolicy">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="settingsBtnAction:" destination="803-1P-4yR" eventType="touchUpInside" id="thj-P6-49x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5G-7o-Mm0">
+                                                <rect key="frame" x="0.0" y="147.5" width="260" height="56"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <state key="normal" title="Återställ köp">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="settingsBtnAction:" destination="803-1P-4yR" eventType="touchUpInside" id="0E6-7s-muB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAV-dm-qlY">
+                                                <rect key="frame" x="0.0" y="221.5" width="260" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <state key="normal" title="Köp Premium">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="settingsBtnAction:" destination="803-1P-4yR" eventType="touchUpInside" id="wLn-uO-sNS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.59607843140000005" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="QRn-M2-G48" firstAttribute="top" secondItem="jAw-lZ-Oar" secondAttribute="bottom" constant="30" id="2gc-LH-9Ot"/>
+                                    <constraint firstItem="QRn-M2-G48" firstAttribute="leading" secondItem="IlV-2a-ExK" secondAttribute="leading" constant="20" id="4kP-LE-2YX"/>
+                                    <constraint firstItem="jAw-lZ-Oar" firstAttribute="top" secondItem="IlV-2a-ExK" secondAttribute="top" constant="8" id="5Nv-XG-NUU"/>
+                                    <constraint firstAttribute="height" constant="375" id="EWr-Qj-wR1"/>
+                                    <constraint firstItem="jAw-lZ-Oar" firstAttribute="leading" secondItem="IlV-2a-ExK" secondAttribute="leading" constant="5" id="Mkp-9f-8uQ"/>
+                                    <constraint firstAttribute="width" constant="300" id="Nyj-Hd-uVa"/>
+                                    <constraint firstAttribute="trailing" secondItem="QRn-M2-G48" secondAttribute="trailing" constant="20" id="qEc-e3-Tbi"/>
+                                    <constraint firstAttribute="bottom" secondItem="QRn-M2-G48" secondAttribute="bottom" constant="20" id="r64-vZ-YGQ"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings4" translatesAutoresizingMaskIntoConstraints="NO" id="If9-xC-MNk">
+                                <rect key="frame" x="157" y="210.5" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="emv-sE-p6H"/>
+                                    <constraint firstAttribute="height" constant="100" id="yqc-8L-fn4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="If9-xC-MNk" firstAttribute="centerX" secondItem="yro-dB-psr" secondAttribute="centerX" id="Jt4-KI-o1Z"/>
+                            <constraint firstItem="IzY-WV-Iwm" firstAttribute="leading" secondItem="yro-dB-psr" secondAttribute="leading" id="R0d-2j-2ae"/>
+                            <constraint firstAttribute="bottom" secondItem="IzY-WV-Iwm" secondAttribute="bottom" id="Uu8-px-Us7"/>
+                            <constraint firstAttribute="trailing" secondItem="IzY-WV-Iwm" secondAttribute="trailing" id="ctU-Wv-Xd9"/>
+                            <constraint firstItem="osM-cG-dPJ" firstAttribute="centerX" secondItem="yro-dB-psr" secondAttribute="centerX" id="ddF-fN-p0k"/>
+                            <constraint firstItem="IlV-2a-ExK" firstAttribute="centerX" secondItem="yro-dB-psr" secondAttribute="centerX" id="eQu-pc-YQg"/>
+                            <constraint firstItem="IlV-2a-ExK" firstAttribute="top" secondItem="osM-cG-dPJ" secondAttribute="bottom" id="fyx-Ze-t1m"/>
+                            <constraint firstItem="IlV-2a-ExK" firstAttribute="centerY" secondItem="yro-dB-psr" secondAttribute="centerY" id="roT-d2-6gF"/>
+                            <constraint firstItem="IlV-2a-ExK" firstAttribute="top" secondItem="If9-xC-MNk" secondAttribute="bottom" constant="-50" id="uUp-rn-oov"/>
+                            <constraint firstItem="IzY-WV-Iwm" firstAttribute="top" secondItem="yro-dB-psr" secondAttribute="top" id="w4i-gs-enU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mop-Z8-Vdl"/>
+                    </view>
+                    <connections>
+                        <outlet property="settingsBgView" destination="IlV-2a-ExK" id="QNu-TN-mY7"/>
+                        <outletCollection property="settingsOutlets" destination="ITT-Xc-xYm" collectionClass="NSMutableArray" id="C2a-To-l9d"/>
+                        <outletCollection property="settingsOutlets" destination="gO8-oc-aVh" collectionClass="NSMutableArray" id="nr2-h4-BfA"/>
+                        <outletCollection property="settingsOutlets" destination="j5G-7o-Mm0" collectionClass="NSMutableArray" id="VQs-dS-9EW"/>
+                        <outletCollection property="settingsOutlets" destination="yAV-dm-qlY" collectionClass="NSMutableArray" id="O1P-tN-vga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nn0-cX-zbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="settings4" width="512" height="512"/>
+    </resources>
+</document>

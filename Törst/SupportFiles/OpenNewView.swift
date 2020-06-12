@@ -27,6 +27,12 @@ func presentPopup(UIStoryboardName : String, WithIdentifier : String, VC: UIView
             VC!.present(sendToVC, animated: true)
         }
         
+        if UIStoryboardName == "SettingsPopup" {
+            let sendToVC = UIStoryboard(name: UIStoryboardName, bundle: nil).instantiateViewController(withIdentifier: WithIdentifier) as! SettingsPopupView
+            sendToVC.modalPresentationStyle = .overCurrentContext
+            VC!.present(sendToVC, animated: true)
+        }
+        
     }
     
 }

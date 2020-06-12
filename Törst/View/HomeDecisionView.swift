@@ -12,6 +12,7 @@ import FirebaseDatabase
 class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
     @IBOutlet var decisionBtnOutlets: [UIButton]!
+    @IBOutlet weak var lockBottomConstraint: NSLayoutConstraint!
     
     let homeDecisionViewDelegate = HomeDecisionPresenter()
     
@@ -45,8 +46,10 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     func setupHomeDecisionUI() {
         for button in decisionBtnOutlets {
             button.homeDecisionOutlet_UI()
+            button.imageView?.contentMode = .scaleAspectFit
         }
         setupGradientLayer()
+        lockBottomConstraint.constant = self.view.frame.height/15
     }
     
     func sendToGameWindow() {
@@ -58,8 +61,12 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     @IBAction func decisionBtnClicked(_ sender: UIButton) {
         homeDecisionViewDelegate.decisionBtnSelected(senderTag: sender.tag)
-        
     }
+    
+    @IBAction func settingsBtnClicked(_ sender: UIButton) {
+        presentPopup(UIStoryboardName: "SettingsPopup", WithIdentifier: "SettingsPopup", VC: self)
+    }
+    
     
     func setupGradientLayer() {
         let gradient: CAGradientLayer = CAGradientLayer()

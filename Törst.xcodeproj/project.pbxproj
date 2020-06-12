@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		2500EF76247D1051005FCCF5 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2500EF75247D1051005FCCF5 /* AppUtility.swift */; };
 		2500EF78247D9CFA005FCCF5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2500EF77247D9CFA005FCCF5 /* StoreKit.framework */; };
+		254759F7248FA8EA003C0BF8 /* SettingsPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */; };
+		254759F9248FA980003C0BF8 /* SettingsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759F8248FA980003C0BF8 /* SettingsPopupView.swift */; };
+		254759FB248FA9CD003C0BF8 /* SettingsPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759FA248FA9CD003C0BF8 /* SettingsPopupPresenter.swift */; };
+		254759FD249163A3003C0BF8 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759FC249163A3003C0BF8 /* IAPService.swift */; };
+		254759FF249163B1003C0BF8 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759FE249163B1003C0BF8 /* IAPProducts.swift */; };
 		2568FF352461539800B77C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C97BDF2460643600DEE132 /* AppDelegate.swift */; };
 		2568FF362461539C00B77C2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C97BE12460643600DEE132 /* SceneDelegate.swift */; };
 		2568FF37246153A000B77C2B /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 25C97BED2460643F00DEE132 /* Info.plist */; };
@@ -30,6 +35,7 @@
 		2568FF68246D9C2300B77C2B /* CheckIfSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF67246D9C2300B77C2B /* CheckIfSubscriber.swift */; };
 		2568FF6C246D9E2100B77C2B /* PremiumPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2568FF6B246D9E2100B77C2B /* PremiumPopup.storyboard */; };
 		2568FF6E246D9E3E00B77C2B /* PremiumPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568FF6D246D9E3E00B77C2B /* PremiumPopupView.swift */; };
+		2573B2A32493AE1D00E6FFD8 /* PremiumPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2573B2A22493AE1D00E6FFD8 /* PremiumPopupPresenter.swift */; };
 		25B60BEF2478627C00B2A735 /* View_UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B60BEE2478627C00B2A735 /* View_UI.swift */; };
 		25D90EFE247430AA00F0B7AF /* InfoPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D90EFD247430AA00F0B7AF /* InfoPopup.storyboard */; };
 		25D90F002474322A00F0B7AF /* InfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D90EFF2474322A00F0B7AF /* InfoPopupView.swift */; };
@@ -41,6 +47,11 @@
 /* Begin PBXFileReference section */
 		2500EF75247D1051005FCCF5 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		2500EF77247D9CFA005FCCF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsPopup.storyboard; sourceTree = "<group>"; };
+		254759F8248FA980003C0BF8 /* SettingsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopupView.swift; sourceTree = "<group>"; };
+		254759FA248FA9CD003C0BF8 /* SettingsPopupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopupPresenter.swift; sourceTree = "<group>"; };
+		254759FC249163A3003C0BF8 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
+		254759FE249163B1003C0BF8 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
 		2568FF402461926600B77C2B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2568FF442469B60300B77C2B /* HomeDecisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDecisionView.swift; sourceTree = "<group>"; };
 		2568FF4A2469DC8B00B77C2B /* GameWindow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameWindow.storyboard; sourceTree = "<group>"; };
@@ -58,6 +69,7 @@
 		2568FF67246D9C2300B77C2B /* CheckIfSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIfSubscriber.swift; sourceTree = "<group>"; };
 		2568FF6B246D9E2100B77C2B /* PremiumPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PremiumPopup.storyboard; sourceTree = "<group>"; };
 		2568FF6D246D9E3E00B77C2B /* PremiumPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPopupView.swift; sourceTree = "<group>"; };
+		2573B2A22493AE1D00E6FFD8 /* PremiumPopupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPopupPresenter.swift; sourceTree = "<group>"; };
 		25B60BEE2478627C00B2A735 /* View_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_UI.swift; sourceTree = "<group>"; };
 		25C97BDC2460643600DEE132 /* Törst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Törst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C97BDF2460643600DEE132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +148,7 @@
 				2568FF4C2469DD4A00B77C2B /* GameWindowView.swift */,
 				2568FF6D246D9E3E00B77C2B /* PremiumPopupView.swift */,
 				25D90EFF2474322A00F0B7AF /* InfoPopupView.swift */,
+				254759F8248FA980003C0BF8 /* SettingsPopupView.swift */,
 				25C97BFB2461519900DEE132 /* Storyboards */,
 			);
 			path = View;
@@ -146,6 +159,8 @@
 			children = (
 				2568FF59246AC1EE00B77C2B /* ProvideGameTexts.swift */,
 				25F8ADB52479AFD600BF82AA /* ProvideGameRules.swift */,
+				254759FC249163A3003C0BF8 /* IAPService.swift */,
+				254759FE249163B1003C0BF8 /* IAPProducts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +171,8 @@
 				2568FF532469E6F100B77C2B /* HomeDecisionPresenter.swift */,
 				2568FF63246C759C00B77C2B /* GameWindowPresenter.swift */,
 				25F8ADB72479B30600BF82AA /* InfoPopupPresenter.swift */,
+				254759FA248FA9CD003C0BF8 /* SettingsPopupPresenter.swift */,
+				2573B2A22493AE1D00E6FFD8 /* PremiumPopupPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -190,6 +207,7 @@
 				2568FF4A2469DC8B00B77C2B /* GameWindow.storyboard */,
 				2568FF6B246D9E2100B77C2B /* PremiumPopup.storyboard */,
 				25D90EFD247430AA00F0B7AF /* InfoPopup.storyboard */,
+				254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -278,6 +296,7 @@
 				25D90EFE247430AA00F0B7AF /* InfoPopup.storyboard in Resources */,
 				2568FF4B2469DC8B00B77C2B /* GameWindow.storyboard in Resources */,
 				2568FF6C246D9E2100B77C2B /* PremiumPopup.storyboard in Resources */,
+				254759F7248FA8EA003C0BF8 /* SettingsPopup.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,10 +350,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2568FF512469E1D700B77C2B /* GlobalColors.swift in Sources */,
+				2573B2A32493AE1D00E6FFD8 /* PremiumPopupPresenter.swift in Sources */,
 				2568FF37246153A000B77C2B /* Info.plist in Sources */,
+				254759F9248FA980003C0BF8 /* SettingsPopupView.swift in Sources */,
 				2568FF5A246AC1EE00B77C2B /* ProvideGameTexts.swift in Sources */,
+				254759FF249163B1003C0BF8 /* IAPProducts.swift in Sources */,
 				2568FF4F2469E1BD00B77C2B /* Button_UI.swift in Sources */,
 				2568FF362461539C00B77C2B /* SceneDelegate.swift in Sources */,
+				254759FB248FA9CD003C0BF8 /* SettingsPopupPresenter.swift in Sources */,
 				2568FF352461539800B77C2B /* AppDelegate.swift in Sources */,
 				2568FF60246C73FA00B77C2B /* GlobalVariables.swift in Sources */,
 				25F8ADB62479AFD600BF82AA /* ProvideGameRules.swift in Sources */,
@@ -342,6 +365,7 @@
 				25D90F002474322A00F0B7AF /* InfoPopupView.swift in Sources */,
 				2568FF542469E6F100B77C2B /* HomeDecisionPresenter.swift in Sources */,
 				2568FF64246C759C00B77C2B /* GameWindowPresenter.swift in Sources */,
+				254759FD249163A3003C0BF8 /* IAPService.swift in Sources */,
 				2568FF5E246C577C00B77C2B /* OpenNewView.swift in Sources */,
 				25B60BEF2478627C00B2A735 /* View_UI.swift in Sources */,
 				2500EF76247D1051005FCCF5 /* AppUtility.swift in Sources */,
