@@ -62,7 +62,6 @@ class GameWindowPresenter{
         case "Mix":
             self.gameWindowViewDelegate?.showCategoryLabel()
         case "JagHarAldrig":
-            print("show or hide categorylabel")
             self.gameWindowViewDelegate?.showCategoryLabel()
         default:
             self.gameWindowViewDelegate?.hideCategoryLabel()
@@ -70,7 +69,7 @@ class GameWindowPresenter{
     }
     
     func showCategoryLabel() {
-        print("show")
+        
         self.gameWindowViewDelegate?.showCategoryLabel()
     }
     
@@ -106,7 +105,11 @@ class GameWindowPresenter{
     
     func nextStatement() {
         //If not purchased only show 15
-        if !GlobalVariables.partialAccessArrayKeys.contains(GlobalVariables.currentGameKey) || !GlobalVariables.hasFullAccess && counter == 14 { self.gameWindowViewDelegate?.sendToPremiumPopup(); return}
+        print(GlobalVariables.partialAccessArrayKeys.contains(GlobalVariables.currentGameKey))
+        print(GlobalVariables.currentGameKey)
+        print(GlobalVariables.hasFullAccess)
+        
+        if (!GlobalVariables.partialAccessArrayKeys.contains(GlobalVariables.currentGameKey) && !GlobalVariables.hasFullAccess) && counter == 14 { self.gameWindowViewDelegate?.sendToPremiumPopup(); return}
         
         if counter < gameTextArray.count - 1 {
             counter += 1
@@ -119,7 +122,6 @@ class GameWindowPresenter{
     }
     
     func setCategoryText(text : String) {
-        print("show set category: \(text)")
         let gameTexts = ProvideGameTexts()
         var categoryText = ""
         

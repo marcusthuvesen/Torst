@@ -28,14 +28,19 @@ class HomeDecisionPresenter{
         switch senderTag {
         case 0:
             fetch_JagHarAldrig()
+            GlobalVariables.currentGameKey = "se.marcusthuvesen.Torst.PartialAccess.JagHarAldrig"
         case 1:
             fetch_Pekleken()
+            GlobalVariables.currentGameKey = "se.marcusthuvesen.Torst.PartialAccess.Pekleken"
         case 2:
             fetch_RyggMotRygg()
+            GlobalVariables.currentGameKey = "se.marcusthuvesen.Torst.PartialAccess.RyggMotRygg"
         case 3:
             fetch_Utmaningar()
+            GlobalVariables.currentGameKey = "se.marcusthuvesen.Torst.PartialAccess.Utmaningar"
         case 4:
             fetch_Mix()
+            GlobalVariables.currentGameKey = ""
         default:
             fetch_JagHarAldrig()
         }

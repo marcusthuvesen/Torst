@@ -50,7 +50,6 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     }
     
     func showCategoryLabel() {
-        print("show categorylabel")
         categoryLabel.isHidden = false
     }
     
@@ -59,7 +58,6 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     }
     
     func setCategoryTextOnLabel(categoryText : String) {
-        print("show categorylabel \(categoryText)")
         categoryLabel.text = categoryText
     }
     

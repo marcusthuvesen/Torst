@@ -16,7 +16,8 @@ func isSubscriber() -> Bool {
 class CheckPurchase{
     static let shared = CheckPurchase()
     func checkUserPurchase() {
-       
+        GlobalVariables.hasFullAccess = false
+        GlobalVariables.partialAccessArrayKeys.removeAll()
         do {
             let receipt = try InAppReceipt.localReceipt()
             

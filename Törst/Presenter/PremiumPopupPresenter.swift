@@ -19,5 +19,13 @@ class PremiumPopupPresenter{
     func setPremiumPopupViewDelegate(premiumPopupViewDelegate : PremiumPopupViewDelegate){
         self.premiumPopupViewDelegate = premiumPopupViewDelegate
     }
+    
+    deinit {
+        CheckPurchase.shared.checkUserPurchase()
+    }
+    
+    func fullAccessClickedActions() {
+        IAPService.shared.purchase(product: .fullAccess)
+    }
    
 }

@@ -27,7 +27,10 @@ class IAPService: NSObject {
     
     func restorePurchases(){
         print("resotring purchases")
+        GlobalVariables.hasFullAccess = false
+        GlobalVariables.partialAccessArrayKeys.removeAll()
         paymentQueue.restoreCompletedTransactions()
+        CheckPurchase.shared.checkUserPurchase()
     }
     
 }

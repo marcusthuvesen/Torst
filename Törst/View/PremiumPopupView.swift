@@ -38,5 +38,12 @@ class PremiumPopupView: UIViewController, PremiumPopupViewDelegate{
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func partialAccessClicked(_ sender: Any) {
+        presentPopup(UIStoryboardName: "PremiumCategorySelection", WithIdentifier: "PremiumCategorySelection", VC: self)
+    }
+    
+    @IBAction func fullAccessClicked(_ sender: Any) {
+        premiumPopupViewDelegate.fullAccessClickedActions()
+    }
     
 }

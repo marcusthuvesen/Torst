@@ -33,6 +33,11 @@ func presentPopup(UIStoryboardName : String, WithIdentifier : String, VC: UIView
             VC!.present(sendToVC, animated: true)
         }
         
+        if UIStoryboardName == "PremiumCategorySelection" {
+            let sendToVC = UIStoryboard(name: "PremiumPopup", bundle: nil).instantiateViewController(withIdentifier: WithIdentifier) as! PremiumCategorySelectionView
+            sendToVC.modalPresentationStyle = .overCurrentContext
+            VC!.present(sendToVC, animated: true)
+        }
     }
     
 }
