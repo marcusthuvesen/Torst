@@ -10,8 +10,8 @@ class IAPService: NSObject {
     let paymentQueue = SKPaymentQueue.default()
     
     func getProducts() {
-        let products: Set = [IAPProduct.autoRenewing6Months.rawValue,
-                             IAPProduct.autoRenewing1Month.rawValue]
+        let products: Set = [IAPProduct.fullAccess.rawValue,
+                             IAPProduct.partialAccessJagHarAldrig.rawValue, IAPProduct.partialAccessPekleken.rawValue, IAPProduct.partialAccessRyggMotRygg.rawValue, IAPProduct.partialAccessUtmaningar.rawValue]
         
         let request = SKProductsRequest(productIdentifiers: products)
         request.delegate = self

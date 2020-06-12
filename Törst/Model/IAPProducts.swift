@@ -1,6 +1,9 @@
 import Foundation
 
 enum IAPProduct : String {
-    case autoRenewing1Month = "se.marcusthuvesen.Tinnitus.1MonthSub"
-    case autoRenewing6Months = "se.marcusthuvesen.Tinnitus.6MonthSub"
+    case fullAccess = "se.marcusthuvesen.Torst.FullAccess"
+    case partialAccessJagHarAldrig = "se.marcusthuvesen.Torst.PartialAccess.JagHarAldrig"
+    case partialAccessPekleken = "se.marcusthuvesen.Torst.PartialAccess.Pekleken"
+    case partialAccessUtmaningar = "se.marcusthuvesen.Torst.PartialAccess.Utmaningar"
+    case partialAccessRyggMotRygg = "se.marcusthuvesen.Torst.PartialAccess.RyggMotRygg"
 }

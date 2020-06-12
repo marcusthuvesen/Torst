@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+
+protocol PremiumPopupViewDelegate : NSObjectProtocol{
+    
+}
+
+class PremiumPopupPresenter{
+    weak private var premiumPopupViewDelegate : PremiumPopupViewDelegate?
+    
+    func setPremiumPopupViewDelegate(premiumPopupViewDelegate : PremiumPopupViewDelegate){
+        self.premiumPopupViewDelegate = premiumPopupViewDelegate
+    }
+   
+}

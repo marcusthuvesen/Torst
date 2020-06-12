@@ -8,17 +8,23 @@
 
 import UIKit
 
-class PremiumPopupView: UIViewController {
-
+class PremiumPopupView: UIViewController, PremiumPopupViewDelegate{
+    
     
     @IBOutlet var continueToPaymentOutlet: [UIButton]!
-    
     @IBOutlet weak var topViewCut: UIView!
+    
+    let premiumPopupViewDelegate = PremiumPopupPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       setupPopupUI()
+        
+        setupPopupUI()
+        setupPremiumPopupDelegate()
+    }
+    
+    func setupPremiumPopupDelegate() {
+        premiumPopupViewDelegate.setPremiumPopupViewDelegate(premiumPopupViewDelegate : self)
     }
     
     func setupPopupUI() {

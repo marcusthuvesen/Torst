@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UIApplication.shared.isIdleTimerDisabled = true
         FirebaseApp.configure()
+        IAPService.shared.getProducts()
+        CheckPurchase.shared.checkUserPurchase()
         //Load game texts from FireBase
         return true
     }
