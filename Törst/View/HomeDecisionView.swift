@@ -12,26 +12,9 @@ import FirebaseDatabase
 class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
     @IBOutlet var decisionBtnOutlets: [UIButton]!
-    @IBOutlet weak var lockBottomConstraint: NSLayoutConstraint!
     @IBOutlet var decisionButtonImages: [UIButton]!
     
     let homeDecisionViewDelegate = HomeDecisionPresenter()
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        AppUtility.lockOrientation(.portrait)
-//        // Or to rotate and lock
-//        // AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
-//
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//
-//        // Don't forget to reset when view is being removed
-//        AppUtility.lockOrientation(.all)
-//    }
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,10 +32,10 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
              button.homeDecisionOutlet_UI()
         }
         for button in decisionButtonImages {
-            button.imageView?.contentMode = .scaleAspectFit
+           // button.imageView?.contentMode = .scaleAspectFit
         }
         setupGradientLayer()
-        lockBottomConstraint.constant = self.view.frame.height/15
+       
     }
     
     func sendToGameWindow() {

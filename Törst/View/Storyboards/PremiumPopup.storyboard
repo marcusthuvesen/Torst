@@ -174,7 +174,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="327"/>
                                 <color key="backgroundColor" red="0.51764705882352935" green="0.77647058823529413" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheers" translatesAutoresizingMaskIntoConstraints="NO" id="WH7-jB-z2v">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drinks" translatesAutoresizingMaskIntoConstraints="NO" id="WH7-jB-z2v">
                                 <rect key="frame" x="60" y="84" width="294" height="220"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkl-dt-aTc">
@@ -353,7 +353,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cheers" width="256" height="256"/>
+        <image name="drinks" width="2732" height="2048"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>
