@@ -13,6 +13,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
     @IBOutlet var decisionBtnOutlets: [UIButton]!
     @IBOutlet weak var lockBottomConstraint: NSLayoutConstraint!
+    @IBOutlet var decisionButtonImages: [UIButton]!
     
     let homeDecisionViewDelegate = HomeDecisionPresenter()
     
@@ -45,7 +46,9 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
     func setupHomeDecisionUI() {
         for button in decisionBtnOutlets {
-            button.homeDecisionOutlet_UI()
+             button.homeDecisionOutlet_UI()
+        }
+        for button in decisionButtonImages {
             button.imageView?.contentMode = .scaleAspectFit
         }
         setupGradientLayer()

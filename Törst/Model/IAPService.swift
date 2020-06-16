@@ -51,6 +51,9 @@ extension IAPService: SKPaymentTransactionObserver {
         for transaction in transactions {
             print(transaction.transactionState)
             print(transaction.transactionState.status(), transaction.payment.productIdentifier)
+            if transaction.error != nil {
+                print(transaction.error!)
+            }
         }
     }
 }
