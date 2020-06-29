@@ -10,4 +10,5 @@ target 'Törst' do
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Database'
 	pod 'TPInAppReceipt'
+	pod 'SwiftyStoreKit'
 end
