@@ -20,6 +20,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         super.viewDidLoad()
         setupHomeDecisionDelegate()
         setupHomeDecisionUI()
+        
     }
    
     

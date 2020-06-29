@@ -16,10 +16,6 @@ struct FetchGameTexts {
     
     init() {
         ref = Database.database().reference()
-        //        for i in 0 ... jagHarAldrig.count-1 {
-        //            ref.child("GameTexts").child("JagHarAldrig").child("\(i)").setValue(["\(i)": jagHarAldrig[i]])
-        //        }
-        
     }
     
     func fetchGameTexts(gameType : String, completion: @escaping ([String]) -> ()){

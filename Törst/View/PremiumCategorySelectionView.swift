@@ -25,19 +25,19 @@ class PremiumCategorySelectionView: UIViewController {
     }
     
     @IBAction func categoryClicked(_ sender: UIButton) {
-        
-        switch sender.tag {
-        case 0:
-            IAPService.shared.purchase(product: .partialAccessJagHarAldrig)
-        case 1:
-            IAPService.shared.purchase(product: .partialAccessPekleken)
-        case 2:
-            IAPService.shared.purchase(product: .partialAccessRyggMotRygg)
-        case 3:
-            IAPService.shared.purchase(product: .partialAccessUtmaningar)
-        default:
-            return
-        }
+//        
+//        switch sender.tag {
+//        case 0:
+//            IAPService.shared.purchase(product: .partialAccessJagHarAldrig)
+//        case 1:
+//            IAPService.shared.purchase(product: .partialAccessPekleken)
+//        case 2:
+//            IAPService.shared.purchase(product: .partialAccessRyggMotRygg)
+//        case 3:
+//            IAPService.shared.purchase(product: .partialAccessUtmaningar)
+//        default:
+//            return
+//        }
     }
     
     @IBAction func dismissBtnClicked(_ sender: Any) {

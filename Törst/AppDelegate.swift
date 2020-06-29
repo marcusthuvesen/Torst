@@ -9,22 +9,25 @@
 import UIKit
 import FirebaseDatabase
 import Firebase
+import StoreKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, SKPaymentTransactionObserver {
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.shared.isIdleTimerDisabled = true
         FirebaseApp.configure()
         IAPService.shared.getProducts()
-        CheckPurchase.shared.checkUserPurchase()
+        print("products: \(IAPService.shared.products)")
         //Load game texts from FireBase
         return true
     }
-    
+
 //   var orientationLock = UIInterfaceOrientationMask.all
 //
 //   func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
