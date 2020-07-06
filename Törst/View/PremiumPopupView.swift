@@ -34,12 +34,47 @@ class PremiumPopupView: UIViewController, PremiumPopupViewDelegate{
         topViewCut.topCutView_UI()
     }
     
+    func presentTermsAndConditions() {
+        openUrl(urlStr: "https://torst.flycricket.io/terms.html")
+    }
+    
+    func presentPrivacyPolicy() {
+        openUrl(urlStr: "https://torst.flycricket.io/privacy.html")
+    }
+    
+    func openUrl(urlStr: String!) {
+        if let url = URL(string:urlStr), !url.absoluteString.isEmpty {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
     @IBAction func closePopupAction(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func partialAccessClicked(_ sender: Any) {
         presentPopup(UIStoryboardName: "PremiumCategorySelection", WithIdentifier: "PremiumCategorySelection", VC: self)
+    }
+    
+    @IBAction func termsConditionsClicked(_ sender: Any) {
+        presentTermsAndConditions()
+    }
+    
+    @IBAction func privacyPolicyClicked(_ sender: Any) {
+        presentPrivacyPolicy()
+    }
+    
+    @IBAction func restorePurchasesClicked(_ sender: Any) {
+        IAPService.shared.restorePurchases()
+        presentAlertPopup()
+    }
+    
+    func presentAlertPopup() {
+               let alert = UIAlertController(title: "Återställer", message: "Vi har nu återställt dina köp", preferredStyle: UIAlertController.Style.alert)
+
+               alert.addAction(UIAlertAction(title: "Okej", style: UIAlertAction.Style.default, handler: nil))
+
+               self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func fullAccessClicked(_ sender: Any) {

@@ -13,30 +13,65 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
     @IBOutlet var decisionBtnOutlets: [UIButton]!
     @IBOutlet var decisionButtonImages: [UIButton]!
+    @IBOutlet weak var torstTitleLabel: UILabel!
+    @IBOutlet weak var titleLeftConstraint: NSLayoutConstraint!
     
     let homeDecisionViewDelegate = HomeDecisionPresenter()
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHomeDecisionDelegate()
         setupHomeDecisionUI()
-        
+        changeUIBasedOnDevice()
+        titleLabelAnimation()
     }
-   
+    
+//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//        return UIInterfaceOrientationMask.portrait //return the value as per the required orientation
+//        }
+//
+//    override var shouldAutorotate: Bool {
+//            return false
+//        }
     
     func setupHomeDecisionDelegate(){
         homeDecisionViewDelegate.setHomeDecisionViewDelegate(homeDecisionViewDelegate : self)
     }
     
     func setupHomeDecisionUI() {
+        //titleLeftConstraint.constant = self.view.bounds.width
         for button in decisionBtnOutlets {
-             button.homeDecisionOutlet_UI()
+            button.homeDecisionOutlet_UI()
         }
         for button in decisionButtonImages {
-           // button.imageView?.contentMode = .scaleAspectFit
+            button.titleLabel?.minimumScaleFactor = 0.5
+            button.titleLabel?.adjustsFontSizeToFitWidth = true
         }
         setupGradientLayer()
-       
+    }
+    
+    func titleLabelAnimation() {
+//        let center = self.view.bounds.width/2 + torstTitleLabel.frame.width/2
+//        let left = CGAffineTransform(translationX: -center, y: 0)
+
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
+            self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
+            self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+        
+        
+    }
+    
+    
+    func changeUIBasedOnDevice() {
+        let screenBounds = UIScreen.main.bounds
+        let width = screenBounds.width
+        let height = screenBounds.height
+        
+        print("width & height: \(width) \(height)")
     }
     
     func sendToGameWindow() {
@@ -70,3 +105,4 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
 }
+

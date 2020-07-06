@@ -23,6 +23,14 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         setupGameWindowDelegate()
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscapeLeft //return the value as per the required orientation
+        }
+
+    override var shouldAutorotate: Bool {
+            return true
+        }
+    
     func setupGameWindowDelegate(){
         gameWindowViewDelegate.setGameWindowViewDelegate(gameWindowViewDelegate : self)
     }

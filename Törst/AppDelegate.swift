@@ -14,6 +14,7 @@ import SwiftyStoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SKPaymentTransactionObserver {
+    var window: UIWindow?
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
     }
@@ -43,13 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SKPaymentTransactionObser
         }
         return true
     }
-    
-    //   var orientationLock = UIInterfaceOrientationMask.all
-    //
-    //   func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-    //           return self.orientationLock
-    //   }
-    //    // MARK: UISceneSession Lifecycle
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

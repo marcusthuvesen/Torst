@@ -121,6 +121,9 @@
                                         <state key="normal" title="Återställ köp">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="restorePurchasesClicked:" destination="sEw-OY-rhY" eventType="touchUpInside" id="GkS-Zr-dXA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVa-t1-pSG">
                                         <rect key="frame" x="249" y="455" width="145" height="35"/>
@@ -132,9 +135,12 @@
                                         <state key="normal" title="Intergritetspolicy">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="privacyPolicyClicked:" destination="sEw-OY-rhY" eventType="touchUpInside" id="oCD-rf-ciY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdZ-Z2-OWT">
-                                        <rect key="frame" x="167" y="504" width="80" height="35"/>
+                                        <rect key="frame" x="167" y="489" width="80" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="PtE-gB-Fea"/>
                                             <constraint firstAttribute="height" constant="35" id="jC6-i9-OcU"/>
@@ -143,6 +149,9 @@
                                         <state key="normal" title="Villkor">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="termsConditionsClicked:" destination="sEw-OY-rhY" eventType="touchUpInside" id="3xJ-Da-mFY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.74117647060000003" green="0.42352941179999998" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -154,7 +163,7 @@
                                     <constraint firstAttribute="height" constant="569" id="Fnw-9t-xRy"/>
                                     <constraint firstAttribute="trailing" secondItem="DZ3-cZ-3op" secondAttribute="trailing" constant="16" id="Fyx-At-J9c"/>
                                     <constraint firstItem="DZ3-cZ-3op" firstAttribute="top" secondItem="WqT-3m-GlR" secondAttribute="bottom" constant="50" id="Hwl-ic-SNC"/>
-                                    <constraint firstAttribute="bottom" secondItem="wdZ-Z2-OWT" secondAttribute="bottom" constant="30" id="Kbt-nq-mnl"/>
+                                    <constraint firstAttribute="bottom" secondItem="wdZ-Z2-OWT" secondAttribute="bottom" constant="45" id="Kbt-nq-mnl"/>
                                     <constraint firstAttribute="trailing" secondItem="k7b-QU-W7o" secondAttribute="trailing" constant="20" id="LeS-WO-koz"/>
                                     <constraint firstItem="NVa-t1-pSG" firstAttribute="top" secondItem="Rte-vw-xhc" secondAttribute="bottom" constant="40" id="LkW-i8-fGX"/>
                                     <constraint firstItem="BiZ-iF-pgc" firstAttribute="leading" secondItem="9CC-g2-6Qb" secondAttribute="leading" constant="20" id="NwR-N3-Pey"/>
