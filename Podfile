@@ -11,4 +11,5 @@ target 'Törst' do
 	pod 'Firebase/Database'
 	pod 'TPInAppReceipt'
 	pod 'SwiftyStoreKit'
+	pod 'SwiftGifOrigin'
 end

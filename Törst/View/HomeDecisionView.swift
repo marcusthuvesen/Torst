@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import SwiftGifOrigin
 
 class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
@@ -15,6 +16,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     @IBOutlet var decisionButtonImages: [UIButton]!
     @IBOutlet weak var torstTitleLabel: UILabel!
     @IBOutlet weak var titleLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var mixerBtnOutlet: UIButton!
     
     let homeDecisionViewDelegate = HomeDecisionPresenter()
     
@@ -47,6 +49,14 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
             button.titleLabel?.minimumScaleFactor = 0.5
             button.titleLabel?.adjustsFontSizeToFitWidth = true
         }
+        
+        let gif = UIImage.gif(name: "mixerGif")
+
+        mixerBtnOutlet.imageView?.animationImages = gif?.images
+        mixerBtnOutlet.imageView?.animationDuration = gif!.duration
+        mixerBtnOutlet.imageView?.animationRepeatCount = 1
+        mixerBtnOutlet.imageView?.startAnimating()
+       
         setupGradientLayer()
     }
     
@@ -56,10 +66,12 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
 
         UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
             self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 3, y: 3)
         }, completion: nil)
         
         UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
             self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
         
         

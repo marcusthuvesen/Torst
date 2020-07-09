@@ -76,12 +76,14 @@ PODS:
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.8)
+  - SwiftGifOrigin (1.7.0)
   - SwiftyStoreKit (0.15.0)
   - TPInAppReceipt (2.5)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Database
+  - SwiftGifOrigin
   - SwiftyStoreKit
   - TPInAppReceipt
 
@@ -102,6 +104,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SwiftGifOrigin
     - SwiftyStoreKit
     - TPInAppReceipt
 
@@ -121,9 +124,10 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftyStoreKit: 033d06b6f87955405d3f844a18a7687c2438592a
   TPInAppReceipt: c81e587bb492516b2f5b8f89b56372743343298d
 
-PODFILE CHECKSUM: 26f0a08044c55eece08f71e3796fdd0ca42ebb8e
+PODFILE CHECKSUM: 29c4387f00a30ebce6de2fd396b390c546d0d54e
 
 COCOAPODS: 1.9.1

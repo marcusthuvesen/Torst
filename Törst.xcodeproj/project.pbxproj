@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2500EF78247D9CFA005FCCF5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2500EF77247D9CFA005FCCF5 /* StoreKit.framework */; };
+		251B098A24B7131E0090E52F /* mixerGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 251B098924B7131E0090E52F /* mixerGif.gif */; };
 		254759F7248FA8EA003C0BF8 /* SettingsPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */; };
 		254759F9248FA980003C0BF8 /* SettingsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759F8248FA980003C0BF8 /* SettingsPopupView.swift */; };
 		254759FB248FA9CD003C0BF8 /* SettingsPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759FA248FA9CD003C0BF8 /* SettingsPopupPresenter.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		2500EF77247D9CFA005FCCF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		251B098924B7131E0090E52F /* mixerGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = mixerGif.gif; path = ../../../../../Users/marcusthuvesen/Downloads/mixerGif.gif; sourceTree = "<group>"; };
 		254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsPopup.storyboard; sourceTree = "<group>"; };
 		254759F8248FA980003C0BF8 /* SettingsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopupView.swift; sourceTree = "<group>"; };
 		254759FA248FA9CD003C0BF8 /* SettingsPopupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopupPresenter.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		25C97BF924614FCB00DEE132 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				251B098924B7131E0090E52F /* mixerGif.gif */,
 				2568FF5B246AC67900B77C2B /* GoogleService-Info.plist */,
 				25C97BDF2460643600DEE132 /* AppDelegate.swift */,
 				25C97BE12460643600DEE132 /* SceneDelegate.swift */,
@@ -299,6 +302,7 @@
 				2568FF3C246153F400B77C2B /* Assets.xcassets in Resources */,
 				2568FF5C246AC67900B77C2B /* GoogleService-Info.plist in Resources */,
 				2568FF412461926600B77C2B /* Main.storyboard in Resources */,
+				251B098A24B7131E0090E52F /* mixerGif.gif in Resources */,
 				25D90EFE247430AA00F0B7AF /* InfoPopup.storyboard in Resources */,
 				2568FF4B2469DC8B00B77C2B /* GameWindow.storyboard in Resources */,
 				2568FF6C246D9E2100B77C2B /* PremiumPopup.storyboard in Resources */,

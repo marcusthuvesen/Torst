@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class GameWindowView: UIViewController, GameWindowViewDelegate {
     
     @IBOutlet weak var infoBtnOutlet: UIButton!
