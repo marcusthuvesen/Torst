@@ -21,5 +21,11 @@ extension UIView {
         self.layer.masksToBounds = true
     }
     
+    func infoImgBgImage_UI() {
+        self.layer.cornerRadius = self.frame.height/2
+        self.layer.masksToBounds = true
+        self.layer.masksToBounds = true
+    }
+    
     
 }

@@ -13,6 +13,7 @@ protocol InfoPopupViewDelegate : NSObjectProtocol{
     //func decisionBtnSelected(sender : UIButton)
     func setRulesTextToTextView(rulesText : String)
     func setRulesLabelTextToLabel(rulesLabelText : String)
+    func setRulesImageToUI(rulesImgString : String)
 }
 
 class InfoPopupPresenter{
@@ -22,6 +23,27 @@ class InfoPopupPresenter{
     func setInfoPopupViewDelegate(infoPopupViewDelegate : InfoPopupViewDelegate){
         self.infoPopupViewDelegate = infoPopupViewDelegate
         setupRulesText()
+        setupRulesImages()
+    }
+    
+    func setupRulesImages() {
+        var rulesImageString = ""
+        switch GlobalVariables.gameType {
+        case "JagHarAldrig":
+            rulesImageString = "drinks"
+        case "Pekleken":
+            rulesImageString = "Hand"
+        case "RyggMotRygg":
+            rulesImageString = "chairs2"
+        case "Utmaningar":
+            rulesImageString = "Arms"
+        case "Mix":
+            rulesImageString = "mix"
+        default:
+            rulesImageString = "drinks"
+        }
+        
+        self.infoPopupViewDelegate?.setRulesImageToUI(rulesImgString : rulesImageString)
     }
     
     func setupRulesText() {

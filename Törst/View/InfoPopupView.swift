@@ -15,6 +15,7 @@ class InfoPopupView: UIViewController, InfoPopupViewDelegate {
     @IBOutlet weak var infoBackgroundView: UIView!
     @IBOutlet weak var rulesTextView: UITextView!
     @IBOutlet weak var rulesLabel: UILabel!
+    @IBOutlet weak var infoImgBgView: UIView!
     
     
     let infoPopupViewDelegate = InfoPopupPresenter()
@@ -30,8 +31,13 @@ class InfoPopupView: UIViewController, InfoPopupViewDelegate {
     }
     
     func setupPopupUI() {
-        infoImage.infoImage_UI()
+        infoImgBgView.infoImgBgImage_UI()
         infoBackgroundView.infoBackgroundView_UI()
+    }
+    
+    func setRulesImageToUI(rulesImgString : String) {
+        infoImage.image = UIImage(named: rulesImgString)
+        infoImage.contentMode = .scaleAspectFit
     }
     
     func setRulesTextToTextView(rulesText: String) {
