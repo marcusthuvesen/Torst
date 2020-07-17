@@ -28,6 +28,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         titleLabelAnimation()
     }
     
+ 
 //    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
 //        return UIInterfaceOrientationMask.portrait //return the value as per the required orientation
 //        }
@@ -48,14 +49,14 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         for button in decisionButtonImages {
             button.titleLabel?.minimumScaleFactor = 0.5
             button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.contentMode = .scaleAspectFit
         }
         
-        let gif = UIImage.gif(name: "mixerGif")
-
-        mixerBtnOutlet.imageView?.animationImages = gif?.images
-        mixerBtnOutlet.imageView?.animationDuration = gif!.duration
-        mixerBtnOutlet.imageView?.animationRepeatCount = 1
-        mixerBtnOutlet.imageView?.startAnimating()
+         let gif = UIImage.gif(name: "mixerGif")
+               mixerBtnOutlet.imageView?.animationImages = gif?.images
+               mixerBtnOutlet.imageView?.animationDuration = gif!.duration
+               mixerBtnOutlet.imageView?.animationRepeatCount = 1
+               mixerBtnOutlet.imageView?.startAnimating()
        
         setupGradientLayer()
     }

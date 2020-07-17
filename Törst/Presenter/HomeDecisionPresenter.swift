@@ -21,6 +21,7 @@ class HomeDecisionPresenter{
     
     func setHomeDecisionViewDelegate(homeDecisionViewDelegate : HomeDecisionViewDelegate){
         self.homeDecisionViewDelegate = homeDecisionViewDelegate
+        
     }
     
     func decisionBtnSelected(senderTag : Int) {
@@ -48,19 +49,8 @@ class HomeDecisionPresenter{
     }
     
     func fetch_JagHarAldrig() {
-//        let FetchGameText = FetchGameTexts()
-//        FetchGameText.fetchGameTexts(gameType : "JagHarAldrig") { fetchedArray in
-//            print("inside completion handler : \(fetchedArray)")
-//        }
-        
+
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "JagHarAldrig")
-//        for i in 0 ... GlobalVariables.gameTextArray.count - 1{
-//            let originalText = GlobalVariables.gameTextArray[i]
-//            print(originalText)
-//            GlobalVariables.gameTextArray.remove(at: i)
-//            GlobalVariables.gameTextArray.insert("Jag har aldrig...\n" + originalText, at: i)
-//            print(GlobalVariables.gameTextArray[i])
-//        }
         homeDecisionViewDelegate?.sendToGameWindow()
     }
     
@@ -80,12 +70,12 @@ class HomeDecisionPresenter{
     }
     
     func fetch_Mix() {
-        if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
-        else {
+//        if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
+//        else {
             provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Mix")
             GlobalVariables.gameTextArray.shuffle()
             homeDecisionViewDelegate?.sendToGameWindow()
-        }
+//        }
     }
     
     

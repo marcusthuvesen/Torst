@@ -133,7 +133,7 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbP-vA-aup">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="105.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="12" minY="14" maxX="0.0" maxY="16"/>
+                                        <inset key="imageEdgeInsets" minX="5" minY="14" maxX="0.0" maxY="16"/>
                                         <state key="normal" image="drinks"/>
                                         <connections>
                                             <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="wvU-KT-otd"/>
@@ -142,7 +142,7 @@
                                     <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcU-S0-f52">
                                         <rect key="frame" x="0.0" y="124.5" width="100" height="105.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="8"/>
+                                        <inset key="imageEdgeInsets" minX="-18" minY="4" maxX="0.0" maxY="8"/>
                                         <state key="normal" image="Hand"/>
                                         <connections>
                                             <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="6Wh-ak-j1Z"/>
@@ -170,7 +170,7 @@
                                     <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crJ-zI-PzK">
                                         <rect key="frame" x="0.0" y="497.5" width="100" height="105.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="-16" minY="5" maxX="-6" maxY="-2"/>
+                                        <inset key="imageEdgeInsets" minX="-16" minY="14" maxX="-6" maxY="-2"/>
                                         <state key="normal" image="mix"/>
                                         <connections>
                                             <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="gai-GU-D53"/>

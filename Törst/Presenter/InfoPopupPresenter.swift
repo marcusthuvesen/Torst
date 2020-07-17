@@ -55,7 +55,7 @@ class InfoPopupPresenter{
         switch GlobalVariables.gameType {
         case "JagHarAldrig":
             rulesText = provideRules.jagHarAldrigRules()
-            rulesLabelText = "Jag Har Aldrig"
+            rulesLabelText = "Jag har aldrig"
         case "Pekleken":
             rulesText = provideRules.peklekenRules()
             rulesLabelText = "Pekleken"

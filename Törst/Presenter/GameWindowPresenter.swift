@@ -34,6 +34,7 @@ class GameWindowPresenter{
         setupStatementArray()
         showOrHideCategoryLabel()
         showOrHideRules()
+        //dump(GlobalVariables.gameTextArray)
     }
 
     func infoBtnActions() {
@@ -56,6 +57,21 @@ class GameWindowPresenter{
             gameWindowViewDelegate?.changeBackgroundColor(colorString: "red")
         }
     }
+    
+    func setCategoryColor(text : String) {
+           var backgroundColor = ""
+           let gameTexts = ProvideGameTexts()
+           
+           if gameTexts.handuppräckning.contains(text) { backgroundColor = "red"}
+           if gameTexts.jagHarAldrig.contains(text) { backgroundColor = "blue"}
+           if gameTexts.pekleken.contains(text) { backgroundColor = "purple"}
+           if gameTexts.ryggMotRygg.contains(text) { backgroundColor = "green" }
+           if gameTexts.utmaningar.contains(text) { backgroundColor = "beige" }
+           if gameTexts.kategorier.contains(text) { backgroundColor = "red" }
+        
+        self.gameWindowViewDelegate?.changeBackgroundColor(colorString: backgroundColor)
+           
+       }
     
     func showOrHideCategoryLabel() {
         switch GlobalVariables.gameType {
@@ -109,17 +125,20 @@ class GameWindowPresenter{
         print(GlobalVariables.currentGameKey)
         print(GlobalVariables.hasFullAccess)
         
-        if (!GlobalVariables.partialAccessArrayKeys.contains(GlobalVariables.currentGameKey) && !GlobalVariables.hasFullAccess) && counter == 14 { self.gameWindowViewDelegate?.sendToPremiumPopup(); return}
+//        if (!GlobalVariables.partialAccessArrayKeys.contains(GlobalVariables.currentGameKey) && !GlobalVariables.hasFullAccess) && counter == 14 { self.gameWindowViewDelegate?.sendToPremiumPopup(); return}
         
         if counter < gameTextArray.count - 1 {
             counter += 1
             //If statement is same as in any of the arrays set pre defined category
             setCategoryText(text : self.gameTextArray[counter])
+            setCategoryColor(text : self.gameTextArray[counter])
             self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
         } else {
             counter = 0
         }
     }
+    
+   
     
     func setCategoryText(text : String) {
         let gameTexts = ProvideGameTexts()
