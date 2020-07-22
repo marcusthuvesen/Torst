@@ -49,38 +49,31 @@ class HomeDecisionPresenter{
     }
     
     func fetch_JagHarAldrig() {
-
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "JagHarAldrig")
         homeDecisionViewDelegate?.sendToGameWindow()
-        if GlobalVariables.partialAccessArrayKeys.contains("se.marcusthuvesen.Torst.PartialAccess.JagHarAldrig") || GlobalVariables.hasFullAccess {
-            
-            GlobalVariables.gameTextArray.shuffle()
-            
-        }
+        checkIfNeedsToBeSorted(accessKey: "se.marcusthuvesen.Torst.PartialAccess.JagHarAldrig")
     }
     
     func fetch_Pekleken() {
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Pekleken")
         homeDecisionViewDelegate?.sendToGameWindow()
-        if GlobalVariables.partialAccessArrayKeys.contains("se.marcusthuvesen.Torst.PartialAccess.Pekleken") || GlobalVariables.hasFullAccess {
-            GlobalVariables.gameTextArray.shuffle()
-            
-        }
+        checkIfNeedsToBeSorted(accessKey: "se.marcusthuvesen.Torst.PartialAccess.Pekleken")
     }
     
     func fetch_RyggMotRygg() {
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "RyggMotRygg")
         homeDecisionViewDelegate?.sendToGameWindow()
-        if GlobalVariables.partialAccessArrayKeys.contains("se.marcusthuvesen.Torst.PartialAccess.RyggMotRygg") || GlobalVariables.hasFullAccess {
-            GlobalVariables.gameTextArray.shuffle()
-            
-        }
+        checkIfNeedsToBeSorted(accessKey: "se.marcusthuvesen.Torst.PartialAccess.RyggMotRygg")
     }
     
     func fetch_Utmaningar() {
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Utmaningar")
         homeDecisionViewDelegate?.sendToGameWindow()
-        if GlobalVariables.partialAccessArrayKeys.contains("se.marcusthuvesen.Torst.PartialAccess.Utmaningar") || GlobalVariables.hasFullAccess {
+        checkIfNeedsToBeSorted(accessKey: "se.marcusthuvesen.Torst.PartialAccess.Utmaningar")
+    }
+    
+    func checkIfNeedsToBeSorted(accessKey : String) {
+        if GlobalVariables.partialAccessArrayKeys.contains(accessKey) || GlobalVariables.hasFullAccess {
             GlobalVariables.gameTextArray.shuffle()
             
         }
