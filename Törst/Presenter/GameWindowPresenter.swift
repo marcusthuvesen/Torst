@@ -30,6 +30,7 @@ class GameWindowPresenter{
     
     func setGameWindowViewDelegate(gameWindowViewDelegate : GameWindowViewDelegate){
         self.gameWindowViewDelegate = gameWindowViewDelegate
+        
         setBackgroundColor()
         setupStatementArray()
         showOrHideCategoryLabel()
@@ -92,6 +93,7 @@ class GameWindowPresenter{
     func setupStatementArray() {
         //Check if subscriber, if so randomize array and go, else use first 15 always
         setCategoryText(text : self.gameTextArray[counter])
+        setCategoryColor(text : self.gameTextArray[counter])
         self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
     }
     
@@ -115,7 +117,9 @@ class GameWindowPresenter{
         if counter != 0 {
             counter -= 1
             setCategoryText(text : self.gameTextArray[counter])
+            setCategoryColor(text : self.gameTextArray[counter])
             self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
+            
         }
     }
     

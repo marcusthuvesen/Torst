@@ -28,6 +28,15 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         titleLabelAnimation()
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+//        appdelegate.shouldSupportOrientation = .portrait // set desired orientation
+//
+//        let value = UIInterfaceOrientation.portrait.rawValue // set desired orientation
+//        UIDevice.current.setValue(value, forKey: "orientation")
+//    }
  
 //    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
 //        return UIInterfaceOrientationMask.portrait //return the value as per the required orientation
