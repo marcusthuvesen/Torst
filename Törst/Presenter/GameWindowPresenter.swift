@@ -26,7 +26,7 @@ class GameWindowPresenter{
     weak private var gameWindowViewDelegate : GameWindowViewDelegate?
     var counter = 0
     let gameTextArray = GlobalVariables.gameTextArray
-
+    
     
     func setGameWindowViewDelegate(gameWindowViewDelegate : GameWindowViewDelegate){
         self.gameWindowViewDelegate = gameWindowViewDelegate
@@ -35,9 +35,9 @@ class GameWindowPresenter{
         setupStatementArray()
         showOrHideCategoryLabel()
         showOrHideRules()
-        //dump(GlobalVariables.gameTextArray)
+        dump(GlobalVariables.gameTextArray)
     }
-
+    
     func infoBtnActions() {
         self.gameWindowViewDelegate?.sendToInfoPopup()
     }
@@ -60,19 +60,18 @@ class GameWindowPresenter{
     }
     
     func setCategoryColor(text : String) {
-           var backgroundColor = ""
-           let gameTexts = ProvideGameTexts()
-           
-           if gameTexts.handuppräckning.contains(text) { backgroundColor = "red"}
-           if gameTexts.jagHarAldrig.contains(text) { backgroundColor = "blue"}
-           if gameTexts.pekleken.contains(text) { backgroundColor = "purple"}
-           if gameTexts.ryggMotRygg.contains(text) { backgroundColor = "green" }
-           if gameTexts.utmaningar.contains(text) { backgroundColor = "beige" }
-           if gameTexts.kategorier.contains(text) { backgroundColor = "red" }
+        var backgroundColor = ""
+        let gameTexts = ProvideGameTexts()
+        
+        if gameTexts.handuppräckning.contains(text) { backgroundColor = "red"}
+        if gameTexts.jagHarAldrig.contains(text) { backgroundColor = "blue"}
+        if gameTexts.pekleken.contains(text) { backgroundColor = "purple"}
+        if gameTexts.ryggMotRygg.contains(text) { backgroundColor = "green" }
+        if gameTexts.utmaningar.contains(text) { backgroundColor = "beige" }
+        if gameTexts.kategorier.contains(text) { backgroundColor = "red" }
         
         self.gameWindowViewDelegate?.changeBackgroundColor(colorString: backgroundColor)
-           
-       }
+    }
     
     func showOrHideCategoryLabel() {
         switch GlobalVariables.gameType {
@@ -86,7 +85,6 @@ class GameWindowPresenter{
     }
     
     func showCategoryLabel() {
-        
         self.gameWindowViewDelegate?.showCategoryLabel()
     }
     
@@ -119,7 +117,6 @@ class GameWindowPresenter{
             setCategoryText(text : self.gameTextArray[counter])
             setCategoryColor(text : self.gameTextArray[counter])
             self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
-            
         }
     }
     
@@ -129,7 +126,7 @@ class GameWindowPresenter{
         print(GlobalVariables.currentGameKey)
         print(GlobalVariables.hasFullAccess)
         
-//        if (!GlobalVariables.partialAccessArrayKeys.contains(GlobalVariables.currentGameKey) && !GlobalVariables.hasFullAccess) && counter == 14 { self.gameWindowViewDelegate?.sendToPremiumPopup(); return}
+        if (!GlobalVariables.partialAccessArrayKeys.contains(GlobalVariables.currentGameKey) && !GlobalVariables.hasFullAccess) && counter == 14 { self.gameWindowViewDelegate?.sendToPremiumPopup(); return}
         
         if counter < gameTextArray.count - 1 {
             counter += 1
@@ -142,7 +139,7 @@ class GameWindowPresenter{
         }
     }
     
-   
+    
     
     func setCategoryText(text : String) {
         let gameTexts = ProvideGameTexts()

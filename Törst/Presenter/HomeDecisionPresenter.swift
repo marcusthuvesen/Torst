@@ -52,30 +52,46 @@ class HomeDecisionPresenter{
 
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "JagHarAldrig")
         homeDecisionViewDelegate?.sendToGameWindow()
+        if GlobalVariables.partialAccessArrayKeys.contains("se.marcusthuvesen.Torst.PartialAccess.JagHarAldrig") || GlobalVariables.hasFullAccess {
+            
+            GlobalVariables.gameTextArray.shuffle()
+            
+        }
     }
     
     func fetch_Pekleken() {
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Pekleken")
         homeDecisionViewDelegate?.sendToGameWindow()
+        if GlobalVariables.partialAccessArrayKeys.contains("se.marcusthuvesen.Torst.PartialAccess.Pekleken") || GlobalVariables.hasFullAccess {
+            GlobalVariables.gameTextArray.shuffle()
+            
+        }
     }
     
     func fetch_RyggMotRygg() {
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "RyggMotRygg")
         homeDecisionViewDelegate?.sendToGameWindow()
+        if GlobalVariables.partialAccessArrayKeys.contains("se.marcusthuvesen.Torst.PartialAccess.RyggMotRygg") || GlobalVariables.hasFullAccess {
+            GlobalVariables.gameTextArray.shuffle()
+            
+        }
     }
     
     func fetch_Utmaningar() {
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Utmaningar")
         homeDecisionViewDelegate?.sendToGameWindow()
+        if GlobalVariables.partialAccessArrayKeys.contains("se.marcusthuvesen.Torst.PartialAccess.Utmaningar") || GlobalVariables.hasFullAccess {
+            GlobalVariables.gameTextArray.shuffle()
+            
+        }
     }
     
     func fetch_Mix() {
-//        if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
-//        else {
+        if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
+        else {
             provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Mix")
-            GlobalVariables.gameTextArray.shuffle()
             homeDecisionViewDelegate?.sendToGameWindow()
-//        }
+        }
     }
     
     

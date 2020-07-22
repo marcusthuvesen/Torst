@@ -39,9 +39,7 @@ struct ProvideGameTexts {
         default:
             GlobalVariables.gameTextArray = jagHarAldrig
         }
-        if isSubscriber() {
-            GlobalVariables.gameTextArray.shuffle()
-        }
+       
     }
     
     
