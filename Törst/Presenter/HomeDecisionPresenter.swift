@@ -13,6 +13,7 @@ protocol HomeDecisionViewDelegate : NSObjectProtocol{
     //func decisionBtnSelected(sender : UIButton)
     func sendToGameWindow()
     func sendToPremiumPopup()
+    func removeLock()
 }
 
 class HomeDecisionPresenter{
@@ -21,7 +22,13 @@ class HomeDecisionPresenter{
     
     func setHomeDecisionViewDelegate(homeDecisionViewDelegate : HomeDecisionViewDelegate){
         self.homeDecisionViewDelegate = homeDecisionViewDelegate
-        
+        checkIfPaidUserToChangeUI()
+    }
+    
+    func checkIfPaidUserToChangeUI() {
+        if GlobalVariables.hasFullAccess {
+            self.homeDecisionViewDelegate?.removeLock()
+        }
     }
     
     func decisionBtnSelected(senderTag : Int) {
@@ -80,11 +87,11 @@ class HomeDecisionPresenter{
     }
     
     func fetch_Mix() {
-       // if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
-        //else {
+        if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
+        else {
             provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Mix")
             homeDecisionViewDelegate?.sendToGameWindow()
-     //   }
+        }
     }
     
     

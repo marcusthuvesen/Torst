@@ -15,8 +15,8 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     @IBOutlet var decisionBtnOutlets: [UIButton]!
     @IBOutlet var decisionButtonImages: [UIButton]!
     @IBOutlet weak var torstTitleLabel: UILabel!
-    @IBOutlet weak var titleLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var mixerBtnOutlet: UIButton!
+    @IBOutlet weak var lockImage: UIImageView!
     
     let homeDecisionViewDelegate = HomeDecisionPresenter()
     
@@ -53,8 +53,6 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
     func titleLabelAnimation() {
-//        let center = self.view.bounds.width/2 + torstTitleLabel.frame.width/2
-//        let left = CGAffineTransform(translationX: -center, y: 0)
 
         UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
             self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
@@ -66,15 +64,10 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
             self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
         
-        
     }
     
     
     func changeUIBasedOnDevice() {
-        let screenBounds = UIScreen.main.bounds
-        let width = screenBounds.width
-        let height = screenBounds.height
-        
         let deviceType = UIDevice.modelName
         
         print("ModelName: \(deviceType)")
@@ -83,8 +76,6 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
             print("ModelName 6,7,8")
             changeUIForIphone678()
         }
-            
-        print("width & height: \(width) \(height)")
     }
     
     func changeUIForIphone678() {
@@ -126,6 +117,11 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     func sendToPremiumPopup() {
         presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
     }
+    
+    func removeLock() {
+        lockImage.isHidden = true
+    }
+
     @IBAction func decisionBtnClicked(_ sender: UIButton) {
         homeDecisionViewDelegate.decisionBtnSelected(senderTag: sender.tag)
     }

@@ -211,6 +211,7 @@
                         <viewLayoutGuide key="safeArea" id="xJw-6Z-txp"/>
                     </view>
                     <connections>
+                        <outlet property="lockImage" destination="jUJ-YQ-tHw" id="jq7-bf-YZM"/>
                         <outlet property="mixerBtnOutlet" destination="crJ-zI-PzK" id="iHu-qx-v0S"/>
                         <outlet property="torstTitleLabel" destination="6Ou-dw-9qj" id="G24-Nn-g71"/>
                         <outletCollection property="decisionBtnOutlets" destination="RUy-fk-Mum" collectionClass="NSMutableArray" id="oxt-Xf-iWN"/>
