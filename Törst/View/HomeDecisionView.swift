@@ -28,24 +28,6 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         titleLabelAnimation()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        let appdelegate = UIApplication.shared.delegate as! AppDelegate
-//        appdelegate.shouldSupportOrientation = .portrait // set desired orientation
-//
-//        let value = UIInterfaceOrientation.portrait.rawValue // set desired orientation
-//        UIDevice.current.setValue(value, forKey: "orientation")
-//    }
- 
-//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-//        return UIInterfaceOrientationMask.portrait //return the value as per the required orientation
-//        }
-//
-//    override var shouldAutorotate: Bool {
-//            return false
-//        }
-    
     func setupHomeDecisionDelegate(){
         homeDecisionViewDelegate.setHomeDecisionViewDelegate(homeDecisionViewDelegate : self)
     }
@@ -93,7 +75,48 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         let width = screenBounds.width
         let height = screenBounds.height
         
+        let deviceType = UIDevice.modelName
+        
+        print("ModelName: \(deviceType)")
+        
+        if deviceType.contains("8") || deviceType.contains("7") || deviceType.contains("6"){
+            print("ModelName 6,7,8")
+            changeUIForIphone678()
+        }
+            
         print("width & height: \(width) \(height)")
+    }
+    
+    func changeUIForIphone678() {
+        for button in decisionButtonImages{
+            if button.tag == 0 {
+                button.imageEdgeInsets.left = 8
+                button.imageEdgeInsets.top = 8
+                button.imageEdgeInsets.bottom = 8
+            }
+            
+            else if button.tag == 1 {
+                button.imageEdgeInsets.left = -10
+                button.imageEdgeInsets.top = 0
+                button.imageEdgeInsets.bottom = 0
+            }
+            
+            else if button.tag == 2 {
+                button.imageEdgeInsets.left = 3
+                button.imageEdgeInsets.top = 6
+                button.imageEdgeInsets.bottom = 6
+            }
+            
+            else if button.tag == 3 {
+                button.imageEdgeInsets.left = -9
+            }
+            
+            else{
+                button.imageEdgeInsets.left = -9
+                button.imageEdgeInsets.top = 8
+            }
+            
+        }
     }
     
     func sendToGameWindow() {
@@ -110,7 +133,6 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     @IBAction func settingsBtnClicked(_ sender: UIButton) {
         presentPopup(UIStoryboardName: "SettingsPopup", WithIdentifier: "SettingsPopup", VC: self)
     }
-    
     
     func setupGradientLayer() {
         let gradient: CAGradientLayer = CAGradientLayer()

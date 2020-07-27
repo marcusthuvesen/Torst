@@ -18,7 +18,6 @@ protocol GameWindowViewDelegate : NSObjectProtocol{
     func hideCategoryLabel()
     func setCategoryTextOnLabel(categoryText : String)
     func hideRulesIcon()
-    func showRulesIcon()
 }
 
 class GameWindowPresenter{
@@ -30,12 +29,9 @@ class GameWindowPresenter{
     
     func setGameWindowViewDelegate(gameWindowViewDelegate : GameWindowViewDelegate){
         self.gameWindowViewDelegate = gameWindowViewDelegate
-        
         setBackgroundColor()
         setupStatementArray()
         showOrHideCategoryLabel()
-        showOrHideRules()
-        dump(GlobalVariables.gameTextArray)
     }
     
     func infoBtnActions() {
@@ -94,23 +90,7 @@ class GameWindowPresenter{
         setCategoryColor(text : self.gameTextArray[counter])
         self.gameWindowViewDelegate?.changeStatementUI(statement : self.gameTextArray[counter])
     }
-    
-    func showOrHideRules() {
-        if GlobalVariables.gameType != "Mix" {
-            showRules()
-        } else {
-            hideRules()
-        }
-    }
-    
-    func hideRules() {
-        self.gameWindowViewDelegate?.hideRulesIcon()
-    }
-    
-    func showRules() {
-        self.gameWindowViewDelegate?.showRulesIcon()
-    }
-    
+   
     func previousStatement() {
         if counter != 0 {
             counter -= 1
@@ -122,9 +102,6 @@ class GameWindowPresenter{
     
     func nextStatement() {
         //If not purchased only show 15
-        print(GlobalVariables.partialAccessArrayKeys.contains(GlobalVariables.currentGameKey))
-        print(GlobalVariables.currentGameKey)
-        print(GlobalVariables.hasFullAccess)
         
         if (!GlobalVariables.partialAccessArrayKeys.contains(GlobalVariables.currentGameKey) && !GlobalVariables.hasFullAccess) && counter == 14 { self.gameWindowViewDelegate?.sendToPremiumPopup(); return}
         
@@ -138,8 +115,7 @@ class GameWindowPresenter{
             counter = 0
         }
     }
-    
-    
+
     
     func setCategoryText(text : String) {
         let gameTexts = ProvideGameTexts()
@@ -149,7 +125,7 @@ class GameWindowPresenter{
         if gameTexts.jagHarAldrig.contains(text) { categoryText = "Jag har aldrig..." }
         if gameTexts.pekleken.contains(text) { categoryText = "Pekleken" }
         if gameTexts.ryggMotRygg.contains(text) { categoryText = "Rygg mot rygg" }
-        if gameTexts.utmaningar.contains(text) { categoryText = "Utmaningar" }
+        if gameTexts.utmaningar.contains(text) { categoryText = "Utmaning" }
         if gameTexts.kategorier.contains(text) { categoryText = "Kategorin är..." }
         
         self.gameWindowViewDelegate?.setCategoryTextOnLabel(categoryText: categoryText)

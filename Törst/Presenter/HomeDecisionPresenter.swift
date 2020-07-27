@@ -80,11 +80,11 @@ class HomeDecisionPresenter{
     }
     
     func fetch_Mix() {
-        if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
-        else {
+       // if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
+        //else {
             provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Mix")
             homeDecisionViewDelegate?.sendToGameWindow()
-        }
+     //   }
     }
     
     

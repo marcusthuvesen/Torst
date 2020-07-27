@@ -33,7 +33,7 @@ struct ProvideGameRules {
     }
     
     func mixRules() -> String {
-        let mixRules = "mixregler"
+        let mixRules = "Mix-spelen \"jag har aldrig\", \"pekleken\" och \"utmaningar\" kommer slumpmässigt blandas. Det kommer även blandas in två nya spel, vilka är \"kategori\" och \"handuppräckning\". I \"kategori\" kommer en kategori att presenteras (exempel bilmärken) sedan går man varvet runt och nämner en sak inom kategorin. Tar de för lång tid eller om någon upprepar sig får den dricka. Handuppräckning går ut på att ett dilemma läses upp och alla ska rösta på vad man föredrar samtidigt. Hand upp = första alternativet, hand ner = andra alternativet, minoriteten dricker. Utmaningarna ska utföras av en specifik person som bestäms i medurs turordning."
         return mixRules
     }
     
