@@ -14,5 +14,6 @@ struct GlobalVariables {
     public static var partialAccessArrayKeys = [""]
     public static var hasFullAccess = false
     public static var currentGameKey = ""
+    public static var showMixGif = false
 }
 

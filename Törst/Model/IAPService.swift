@@ -32,6 +32,11 @@ class IAPService: NSObject {
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
+                
+                if purchase.productId == IAPProduct.fullAccess.rawValue{
+                    GlobalVariables.showMixGif = true
+                }
+                
                 CheckPurchase.shared.checkUserPurchase()
             case .error(let error):
                 switch error.code {

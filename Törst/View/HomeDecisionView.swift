@@ -42,14 +42,21 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
             button.titleLabel?.adjustsFontSizeToFitWidth = true
             button.contentMode = .scaleAspectFit
         }
-        
-         let gif = UIImage.gif(name: "mixerGif")
-               mixerBtnOutlet.imageView?.animationImages = gif?.images
-               mixerBtnOutlet.imageView?.animationDuration = gif!.duration
-               mixerBtnOutlet.imageView?.animationRepeatCount = 1
-               mixerBtnOutlet.imageView?.startAnimating()
-       
+    
         setupGradientLayer()
+        
+    }
+    
+    func checkIfShouldShowGif() {
+        if GlobalVariables.showMixGif {
+            let gif = UIImage.gif(name: "mixerGif")
+            mixerBtnOutlet.imageView?.animationImages = gif?.images
+            mixerBtnOutlet.imageView?.animationDuration = gif!.duration
+            mixerBtnOutlet.imageView?.animationRepeatCount = 1
+            mixerBtnOutlet.imageView?.startAnimating()
+            
+            GlobalVariables.showMixGif = false
+        }
     }
     
     func titleLabelAnimation() {

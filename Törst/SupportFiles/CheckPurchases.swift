@@ -23,8 +23,6 @@ class CheckPurchase{
         GlobalVariables.partialAccessArrayKeys.removeAll()
         do {
             
-            
-            
             let receipt = try InAppReceipt.localReceipt()
             
             let fullAccessPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.FullAccess")
