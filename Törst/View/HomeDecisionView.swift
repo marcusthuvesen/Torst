@@ -28,8 +28,27 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         titleLabelAnimation()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
+    }
+    
+    // This stops the controller from rotating
+    override var shouldAutorotate: Bool {
+        true
+    }
+    
     func setupHomeDecisionDelegate(){
         homeDecisionViewDelegate.setHomeDecisionViewDelegate(homeDecisionViewDelegate : self)
+    }
+    
+    // This will rotate it back to portrait once it's presented again
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+      .portrait
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
     }
     
     func setupHomeDecisionUI() {
@@ -44,7 +63,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         }
     
         setupGradientLayer()
-        
+        checkIfShouldShowGif()
     }
     
     func checkIfShouldShowGif() {
@@ -55,6 +74,14 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
             mixerBtnOutlet.imageView?.animationRepeatCount = 1
             mixerBtnOutlet.imageView?.startAnimating()
             
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
+                self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 3, y: 3)
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
+                self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            }, completion: nil)
+            
             GlobalVariables.showMixGif = false
         }
     }
@@ -63,12 +90,10 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
 
         UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
             self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-            self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 3, y: 3)
         }, completion: nil)
         
         UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
             self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
         
     }
@@ -118,7 +143,10 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
     func sendToGameWindow() {
-        presentPopup(UIStoryboardName: "GameWindow", WithIdentifier: "GameWindow", VC: self)
+       // presentPopup(UIStoryboardName: "GameWindow", WithIdentifier: "GameWindow", VC: self)
+        let sendToVC = UIStoryboard(name: "GameWindow", bundle: nil).instantiateViewController(withIdentifier: "GameWindow") as! GameWindowView
+        sendToVC.modalPresentationStyle = .currentContext
+        self.present(sendToVC, animated: true)
     }
     
     func sendToPremiumPopup() {

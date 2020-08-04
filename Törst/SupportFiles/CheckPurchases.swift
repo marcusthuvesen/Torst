@@ -22,9 +22,9 @@ class CheckPurchase{
         GlobalVariables.hasFullAccess = false
         GlobalVariables.partialAccessArrayKeys.removeAll()
         do {
-            
+
             let receipt = try InAppReceipt.localReceipt()
-            
+
             let fullAccessPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.FullAccess")
             let partialAccessJagHarAldrigPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.PartialAccess.JagHarAldrig")
             let partialAccessPeklekenPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.PartialAccess.Pekleken")
@@ -37,7 +37,7 @@ class CheckPurchase{
             } else {
                 GlobalVariables.hasFullAccess = false
             }
-            
+
             if partialAccessJagHarAldrigPurchase.count != 0 {
                 GlobalVariables.partialAccessArrayKeys.append("se.marcusthuvesen.Torst.PartialAccess.JagHarAldrig")
             }
@@ -53,10 +53,10 @@ class CheckPurchase{
             if partialAccessUtmaningarPurchase.count != 0 {
                 GlobalVariables.partialAccessArrayKeys.append("se.marcusthuvesen.Torst.PartialAccess.Utmaningar")
             }
-           
+
         } catch {
             print("no Purhase \(error)")
-            
+
         }
     }
     

@@ -25,12 +25,8 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.landscapeLeft //return the value as per the required orientation
-        }
-
-    override var shouldAutorotate: Bool {
-            return true
-        }
+        return UIInterfaceOrientationMask.all
+    }
     
     func setupGameWindowDelegate(){
         gameWindowViewDelegate.setGameWindowViewDelegate(gameWindowViewDelegate : self)
@@ -46,7 +42,7 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         case "blue":
             backgroundView.backgroundColor = .jagHarAldrigBlue
         case "purple":
-           backgroundView.backgroundColor = .peklekenPurple
+            backgroundView.backgroundColor = .peklekenPurple
         case "green":
             backgroundView.backgroundColor = .ryggMotRyggGreen
         case "beige":

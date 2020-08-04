@@ -26,9 +26,9 @@ class HomeDecisionPresenter{
     }
     
     func checkIfPaidUserToChangeUI() {
-        if GlobalVariables.hasFullAccess {
+     //   if GlobalVariables.hasFullAccess {
             self.homeDecisionViewDelegate?.removeLock()
-        }
+       // }
     }
     
     func decisionBtnSelected(senderTag : Int) {
@@ -80,18 +80,18 @@ class HomeDecisionPresenter{
     }
     
     func checkIfNeedsToBeSorted(accessKey : String) {
-        if GlobalVariables.partialAccessArrayKeys.contains(accessKey) || GlobalVariables.hasFullAccess {
+       // if GlobalVariables.partialAccessArrayKeys.contains(accessKey) || GlobalVariables.hasFullAccess {
             GlobalVariables.gameTextArray.shuffle()
             
-        }
+      //  }
     }
     
     func fetch_Mix() {
-        if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
-        else {
+       // if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
+       // else {
             provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Mix")
             homeDecisionViewDelegate?.sendToGameWindow()
-        }
+      //  }
     }
     
     

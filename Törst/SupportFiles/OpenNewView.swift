@@ -13,7 +13,7 @@ func presentPopup(UIStoryboardName : String, WithIdentifier : String, VC: UIView
     if VC != nil{
         if UIStoryboardName == "GameWindow" {
             let sendToVC = UIStoryboard(name: UIStoryboardName, bundle: nil).instantiateViewController(withIdentifier: WithIdentifier) as! GameWindowView
-            sendToVC.modalPresentationStyle = .overCurrentContext
+            sendToVC.modalPresentationStyle = .currentContext
             VC!.present(sendToVC, animated: true)
         }
         if UIStoryboardName == "PremiumPopup" {
