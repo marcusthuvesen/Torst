@@ -16,6 +16,7 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var categoryLabel: UILabel!
     
+    
     let gameWindowViewDelegate = GameWindowPresenter()
     
     override func viewDidLoad() {
@@ -24,8 +25,19 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         setupGameWindowDelegate()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        sendToOnboarding()
+    }
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.all
+    }
+    
+    func sendToOnboarding() {
+        print("in here")
+        let sendToVC = UIStoryboard(name: "GameWindow", bundle: nil).instantiateViewController(withIdentifier: "OnboardingView") as! OnboardingView
+        sendToVC.modalPresentationStyle = .overCurrentContext
+        self.present(sendToVC, animated: true)
     }
     
     func setupGameWindowDelegate(){
@@ -101,6 +113,7 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     @IBAction func backBtnClicked(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+   
     
 }
 

@@ -42,6 +42,8 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         homeDecisionViewDelegate.setHomeDecisionViewDelegate(homeDecisionViewDelegate : self)
     }
     
+    
+    
     // This will rotate it back to portrait once it's presented again
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
       .portrait
@@ -104,9 +106,50 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         
         print("ModelName: \(deviceType)")
         
-        if deviceType.contains("8") || deviceType.contains("7") || deviceType.contains("6"){
+        if deviceType.contains("8") || deviceType.contains("7") || deviceType.contains("6") {
             print("ModelName 6,7,8")
             changeUIForIphone678()
+        }
+        
+        if deviceType.contains("iPad") {
+            print("Ipad")
+            changeUIForIpad()
+        }
+    }
+    
+    func changeUIForIpad() {
+        for button in decisionBtnOutlets{
+            button.titleLabel?.font =  UIFont(name: "AvenirNext-DemiBold", size: 35)
+            button.titleEdgeInsets.left = -300
+        }
+        for button in decisionButtonImages{
+            if button.tag == 0 {
+                button.imageEdgeInsets.left = 25
+                button.imageEdgeInsets.top = 20
+                button.imageEdgeInsets.bottom = 25
+            }
+            
+            else if button.tag == 1 {
+                button.imageEdgeInsets.left = -19
+                button.imageEdgeInsets.top = 5
+                button.imageEdgeInsets.bottom = 7
+            }
+            
+            else if button.tag == 2 {
+                button.imageEdgeInsets.left = 15
+                button.imageEdgeInsets.top = 18
+                button.imageEdgeInsets.bottom = 18
+            }
+            
+            else if button.tag == 3 {
+                button.imageEdgeInsets.left = -21
+            }
+            
+            else{
+                button.imageEdgeInsets.left = -21
+                button.imageEdgeInsets.top = 20
+            }
+            
         }
     }
     

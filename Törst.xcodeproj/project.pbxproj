@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2500EF78247D9CFA005FCCF5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2500EF77247D9CFA005FCCF5 /* StoreKit.framework */; };
 		251B098A24B7131E0090E52F /* mixerGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 251B098924B7131E0090E52F /* mixerGif.gif */; };
+		253FE8D724DDDBFD00F74983 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FE8D624DDDBFD00F74983 /* OnboardingView.swift */; };
 		254759F7248FA8EA003C0BF8 /* SettingsPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */; };
 		254759F9248FA980003C0BF8 /* SettingsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759F8248FA980003C0BF8 /* SettingsPopupView.swift */; };
 		254759FB248FA9CD003C0BF8 /* SettingsPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759FA248FA9CD003C0BF8 /* SettingsPopupPresenter.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		2500EF77247D9CFA005FCCF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		251B098924B7131E0090E52F /* mixerGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = mixerGif.gif; path = ../../../../../Users/marcusthuvesen/Downloads/mixerGif.gif; sourceTree = "<group>"; };
+		253FE8D624DDDBFD00F74983 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsPopup.storyboard; sourceTree = "<group>"; };
 		254759F8248FA980003C0BF8 /* SettingsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopupView.swift; sourceTree = "<group>"; };
 		254759FA248FA9CD003C0BF8 /* SettingsPopupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopupPresenter.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				25D90EFF2474322A00F0B7AF /* InfoPopupView.swift */,
 				254759F8248FA980003C0BF8 /* SettingsPopupView.swift */,
 				2573B2A62493F68500E6FFD8 /* PremiumCategorySelectionView.swift */,
+				253FE8D624DDDBFD00F74983 /* OnboardingView.swift */,
 				25C97BFB2461519900DEE132 /* Storyboards */,
 			);
 			path = View;
@@ -359,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253FE8D724DDDBFD00F74983 /* OnboardingView.swift in Sources */,
 				2568FF512469E1D700B77C2B /* GlobalColors.swift in Sources */,
 				2573B2A32493AE1D00E6FFD8 /* PremiumPopupPresenter.swift in Sources */,
 				2568FF37246153A000B77C2B /* Info.plist in Sources */,
