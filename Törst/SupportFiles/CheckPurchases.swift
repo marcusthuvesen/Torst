@@ -10,9 +10,6 @@ import Foundation
 import TPInAppReceipt
 import SwiftyStoreKit
 
-func isSubscriber() -> Bool {
-    return true
-}
 
 class CheckPurchase{
     static let shared = CheckPurchase()

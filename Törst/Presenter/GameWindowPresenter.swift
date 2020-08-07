@@ -102,7 +102,6 @@ class GameWindowPresenter{
     
     func nextStatement() {
         //If not purchased only show 15
-        
         if (!GlobalVariables.partialAccessArrayKeys.contains(GlobalVariables.currentGameKey) && !GlobalVariables.hasFullAccess) && counter == 14 { self.gameWindowViewDelegate?.sendToPremiumPopup(); return}
         
         if counter < gameTextArray.count - 1 {

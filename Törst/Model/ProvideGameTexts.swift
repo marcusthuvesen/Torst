@@ -42,8 +42,4 @@ struct ProvideGameTexts {
        
     }
     
-    
-    func jagHarAldrigLocalText() -> [String] {
-        return jagHarAldrig
-    }
 }
