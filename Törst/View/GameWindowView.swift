@@ -11,6 +11,7 @@ import UIKit
 
 class GameWindowView: UIViewController, GameWindowViewDelegate {
     
+    
     @IBOutlet weak var infoBtnOutlet: UIButton!
     @IBOutlet weak var gameTextView: UITextView!
     @IBOutlet var backgroundView: UIView!
@@ -25,20 +26,10 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         setupGameWindowDelegate()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        sendToOnboarding()
-    }
-    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.all
     }
     
-    func sendToOnboarding() {
-        print("in here")
-        let sendToVC = UIStoryboard(name: "GameWindow", bundle: nil).instantiateViewController(withIdentifier: "OnboardingView") as! OnboardingView
-        sendToVC.modalPresentationStyle = .overCurrentContext
-        self.present(sendToVC, animated: true)
-    }
     
     func setupGameWindowDelegate(){
         gameWindowViewDelegate.setGameWindowViewDelegate(gameWindowViewDelegate : self)
@@ -48,6 +39,28 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         infoBtnOutlet.infoOutlet_UI()
         gameTextView.centerText()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        sendToOnboarding()
+    }
+    
+    func sendToOnboarding() {
+        let numberOfTimes = UserDefaults.standard.integer(forKey: "numberOfTimes")
+        
+        if numberOfTimes != 1 { return } else {
+            print("print \(numberOfTimes)")
+            sendToOnboardingView()
+        }
+    }
+    
+    func sendToOnboardingView() {
+        
+        print("send to onboarding")
+        let sendToVC = UIStoryboard(name: "GameWindow", bundle: nil).instantiateViewController(withIdentifier: "OnboardingView") as! OnboardingView
+        sendToVC.modalPresentationStyle = .overCurrentContext
+        self.present(sendToVC, animated: true)
+    }
+    
     
     func changeBackgroundColor(colorString : String) {
         switch colorString {

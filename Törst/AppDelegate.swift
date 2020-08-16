@@ -42,7 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SKPaymentTransactionObser
                 }
             }
         }
+        howManyTimesOpenedApp()
         return true
+    }
+    
+    func howManyTimesOpenedApp() {
+        let numberOfTimes = UserDefaults.standard.integer(forKey: "numberOfTimes")
+        print("print: \(numberOfTimes)")
+        UserDefaults.standard.set(numberOfTimes+1, forKey: "numberOfTimes")
     }
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {

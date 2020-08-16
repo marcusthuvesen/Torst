@@ -52,7 +52,6 @@ class HomeDecisionPresenter{
         default:
             fetch_JagHarAldrig()
         }
-        
     }
     
     func fetch_JagHarAldrig() {

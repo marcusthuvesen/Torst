@@ -14,7 +14,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
     @IBOutlet var decisionBtnOutlets: [UIButton]!
     @IBOutlet var decisionButtonImages: [UIButton]!
-    @IBOutlet weak var torstTitleLabel: UILabel!
+
     @IBOutlet weak var mixerBtnOutlet: UIButton!
     @IBOutlet weak var lockImage: UIImageView!
     
@@ -91,11 +91,11 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     func titleLabelAnimation() {
 
         UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
-            self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+          //  self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }, completion: nil)
         
         UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
-            self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+          //  self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
         
     }
