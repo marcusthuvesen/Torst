@@ -81,7 +81,6 @@ class HomeDecisionPresenter{
     func checkIfNeedsToBeSorted(accessKey : String) {
         if GlobalVariables.partialAccessArrayKeys.contains(accessKey) || GlobalVariables.hasFullAccess {
             GlobalVariables.gameTextArray.shuffle()
-            
         }
     }
     
@@ -89,6 +88,7 @@ class HomeDecisionPresenter{
         if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
         else {
             provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Mix")
+            GlobalVariables.gameTextArray.shuffle()
             homeDecisionViewDelegate?.sendToGameWindow()
         }
     }

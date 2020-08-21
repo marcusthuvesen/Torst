@@ -125,7 +125,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="105.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="4" minY="14" maxX="0.0" maxY="16"/>
-                                        <state key="normal" image="drinks2"/>
+                                        <state key="normal" image="drinks"/>
                                         <connections>
                                             <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="wvU-KT-otd"/>
                                         </connections>
@@ -233,7 +233,7 @@
         <image name="Arms" width="2732" height="2048"/>
         <image name="Hand" width="2732" height="2048"/>
         <image name="chairs2" width="2732" height="2048"/>
-        <image name="drinks2" width="2732" height="2048"/>
+        <image name="drinks" width="2732" height="2048"/>
         <image name="lock (2)" width="64" height="64"/>
         <image name="mix" width="2732" height="2048"/>
         <image name="settings" width="32" height="32"/>

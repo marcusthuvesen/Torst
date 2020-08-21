@@ -54,8 +54,6 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     }
     
     func sendToOnboardingView() {
-        
-        print("send to onboarding")
         let sendToVC = UIStoryboard(name: "GameWindow", bundle: nil).instantiateViewController(withIdentifier: "OnboardingView") as! OnboardingView
         sendToVC.modalPresentationStyle = .overCurrentContext
         self.present(sendToVC, animated: true)

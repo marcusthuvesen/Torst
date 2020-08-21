@@ -12,7 +12,7 @@ import Foundation
 struct ProvideGameRules {
     
     func jagHarAldrigRules() -> String {
-        let jagHarAldrigRules = "Personen med telefonen läser upp påståendena som startar med \"jag har aldrig\" alla som gjort det som läses upp ska dricka, om endast en person dricker måste man förklara/beskriva händelsen."
+        let jagHarAldrigRules = "Personen med telefonen läser upp påståendena som startar med \"jag har aldrig\".\n\nAlla som gjort det som läses upp ska dricka, om endast en person dricker måste man förklara/beskriva händelsen."
         return jagHarAldrigRules
     }
     
@@ -28,12 +28,12 @@ struct ProvideGameRules {
     }
     
     func utmaningarRules() -> String {
-        let utmaningarRules = "Personen med telefonen läser upp en utmaning till personen till vänster och fortsätter sedan runt i gruppen. Om deltagaren inte vill/kan göra utmaningen ska den dricka 5 klunkar."
+        let utmaningarRules = "Deltagaren med telefonen läser upp en utmaning till personen till vänster och fortsätter sedan runt i gruppen.\n\nOm deltagaren inte vill/kan göra utmaningen ska den dricka 5 klunkar."
         return utmaningarRules
     }
     
     func mixRules() -> String {
-        let mixRules = "Mix-spelen \"jag har aldrig\", \"pekleken\" och \"utmaningar\" kommer slumpmässigt blandas. Det kommer även blandas in två nya spel, vilka är \"kategori\" och \"handuppräckning\". I \"kategori\" kommer en kategori att presenteras (exempel bilmärken) sedan går man varvet runt och nämner en sak inom kategorin. Tar de för lång tid eller om någon upprepar sig får den dricka. Handuppräckning går ut på att ett dilemma läses upp och alla ska rösta på vad man föredrar samtidigt. Hand upp = första alternativet, hand ner = andra alternativet, minoriteten dricker. Utmaningarna ska utföras av en specifik person som bestäms i medurs turordning."
+        let mixRules = "Spelen \"jag har aldrig\", \"pekleken\" och \"utmaningar\" kommer slumpmässigt blandas. Det kommer även blandas in två nya spel, vilka är \"kategori\" och \"handuppräckning\".\n\nI \"kategori\" kommer en kategori att presenteras (t.ex. bilmärken) sedan går man varvet runt och nämner en sak inom kategorin. Tar de för lång tid eller om någon upprepar sig får den dricka.\n\nHanduppräckning går ut på att ett dilemma läses upp och alla ska rösta på vad man föredrar samtidigt, minoriteten dricker.\nHand upp = första alternativet\nHand ner = andra alternativet\n\nUtmaningarna ska utföras av en specifik person som bestäms i medurs turordning."
         return mixRules
     }
     
