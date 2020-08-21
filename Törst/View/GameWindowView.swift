@@ -50,6 +50,7 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         if numberOfTimes != 1 { return } else {
             print("print \(numberOfTimes)")
             sendToOnboardingView()
+            UserDefaults.standard.set(numberOfTimes+1, forKey: "numberOfTimes")
         }
     }
     
