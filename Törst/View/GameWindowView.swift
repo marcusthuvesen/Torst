@@ -103,7 +103,10 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     }
     
     func sendToPremiumPopup() {
-        presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
+        //presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
+        let sendToVC = UIStoryboard(name: "PremiumPopup", bundle: nil).instantiateViewController(withIdentifier: "PremiumPopup") as! PremiumPopupView
+        sendToVC.modalPresentationStyle = .currentContext
+        self.present(sendToVC, animated: true)
     }
     
     func sendToInfoPopup() {

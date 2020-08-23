@@ -36,18 +36,21 @@ class SettingsPopupView: UIViewController, SettingsPopupViewDelegate{
     }
     
     func presentAlertPopup() {
-         // create the alert
-               let alert = UIAlertController(title: "Återställer", message: "Vi har nu återställt dina köp", preferredStyle: UIAlertController.Style.alert)
-
-               // add an action (button)
-               alert.addAction(UIAlertAction(title: "Okej", style: UIAlertAction.Style.default, handler: nil))
-
-               // show the alert
-               self.present(alert, animated: true, completion: nil)
+        // create the alert
+        let alert = UIAlertController(title: "Återställer", message: "Vi har nu återställt dina köp", preferredStyle: UIAlertController.Style.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Okej", style: UIAlertAction.Style.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     func presentPremiumPopup() {
-        presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
+        let sendToVC = UIStoryboard(name: "PremiumPopup", bundle: nil).instantiateViewController(withIdentifier: "PremiumPopup") as! PremiumPopupView
+        sendToVC.modalPresentationStyle = .currentContext
+        self.present(sendToVC, animated: true)
+        //presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
     }
     
     func presentTermsAndConditions() {

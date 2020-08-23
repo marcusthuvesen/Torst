@@ -31,6 +31,8 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         let value = UIInterfaceOrientation.portrait.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
+        checkIfShouldShowGif()
+        homeDecisionViewDelegate.checkIfPaidUserToChangeUI()
     }
     
     // This stops the controller from rotating
@@ -76,11 +78,11 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
             mixerBtnOutlet.imageView?.animationRepeatCount = 1
             mixerBtnOutlet.imageView?.startAnimating()
             
-            UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
+            UIView.animate(withDuration: 1.0, delay: 0.3, options: [], animations: {
                 self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 3, y: 3)
             }, completion: nil)
             
-            UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
+            UIView.animate(withDuration: 1.0, delay: 1.3, options: [], animations: {
                 self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }, completion: nil)
             
@@ -193,7 +195,10 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
     func sendToPremiumPopup() {
-        presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
+        let sendToVC = UIStoryboard(name: "PremiumPopup", bundle: nil).instantiateViewController(withIdentifier: "PremiumPopup") as! PremiumPopupView
+        sendToVC.modalPresentationStyle = .currentContext
+        self.present(sendToVC, animated: true)
+       // presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
     }
     
     func removeLock() {
