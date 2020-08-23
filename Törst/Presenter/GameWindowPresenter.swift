@@ -33,10 +33,7 @@ class GameWindowPresenter{
         setupStatementArray()
         showOrHideCategoryLabel()
     }
-    
-    
-    
-    
+
     func infoBtnActions() {
         self.gameWindowViewDelegate?.sendToInfoPopup()
     }

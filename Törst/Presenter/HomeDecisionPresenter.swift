@@ -56,31 +56,35 @@ class HomeDecisionPresenter{
     
     func fetch_JagHarAldrig() {
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "JagHarAldrig")
-        homeDecisionViewDelegate?.sendToGameWindow()
         checkIfNeedsToBeSorted(accessKey: "se.marcusthuvesen.Torst.PartialAccess.JagHarAldrig")
+        homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_Pekleken() {
+        
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Pekleken")
-        homeDecisionViewDelegate?.sendToGameWindow()
         checkIfNeedsToBeSorted(accessKey: "se.marcusthuvesen.Torst.PartialAccess.Pekleken")
+        homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_RyggMotRygg() {
+        
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "RyggMotRygg")
-        homeDecisionViewDelegate?.sendToGameWindow()
         checkIfNeedsToBeSorted(accessKey: "se.marcusthuvesen.Torst.PartialAccess.RyggMotRygg")
+        homeDecisionViewDelegate?.sendToGameWindow()
+        
     }
     
     func fetch_Utmaningar() {
         provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Utmaningar")
-        homeDecisionViewDelegate?.sendToGameWindow()
         checkIfNeedsToBeSorted(accessKey: "se.marcusthuvesen.Torst.PartialAccess.Utmaningar")
+        homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func checkIfNeedsToBeSorted(accessKey : String) {
         if GlobalVariables.partialAccessArrayKeys.contains(accessKey) || GlobalVariables.hasFullAccess {
             GlobalVariables.gameTextArray.shuffle()
+            dump(GlobalVariables.gameTextArray)
         }
     }
     

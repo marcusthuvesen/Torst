@@ -16,6 +16,7 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     @IBOutlet weak var gameTextView: UITextView!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     
     
     let gameWindowViewDelegate = GameWindowPresenter()
@@ -42,6 +43,12 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         sendToOnboarding()
+    }
+    
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        print("250")
+        textViewHeightConstraint.constant = 250
     }
     
     func sendToOnboarding() {
@@ -103,7 +110,6 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     }
     
     func sendToPremiumPopup() {
-        //presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
         let sendToVC = UIStoryboard(name: "PremiumPopup", bundle: nil).instantiateViewController(withIdentifier: "PremiumPopup") as! PremiumPopupView
         sendToVC.modalPresentationStyle = .currentContext
         self.present(sendToVC, animated: true)
