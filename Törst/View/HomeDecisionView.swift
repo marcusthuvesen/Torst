@@ -14,11 +14,12 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
     @IBOutlet var decisionBtnOutlets: [UIButton]!
     @IBOutlet var decisionButtonImages: [UIButton]!
-
+    
     @IBOutlet weak var mixerBtnOutlet: UIButton!
     @IBOutlet weak var lockImage: UIImageView!
     
     let homeDecisionViewDelegate = HomeDecisionPresenter()
+    var alreadyShownAlert = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         setupHomeDecisionUI()
         changeUIBasedOnDevice()
         titleLabelAnimation()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,11 +35,32 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         UIDevice.current.setValue(value, forKey: "orientation")
         checkIfShouldShowGif()
         homeDecisionViewDelegate.checkIfPaidUserToChangeUI()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showPopupAlert()
     }
     
     // This stops the controller from rotating
     override var shouldAutorotate: Bool {
         true
+    }
+    
+    func showPopupAlert() {
+        
+        if alreadyShownAlert { return }
+        // create the alert
+        let alert = UIAlertController(title: "Varning", message: "Drick ansvarsfullt. Genom att fortsätta, samtycker ni till att du själv ansvarar för eventuella konsekvenser som kan uppstå i genom att ni använder Törst.", preferredStyle: UIAlertController.Style.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Okej", style: UIAlertAction.Style.default, handler: nil))
+        
+        alert.overrideUserInterfaceStyle = .dark
+        
+        // show the alert
+        alreadyShownAlert = true
+        self.present(alert, animated: true, completion: nil)
     }
     
     func setupHomeDecisionDelegate(){
@@ -48,9 +71,9 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
     // This will rotate it back to portrait once it's presented again
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-      .portrait
+        .portrait
     }
-
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.portrait
     }
@@ -65,7 +88,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
             button.titleLabel?.adjustsFontSizeToFitWidth = true
             button.contentMode = .scaleAspectFit
         }
-    
+        
         setupGradientLayer()
         checkIfShouldShowGif()
     }
@@ -91,13 +114,13 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
     func titleLabelAnimation() {
-
+        
         UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
-          //  self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            //  self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }, completion: nil)
         
         UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
-          //  self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            //  self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
         
     }
@@ -130,23 +153,23 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
                 button.imageEdgeInsets.top = 20
                 button.imageEdgeInsets.bottom = 25
             }
-            
+                
             else if button.tag == 1 {
                 button.imageEdgeInsets.left = -19
                 button.imageEdgeInsets.top = 5
                 button.imageEdgeInsets.bottom = 7
             }
-            
+                
             else if button.tag == 2 {
                 button.imageEdgeInsets.left = 15
                 button.imageEdgeInsets.top = 18
                 button.imageEdgeInsets.bottom = 18
             }
-            
+                
             else if button.tag == 3 {
                 button.imageEdgeInsets.left = -21
             }
-            
+                
             else{
                 button.imageEdgeInsets.left = -21
                 button.imageEdgeInsets.top = 20
@@ -162,23 +185,23 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
                 button.imageEdgeInsets.top = 8
                 button.imageEdgeInsets.bottom = 8
             }
-            
+                
             else if button.tag == 1 {
                 button.imageEdgeInsets.left = -10
                 button.imageEdgeInsets.top = 0
                 button.imageEdgeInsets.bottom = 0
             }
-            
+                
             else if button.tag == 2 {
                 button.imageEdgeInsets.left = 3
                 button.imageEdgeInsets.top = 6
                 button.imageEdgeInsets.bottom = 6
             }
-            
+                
             else if button.tag == 3 {
                 button.imageEdgeInsets.left = -9
             }
-            
+                
             else{
                 button.imageEdgeInsets.left = -9
                 button.imageEdgeInsets.top = 8
@@ -188,7 +211,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
     func sendToGameWindow() {
-       // presentPopup(UIStoryboardName: "GameWindow", WithIdentifier: "GameWindow", VC: self)
+        // presentPopup(UIStoryboardName: "GameWindow", WithIdentifier: "GameWindow", VC: self)
         let sendToVC = UIStoryboard(name: "GameWindow", bundle: nil).instantiateViewController(withIdentifier: "GameWindow") as! GameWindowView
         sendToVC.modalPresentationStyle = .currentContext
         self.present(sendToVC, animated: true)
@@ -198,13 +221,13 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         let sendToVC = UIStoryboard(name: "PremiumPopup", bundle: nil).instantiateViewController(withIdentifier: "PremiumPopup") as! PremiumPopupView
         sendToVC.modalPresentationStyle = .currentContext
         self.present(sendToVC, animated: true)
-       // presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
+        // presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
     }
     
     func removeLock() {
         lockImage.isHidden = true
     }
-
+    
     @IBAction func decisionBtnClicked(_ sender: UIButton) {
         homeDecisionViewDelegate.decisionBtnSelected(senderTag: sender.tag)
     }

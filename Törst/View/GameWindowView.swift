@@ -25,11 +25,14 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         super.viewDidLoad()
         setupUI()
         setupGameWindowDelegate()
+        
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.all
     }
+    
+    
     
     
     func setupGameWindowDelegate(){
