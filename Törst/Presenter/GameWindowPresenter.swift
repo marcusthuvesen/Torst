@@ -32,6 +32,7 @@ class GameWindowPresenter{
         setBackgroundColor()
         setupStatementArray()
         showOrHideCategoryLabel()
+        print("har fullaccess \(GlobalVariables.hasFullAccess)")
     }
 
     func infoBtnActions() {

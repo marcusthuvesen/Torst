@@ -51,7 +51,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         
         if alreadyShownAlert { return }
         // create the alert
-        let alert = UIAlertController(title: "Varning", message: "Drick ansvarsfullt. Genom att fortsätta, samtycker ni till att du själv ansvarar för eventuella konsekvenser som kan uppstå i genom att ni använder Törst.", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Varning", message: "Drick ansvarsfullt. Genom att fortsätta, samtycker ni till att du själv ansvarar för eventuella konsekvenser som kan uppstå genom att ni använder Törst.", preferredStyle: UIAlertController.Style.alert)
         
         // add an action (button)
         alert.addAction(UIAlertAction(title: "Okej", style: UIAlertAction.Style.default, handler: nil))

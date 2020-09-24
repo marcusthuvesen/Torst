@@ -22,11 +22,11 @@ class CheckPurchase{
 
             let receipt = try InAppReceipt.localReceipt()
 
-            let fullAccessPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.FullAccess")
-            let partialAccessJagHarAldrigPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.PartialAccess.JagHarAldrig")
-            let partialAccessPeklekenPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.PartialAccess.Pekleken")
-            let partialAccessRyggMotRyggPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.PartialAccess.RyggMotRygg")
-            let partialAccessUtmaningarPurchase = receipt.purchases(ofProductIdentifier: "se.marcusthuvesen.Torst.PartialAccess.Utmaningar")
+            let fullAccessPurchase = receipt.purchases(ofProductIdentifier: IAPProduct.fullAccess.rawValue)
+            let partialAccessJagHarAldrigPurchase = receipt.purchases(ofProductIdentifier: IAPProduct.partialAccessJagHarAldrig.rawValue)
+            let partialAccessPeklekenPurchase = receipt.purchases(ofProductIdentifier: IAPProduct.partialAccessPekleken.rawValue)
+            let partialAccessRyggMotRyggPurchase = receipt.purchases(ofProductIdentifier: IAPProduct.partialAccessRyggMotRygg.rawValue)
+            let partialAccessUtmaningarPurchase = receipt.purchases(ofProductIdentifier: IAPProduct.partialAccessUtmaningar.rawValue)
             print("fullaccesspurchasecount = \(fullAccessPurchase.count)")
             if fullAccessPurchase.count != 0{
                 GlobalVariables.hasFullAccess = true
@@ -36,19 +36,19 @@ class CheckPurchase{
             }
 
             if partialAccessJagHarAldrigPurchase.count != 0 {
-                GlobalVariables.partialAccessArrayKeys.append("se.marcusthuvesen.Torst.PartialAccess.JagHarAldrig")
+                GlobalVariables.partialAccessArrayKeys.append(IAPProduct.partialAccessJagHarAldrig.rawValue)
             }
 
             if partialAccessPeklekenPurchase.count != 0 {
-                GlobalVariables.partialAccessArrayKeys.append("se.marcusthuvesen.Torst.PartialAccess.Pekleken")
+                GlobalVariables.partialAccessArrayKeys.append(IAPProduct.partialAccessPekleken.rawValue)
             }
 
             if partialAccessRyggMotRyggPurchase.count != 0 {
-                GlobalVariables.partialAccessArrayKeys.append("se.marcusthuvesen.Torst.PartialAccess.RyggMotRygg")
+                GlobalVariables.partialAccessArrayKeys.append(IAPProduct.partialAccessRyggMotRygg.rawValue)
             }
 
             if partialAccessUtmaningarPurchase.count != 0 {
-                GlobalVariables.partialAccessArrayKeys.append("se.marcusthuvesen.Torst.PartialAccess.Utmaningar")
+                GlobalVariables.partialAccessArrayKeys.append(IAPProduct.partialAccessUtmaningar.rawValue)
             }
 
         } catch {
