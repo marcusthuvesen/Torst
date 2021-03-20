@@ -18,22 +18,17 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     
-    
     let gameWindowViewDelegate = GameWindowPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupGameWindowDelegate()
-        
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.all
     }
-    
-    
-    
     
     func setupGameWindowDelegate(){
         gameWindowViewDelegate.setGameWindowViewDelegate(gameWindowViewDelegate : self)
@@ -103,12 +98,10 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     func animateTextLabel() {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: [], animations: {
             self.gameTextView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-            self.categoryLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }, completion: nil)
         
         UIView.animate(withDuration: 0.1, delay: 0.1, options: [], animations: {
             self.gameTextView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            self.categoryLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
     

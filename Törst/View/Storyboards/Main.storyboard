@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1q2-jk-HeP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1q2-jk-HeP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <!--Home Decision View-->
         <scene sceneID="LhN-L0-4l3">
             <objects>
-                <viewController id="1q2-jk-HeP" customClass="HomeDecisionView" customModule="To_rst" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1q2-jk-HeP" customClass="HomeDecisionView" customModule="To_rst" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dC7-tv-fjj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,9 +95,9 @@
                                             <action selector="decisionBtnClicked:" destination="1q2-jk-HeP" eventType="touchUpInside" id="o2w-5X-BB3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpu-ra-If7">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpu-ra-If7" colorLabel="IBBuiltInLabel-Red">
                                         <rect key="frame" x="0.0" y="497.5" width="374" height="105.5"/>
-                                        <color key="backgroundColor" red="0.93725490196078431" green="0.50872461946763403" blue="0.43165397022660901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.50980392156862742" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                         <inset key="titleEdgeInsets" minX="-195" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
@@ -185,6 +186,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="xJw-6Z-txp"/>
                         <color key="backgroundColor" red="0.03021825445606378" green="0.16461215844144253" blue="0.30589774932815761" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UJX-y2-zmL" firstAttribute="leading" secondItem="xJw-6Z-txp" secondAttribute="leading" constant="20" id="2Xb-eC-d1g"/>
@@ -207,7 +209,6 @@
                             <constraint firstItem="7bA-uU-lQY" firstAttribute="centerX" secondItem="dC7-tv-fjj" secondAttribute="centerX" id="qeG-m2-f4t"/>
                             <constraint firstItem="xJw-6Z-txp" firstAttribute="trailing" secondItem="WKg-i9-ato" secondAttribute="trailing" constant="45" id="sHt-Gx-VW3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="xJw-6Z-txp"/>
                     </view>
                     <connections>
                         <outlet property="lockImage" destination="jUJ-YQ-tHw" id="jq7-bf-YZM"/>

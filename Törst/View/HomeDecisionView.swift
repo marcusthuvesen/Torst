@@ -26,8 +26,6 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         setupHomeDecisionDelegate()
         setupHomeDecisionUI()
         changeUIBasedOnDevice()
-        titleLabelAnimation()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,14 +33,12 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         UIDevice.current.setValue(value, forKey: "orientation")
         checkIfShouldShowGif()
         homeDecisionViewDelegate.checkIfPaidUserToChangeUI()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         showPopupAlert()
     }
     
-    // This stops the controller from rotating
     override var shouldAutorotate: Bool {
         true
     }
@@ -50,15 +46,13 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     func showPopupAlert() {
         
         if alreadyShownAlert { return }
-        // create the alert
+
         let alert = UIAlertController(title: "Varning", message: "Drick ansvarsfullt. Genom att fortsätta, samtycker ni till att du själv ansvarar för eventuella konsekvenser som kan uppstå genom att ni använder Törst.", preferredStyle: UIAlertController.Style.alert)
-        
-        // add an action (button)
+      
         alert.addAction(UIAlertAction(title: "Okej", style: UIAlertAction.Style.default, handler: nil))
         
         alert.overrideUserInterfaceStyle = .dark
-        
-        // show the alert
+     
         alreadyShownAlert = true
         self.present(alert, animated: true, completion: nil)
     }
@@ -66,10 +60,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     func setupHomeDecisionDelegate(){
         homeDecisionViewDelegate.setHomeDecisionViewDelegate(homeDecisionViewDelegate : self)
     }
-    
-    
-    
-    // This will rotate it back to portrait once it's presented again
+
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         .portrait
     }
@@ -79,7 +70,6 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
     func setupHomeDecisionUI() {
-        //titleLeftConstraint.constant = self.view.bounds.width
         for button in decisionBtnOutlets {
             button.homeDecisionOutlet_UI()
         }
@@ -113,18 +103,27 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         }
     }
     
-    func titleLabelAnimation() {
+    func animateClickedBtn(senderTag: Int) {
         
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
-            //  self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: [], animations: {
+            self.decisionButtonImages[senderTag].transform = CGAffineTransform(scaleX: 3, y: 3)
         }, completion: nil)
         
-        UIView.animate(withDuration: 1.0, delay: 1.0, options: [], animations: {
-            //  self.torstTitleLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        UIView.animate(withDuration: 0.4, delay: 0.4, options: [], animations: {
+            self.decisionButtonImages[senderTag].transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+   
+        
+        /*
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: [], animations: {
+            self.decisionButtonImages[senderTag].transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/8))
         }, completion: nil)
         
+        UIView.animate(withDuration: 0.4, delay: 0.5, options: [], animations: {
+            self.decisionButtonImages[senderTag].transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/8))
+        }, completion: nil)
+        */
     }
-    
     
     func changeUIBasedOnDevice() {
         let deviceType = UIDevice.modelName
@@ -174,7 +173,6 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
                 button.imageEdgeInsets.left = -21
                 button.imageEdgeInsets.top = 20
             }
-            
         }
     }
     
@@ -206,12 +204,10 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
                 button.imageEdgeInsets.left = -9
                 button.imageEdgeInsets.top = 8
             }
-            
         }
     }
     
     func sendToGameWindow() {
-        // presentPopup(UIStoryboardName: "GameWindow", WithIdentifier: "GameWindow", VC: self)
         let sendToVC = UIStoryboard(name: "GameWindow", bundle: nil).instantiateViewController(withIdentifier: "GameWindow") as! GameWindowView
         sendToVC.modalPresentationStyle = .currentContext
         self.present(sendToVC, animated: true)
@@ -221,7 +217,6 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         let sendToVC = UIStoryboard(name: "PremiumPopup", bundle: nil).instantiateViewController(withIdentifier: "PremiumPopup") as! PremiumPopupView
         sendToVC.modalPresentationStyle = .currentContext
         self.present(sendToVC, animated: true)
-        // presentPopup(UIStoryboardName: "PremiumPopup", WithIdentifier: "PremiumPopup", VC: self)
     }
     
     func removeLock() {
