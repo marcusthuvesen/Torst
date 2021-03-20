@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2500EF78247D9CFA005FCCF5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2500EF77247D9CFA005FCCF5 /* StoreKit.framework */; };
-		251B098A24B7131E0090E52F /* mixerGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 251B098924B7131E0090E52F /* mixerGif.gif */; };
 		253FE8D724DDDBFD00F74983 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FE8D624DDDBFD00F74983 /* OnboardingView.swift */; };
 		254759F7248FA8EA003C0BF8 /* SettingsPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */; };
 		254759F9248FA980003C0BF8 /* SettingsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759F8248FA980003C0BF8 /* SettingsPopupView.swift */; };
@@ -17,6 +16,7 @@
 		254759FF249163B1003C0BF8 /* IAPProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759FE249163B1003C0BF8 /* IAPProducts.swift */; };
 		255426AB24ADD30D0028DEA0 /* ProvideConstraintsForDeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255426AA24ADD30D0028DEA0 /* ProvideConstraintsForDeviceSize.swift */; };
 		255426AD24ADD5240028DEA0 /* WhatDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255426AC24ADD5240028DEA0 /* WhatDeviceType.swift */; };
+		2565F90D2605F33800588CEA /* mixerGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2565F90C2605F33800588CEA /* mixerGif.gif */; };
 		2568FF352461539800B77C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C97BDF2460643600DEE132 /* AppDelegate.swift */; };
 		2568FF362461539C00B77C2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C97BE12460643600DEE132 /* SceneDelegate.swift */; };
 		2568FF37246153A000B77C2B /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 25C97BED2460643F00DEE132 /* Info.plist */; };
@@ -50,7 +50,6 @@
 
 /* Begin PBXFileReference section */
 		2500EF77247D9CFA005FCCF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		251B098924B7131E0090E52F /* mixerGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = mixerGif.gif; path = ../../../../../Users/marcusthuvesen/Downloads/mixerGif.gif; sourceTree = "<group>"; };
 		253FE8D624DDDBFD00F74983 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsPopup.storyboard; sourceTree = "<group>"; };
 		254759F8248FA980003C0BF8 /* SettingsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopupView.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		254759FE249163B1003C0BF8 /* IAPProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProducts.swift; sourceTree = "<group>"; };
 		255426AA24ADD30D0028DEA0 /* ProvideConstraintsForDeviceSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvideConstraintsForDeviceSize.swift; sourceTree = "<group>"; };
 		255426AC24ADD5240028DEA0 /* WhatDeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatDeviceType.swift; sourceTree = "<group>"; };
+		2565F90C2605F33800588CEA /* mixerGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mixerGif.gif; sourceTree = "<group>"; };
 		2568FF402461926600B77C2B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2568FF442469B60300B77C2B /* HomeDecisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDecisionView.swift; sourceTree = "<group>"; };
 		2568FF4A2469DC8B00B77C2B /* GameWindow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameWindow.storyboard; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 		25C97BF924614FCB00DEE132 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				251B098924B7131E0090E52F /* mixerGif.gif */,
+				2565F90C2605F33800588CEA /* mixerGif.gif */,
 				2568FF5B246AC67900B77C2B /* GoogleService-Info.plist */,
 				25C97BDF2460643600DEE132 /* AppDelegate.swift */,
 				25C97BE12460643600DEE132 /* SceneDelegate.swift */,
@@ -302,10 +302,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2565F90D2605F33800588CEA /* mixerGif.gif in Resources */,
 				2568FF3C246153F400B77C2B /* Assets.xcassets in Resources */,
 				2568FF5C246AC67900B77C2B /* GoogleService-Info.plist in Resources */,
 				2568FF412461926600B77C2B /* Main.storyboard in Resources */,
-				251B098A24B7131E0090E52F /* mixerGif.gif in Resources */,
 				25D90EFE247430AA00F0B7AF /* InfoPopup.storyboard in Resources */,
 				2568FF4B2469DC8B00B77C2B /* GameWindow.storyboard in Resources */,
 				2568FF6C246D9E2100B77C2B /* PremiumPopup.storyboard in Resources */,
@@ -517,7 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.02;
 				DEVELOPMENT_TEAM = 4CTKXD59TF;
 				INFOPLIST_FILE = "Törst/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -525,7 +525,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.02;
+				MARKETING_VERSION = 1.07;
 				PRODUCT_BUNDLE_IDENTIFIER = se.marcusthuvesen.TorstSpel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -539,7 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 1.02;
 				DEVELOPMENT_TEAM = 4CTKXD59TF;
 				INFOPLIST_FILE = "Törst/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -547,7 +547,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.02;
+				MARKETING_VERSION = 1.07;
 				PRODUCT_BUNDLE_IDENTIFIER = se.marcusthuvesen.TorstSpel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

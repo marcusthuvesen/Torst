@@ -14,7 +14,7 @@ import SwiftyStoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SKPaymentTransactionObserver {
-    //var window: UIWindow?
+   
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
     }
@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SKPaymentTransactionObser
             }
         }
         howManyTimesOpenedApp()
+        
         return true
     }
     

@@ -18,17 +18,21 @@ struct FetchGameTexts {
         ref = Database.database().reference()
     }
     
-    func fetchGameTexts(gameType : String, completion: @escaping ([String]) -> ()){
+    func pushData() {
+      //For pushing more statements  self.ref.child("GameTexts").child("RyggMotRygg").setValue(ryggMotRygg)
+    }
+    
+    func fetchGameTexts(gameType : String, completion: @escaping ([String])->Void) {
         var fetchedArray = [String]()
         
-        ref.child("GameTexts").child(gameType).observe(.value) { (snapshot, error) in
-            
-            for child in snapshot.children {
-                fetchedArray.append("\(child)")
+        ref.child("GameTexts").child(gameType).observeSingleEvent(of: .value){ (snapshot, error) in
+            if snapshot.exists() {
+                     fetchedArray = snapshot.value as? [String] ?? []
             }
             completion(fetchedArray)
         }
+        
     }
     
-    
 }
+

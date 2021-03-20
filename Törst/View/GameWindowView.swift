@@ -100,6 +100,19 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         categoryLabel.text = categoryText
     }
     
+    func animateTextLabel() {
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: [], animations: {
+            self.gameTextView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            self.categoryLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.1, delay: 0.1, options: [], animations: {
+            self.gameTextView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            self.categoryLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
+    
     func changeStatementUI(statement : String) {
         gameTextView.text = statement
     }

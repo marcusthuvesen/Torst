@@ -23,6 +23,7 @@ class HomeDecisionPresenter{
     func setHomeDecisionViewDelegate(homeDecisionViewDelegate : HomeDecisionViewDelegate){
         self.homeDecisionViewDelegate = homeDecisionViewDelegate
         checkIfPaidUserToChangeUI()
+        provideGameTexts.fetchFromFB()
     }
     
     func checkIfPaidUserToChangeUI() {
@@ -55,28 +56,25 @@ class HomeDecisionPresenter{
     }
     
     func fetch_JagHarAldrig() {
-        provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "JagHarAldrig")
+        provideGameTexts.setGameText(gameType: "JagHarAldrig")
         checkIfNeedsToBeSorted(accessKey: IAPProduct.partialAccessJagHarAldrig.rawValue)
         homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_Pekleken() {
-        
-        provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Pekleken")
+        provideGameTexts.setGameText(gameType: "Pekleken")
         checkIfNeedsToBeSorted(accessKey: IAPProduct.partialAccessPekleken.rawValue)
         homeDecisionViewDelegate?.sendToGameWindow()
     }
     
     func fetch_RyggMotRygg() {
-        
-        provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "RyggMotRygg")
+        provideGameTexts.setGameText(gameType: "RyggMotRygg")
         checkIfNeedsToBeSorted(accessKey: IAPProduct.partialAccessRyggMotRygg.rawValue)
         homeDecisionViewDelegate?.sendToGameWindow()
-        
     }
     
     func fetch_Utmaningar() {
-        provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Utmaningar")
+        provideGameTexts.setGameText(gameType: "Utmaningar")
         checkIfNeedsToBeSorted(accessKey: IAPProduct.partialAccessUtmaningar.rawValue)
         homeDecisionViewDelegate?.sendToGameWindow()
     }
@@ -91,7 +89,7 @@ class HomeDecisionPresenter{
     func fetch_Mix() {
         if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
         else {
-            provideGameTexts.fetchFromFB_OrLoadLocally(gameType : "Mix")
+            provideGameTexts.setGameText(gameType: "Mix")
             GlobalVariables.gameTextArray.shuffle()
             homeDecisionViewDelegate?.sendToGameWindow()
         }

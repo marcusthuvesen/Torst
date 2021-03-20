@@ -18,6 +18,7 @@ protocol GameWindowViewDelegate : NSObjectProtocol{
     func hideCategoryLabel()
     func setCategoryTextOnLabel(categoryText : String)
     func hideRulesIcon()
+    func animateTextLabel()
 }
 
 class GameWindowPresenter{
@@ -129,5 +130,6 @@ class GameWindowPresenter{
         if gameTexts.kategorier.contains(text) { categoryText = "Kategorin är..." }
         
         self.gameWindowViewDelegate?.setCategoryTextOnLabel(categoryText: categoryText)
+        self.gameWindowViewDelegate?.animateTextLabel()
     }
 }
