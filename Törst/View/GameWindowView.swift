@@ -96,11 +96,19 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     }
     
     func animateTextLabel() {
-        UIView.animate(withDuration: 0.1, delay: 0.0, options: [], animations: {
-            self.gameTextView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        UIView.animate(withDuration: 0.08, delay: 0.0, options: [], animations: {
+            self.gameTextView.transform = CGAffineTransform(scaleX: 1.2, y: 1.0)
         }, completion: nil)
         
-        UIView.animate(withDuration: 0.1, delay: 0.1, options: [], animations: {
+        UIView.animate(withDuration: 0.08, delay: 0.08, options: [], animations: {
+            self.gameTextView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.08, delay: 0.16, options: [], animations: {
+            self.gameTextView.transform = CGAffineTransform(scaleX: 1.05, y: 1.0 )
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.08, delay: 0.24, options: [], animations: {
             self.gameTextView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }

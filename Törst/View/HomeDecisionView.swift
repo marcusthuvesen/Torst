@@ -104,7 +104,8 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
     func animateClickedBtn(senderTag: Int) {
-        
+       
+        /*
         UIView.animate(withDuration: 0.4, delay: 0.0, options: [], animations: {
             self.decisionButtonImages[senderTag].transform = CGAffineTransform(scaleX: 3, y: 3)
         }, completion: nil)
@@ -112,7 +113,7 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         UIView.animate(withDuration: 0.4, delay: 0.4, options: [], animations: {
             self.decisionButtonImages[senderTag].transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
-   
+        */
         
         /*
         UIView.animate(withDuration: 0.4, delay: 0.0, options: [], animations: {
