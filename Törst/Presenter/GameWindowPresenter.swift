@@ -59,7 +59,8 @@ class GameWindowPresenter{
     
     func setCategoryColor(text : String) {
         var backgroundColor = ""
-        let gameTexts = ProvideGameTexts()
+        let gameTexts = HomeDecisionPresenter.provideGameTexts
+        print(gameTexts.utmaningar)
         
         if gameTexts.handuppräckning.contains(text) { backgroundColor = "red"}
         if gameTexts.jagHarAldrig.contains(text) { backgroundColor = "blue"}
@@ -119,7 +120,7 @@ class GameWindowPresenter{
 
     
     func setCategoryText(text : String) {
-        let gameTexts = ProvideGameTexts()
+        let gameTexts = HomeDecisionPresenter.provideGameTexts
         var categoryText = ""
         
         if gameTexts.handuppräckning.contains(text) { categoryText = "Handuppräckning" }

@@ -18,12 +18,12 @@ protocol HomeDecisionViewDelegate : NSObjectProtocol{
 
 class HomeDecisionPresenter{
     weak private var homeDecisionViewDelegate : HomeDecisionViewDelegate?
-    let provideGameTexts = ProvideGameTexts()
+    static let provideGameTexts = ProvideGameTexts()
     
     func setHomeDecisionViewDelegate(homeDecisionViewDelegate : HomeDecisionViewDelegate){
         self.homeDecisionViewDelegate = homeDecisionViewDelegate
         checkIfPaidUserToChangeUI()
-        provideGameTexts.fetchFromFB()
+        HomeDecisionPresenter.provideGameTexts.fetchFromFB()
     }
     
     func checkIfPaidUserToChangeUI() {
@@ -54,38 +54,36 @@ class HomeDecisionPresenter{
             fetch_JagHarAldrig()
         }
         
-        self.homeDecisionViewDelegate?.animateClickedBtn(senderTag : senderTag)
-        
     }
     
     func fetch_JagHarAldrig() {
-        provideGameTexts.setGameText(gameType: "JagHarAldrig")
+        HomeDecisionPresenter.provideGameTexts.setGameText(gameType: "JagHarAldrig")
         checkIfNeedsToBeSorted(accessKey: IAPProduct.partialAccessJagHarAldrig.rawValue)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.homeDecisionViewDelegate?.sendToGameWindow()
         }
     }
     
     func fetch_Pekleken() {
-        provideGameTexts.setGameText(gameType: "Pekleken")
+        HomeDecisionPresenter.provideGameTexts.setGameText(gameType: "Pekleken")
         checkIfNeedsToBeSorted(accessKey: IAPProduct.partialAccessPekleken.rawValue)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.homeDecisionViewDelegate?.sendToGameWindow()
         }
     }
     
     func fetch_RyggMotRygg() {
-        provideGameTexts.setGameText(gameType: "RyggMotRygg")
+        HomeDecisionPresenter.provideGameTexts.setGameText(gameType: "RyggMotRygg")
         checkIfNeedsToBeSorted(accessKey: IAPProduct.partialAccessRyggMotRygg.rawValue)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.homeDecisionViewDelegate?.sendToGameWindow()
         }
     }
     
     func fetch_Utmaningar() {
-        provideGameTexts.setGameText(gameType: "Utmaningar")
+        HomeDecisionPresenter.provideGameTexts.setGameText(gameType: "Utmaningar")
         checkIfNeedsToBeSorted(accessKey: IAPProduct.partialAccessUtmaningar.rawValue)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.homeDecisionViewDelegate?.sendToGameWindow()
         }
     }
@@ -100,7 +98,7 @@ class HomeDecisionPresenter{
     func fetch_Mix() {
         if !GlobalVariables.hasFullAccess { self.homeDecisionViewDelegate?.sendToPremiumPopup() }
         else {
-            provideGameTexts.setGameText(gameType: "Mix")
+            HomeDecisionPresenter.provideGameTexts.setGameText(gameType: "Mix")
             GlobalVariables.gameTextArray.shuffle()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
                 self.homeDecisionViewDelegate?.sendToGameWindow()

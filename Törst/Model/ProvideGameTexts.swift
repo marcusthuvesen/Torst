@@ -39,6 +39,7 @@ class ProvideGameTexts {
         }
         fetchGameTexts.fetchGameTexts(gameType: "Utmaningar") { (result) in
             self.utmaningar = result
+            print(self.utmaningar)
         }
     }
     
@@ -48,24 +49,19 @@ class ProvideGameTexts {
         
         switch gameType {
         case "JagHarAldrig":
-            GlobalVariables.gameTextArray = jagHarAldrig
+            GlobalVariables.gameTextArray = self.jagHarAldrig
         case "Pekleken":
-            GlobalVariables.gameTextArray = pekleken
+            GlobalVariables.gameTextArray = self.pekleken
         case "RyggMotRygg":
-            GlobalVariables.gameTextArray = ryggMotRygg
+            GlobalVariables.gameTextArray = self.ryggMotRygg
         case "Utmaningar":
-            GlobalVariables.gameTextArray = utmaningar
+            GlobalVariables.gameTextArray = self.utmaningar
         case "Mix":
-            GlobalVariables.gameTextArray = jagHarAldrig + pekleken + utmaningar + kategorier + handuppräckning
+            GlobalVariables.gameTextArray = self.jagHarAldrig + self.pekleken + self.utmaningar + self.kategorier + self.handuppräckning
         default:
-            GlobalVariables.gameTextArray = jagHarAldrig
+            GlobalVariables.gameTextArray = self.jagHarAldrig
         }
     }
 }
 
-
-/*
-
-"Vem har haft sex med flest?", "Vem är sämst allmänbildad?", "Vem skulle kunna slå sönder något i ren ilska?", "Vem har den snyggaste outfiten?", "Vem skulle kunna delta i en trekant?", "Vem är mest pojkvän/flickväns-material?", "Vem är mest konflikträdd?", "Vem kan beställa öl på flest språk?", "Vem har den galnaste familjen?", "Vem skulle kunna däcka i sitt fyllekäk?", "Vem får mest ragg?",  "Vem gör de bästa drinkarna?", "Vem blir mest omtyckt av sina svärföräldrar?", "Vem har oftast ångest efter sex?", "Vem har de galnaste sextankarna?", "Vem kör bil bäst?", "Vem lagar bäst mat?", "Vem tar längst tid på sig i duschen?", "Vem dricker mest?", "Vem gör av med mest pengar på skit?", "Vem hade bäst betyg i skolan?", "Vem skulle köpa en bil bara för färgen?", "Vem har störst sannolikhet att ha sex med någon av samma kön?", "Vem blev av med oskulden först?", "Vem sjunger bäst?", "Vem är bäst på att ljuga?", "Vem är den bästa kyssaren?", "Vem är mest modemedveten?", "Vem dansar bäst?",  "Vem går hem med någon ikväll?", "Vem har flest tatueringar?", "Vem har bäst musiksmak?", "Vem kommer gifta sig först?", "Vem är mest aktiv på dejtingappar?", "Vem experimenterar mest med droger?", "Vem är mest spontan?", "Vem är klumpigast?", "Vem är törstigast?", "Vem har mest humörsvängningar?", "Vem hade passat bäst i militären?", "Vem var den jobbigaste ungen?", "Vem lägger mest pengar på underkläder?", "Vem gör de konstigaste ljuden i sängen?", "Vem har bäst rumpa?", "Vem är starkast?", "Vem smuttar på samma dricka hela kvällen?", "Vem dansar nykter?", "Vem flexar mest?", "Vem får flest orgasms?", "Vem kommer få barn först?", "Vem är mest basic bitch?", "Vem har den bästa talangen?", "Vem passar bäst som chef?", "Vem skulle nöja sig som hemmafru?", "Vem av er har haft sex på konstigaste stället?", "Vem är bäst på första intryck?", "Vem gillar att bli spankad under sex?", "Vem har den konstigaste dialekten?", "Vem har en lista på sexpartners?", "Vem var klassens clown?", "Vem spyr oftast på fyllan?", "Vem har en tatuering som den skäms över?", "Vem skulle kunna raka av allt hår?", "Vem har störst chans att ligga med en kändis?", "Vem blir nekad av vakten påväg in till klubben?", "Vem är snuskigast?", "Vem blir mest känslosam på fyllan?", "Vem skulle passa bäst i skägg?", "Vem är mest vältränad?", "Vem sminkar sig bäst?", "Vem tänker mest på sex?", "Vem har härligaste skrattet?", "Vem dansar sexigast?", "Vem har snyggaste outfiten idag?", "Vem tål minst alkohol?", "Vem har sämst konsekvenstänk?", "Vem har störst sannolikhet att bjuda hela sällskapet på dricka?", "Vem skulle klara sig längst i en zombieapokalyps?", "Vem skulle hoppa bungyjump utan att tveka?"
-*/
 
