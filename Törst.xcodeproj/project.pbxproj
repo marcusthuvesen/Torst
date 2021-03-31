@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2500EF78247D9CFA005FCCF5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2500EF77247D9CFA005FCCF5 /* StoreKit.framework */; };
+		2509004D2614EAF900FEA8CD /* RateUsPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2509004C2614EAF900FEA8CD /* RateUsPopUp.storyboard */; };
+		2509004F2614F17400FEA8CD /* RateUsPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2509004E2614F17400FEA8CD /* RateUsPopUpView.swift */; };
 		253FE8D724DDDBFD00F74983 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253FE8D624DDDBFD00F74983 /* OnboardingView.swift */; };
 		254759F7248FA8EA003C0BF8 /* SettingsPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */; };
 		254759F9248FA980003C0BF8 /* SettingsPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254759F8248FA980003C0BF8 /* SettingsPopupView.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		2500EF77247D9CFA005FCCF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2509004C2614EAF900FEA8CD /* RateUsPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RateUsPopUp.storyboard; sourceTree = "<group>"; };
+		2509004E2614F17400FEA8CD /* RateUsPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateUsPopUpView.swift; sourceTree = "<group>"; };
 		253FE8D624DDDBFD00F74983 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsPopup.storyboard; sourceTree = "<group>"; };
 		254759F8248FA980003C0BF8 /* SettingsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopupView.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				254759F8248FA980003C0BF8 /* SettingsPopupView.swift */,
 				2573B2A62493F68500E6FFD8 /* PremiumCategorySelectionView.swift */,
 				253FE8D624DDDBFD00F74983 /* OnboardingView.swift */,
+				2509004E2614F17400FEA8CD /* RateUsPopUpView.swift */,
 				25C97BFB2461519900DEE132 /* Storyboards */,
 			);
 			path = View;
@@ -220,6 +225,7 @@
 				2568FF6B246D9E2100B77C2B /* PremiumPopup.storyboard */,
 				25D90EFD247430AA00F0B7AF /* InfoPopup.storyboard */,
 				254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */,
+				2509004C2614EAF900FEA8CD /* RateUsPopUp.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2509004D2614EAF900FEA8CD /* RateUsPopUp.storyboard in Resources */,
 				2565F90D2605F33800588CEA /* mixerGif.gif in Resources */,
 				2568FF3C246153F400B77C2B /* Assets.xcassets in Resources */,
 				2568FF5C246AC67900B77C2B /* GoogleService-Info.plist in Resources */,
@@ -375,6 +382,7 @@
 				2568FF352461539800B77C2B /* AppDelegate.swift in Sources */,
 				2568FF60246C73FA00B77C2B /* GlobalVariables.swift in Sources */,
 				2573B2A72493F68500E6FFD8 /* PremiumCategorySelectionView.swift in Sources */,
+				2509004F2614F17400FEA8CD /* RateUsPopUpView.swift in Sources */,
 				25F8ADB62479AFD600BF82AA /* ProvideGameRules.swift in Sources */,
 				255426AD24ADD5240028DEA0 /* WhatDeviceType.swift in Sources */,
 				2568FF66246C857C00B77C2B /* TextView_UI.swift in Sources */,

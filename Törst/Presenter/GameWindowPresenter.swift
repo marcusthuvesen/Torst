@@ -33,7 +33,6 @@ class GameWindowPresenter{
         setBackgroundColor()
         setupStatementArray()
         showOrHideCategoryLabel()
-        print("har fullaccess \(GlobalVariables.hasFullAccess)")
     }
 
     func infoBtnActions() {
@@ -60,7 +59,6 @@ class GameWindowPresenter{
     func setCategoryColor(text : String) {
         var backgroundColor = ""
         let gameTexts = HomeDecisionPresenter.provideGameTexts
-        print(gameTexts.utmaningar)
         
         if gameTexts.handuppräckning.contains(text) { backgroundColor = "red"}
         if gameTexts.jagHarAldrig.contains(text) { backgroundColor = "blue"}

@@ -129,15 +129,11 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     func changeUIBasedOnDevice() {
         let deviceType = UIDevice.modelName
         
-        print("ModelName: \(deviceType)")
-        
         if deviceType.contains("8") || deviceType.contains("7") || deviceType.contains("6") {
-            print("ModelName 6,7,8")
             changeUIForIphone678()
         }
         
         if deviceType.contains("iPad") {
-            print("Ipad")
             changeUIForIpad()
         }
     }

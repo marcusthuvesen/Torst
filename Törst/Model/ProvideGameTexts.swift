@@ -39,7 +39,6 @@ class ProvideGameTexts {
         }
         fetchGameTexts.fetchGameTexts(gameType: "Utmaningar") { (result) in
             self.utmaningar = result
-            print(self.utmaningar)
         }
     }
     

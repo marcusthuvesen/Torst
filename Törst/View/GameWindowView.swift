@@ -40,23 +40,27 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        sendToOnboarding()
+        sendToPopups()
+        sendToRateUsPopup()
     }
     
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        print("250")
         textViewHeightConstraint.constant = 250
     }
     
-    func sendToOnboarding() {
+    func sendToPopups() {
         let numberOfTimes = UserDefaults.standard.integer(forKey: "numberOfTimes")
         
-        if numberOfTimes != 1 { return } else {
-            print("print \(numberOfTimes)")
+        if numberOfTimes == 1 {
             sendToOnboardingView()
             UserDefaults.standard.set(numberOfTimes+1, forKey: "numberOfTimes")
         }
+        
+        if numberOfTimes == 3 {
+            sendToRateUsPopup()
+        }
+        
     }
     
     func sendToOnboardingView() {
@@ -65,6 +69,19 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         self.present(sendToVC, animated: true)
     }
     
+    func sendToRateUsPopup() {
+        presentPopup(UIStoryboardName: "RateUsPopUp", WithIdentifier: "RateUsPopUpView", VC: self)
+    }
+    
+    func sendToPremiumPopup() {
+        let sendToVC = UIStoryboard(name: "PremiumPopup", bundle: nil).instantiateViewController(withIdentifier: "PremiumPopup") as! PremiumPopupView
+        sendToVC.modalPresentationStyle = .currentContext
+        self.present(sendToVC, animated: true)
+    }
+    
+    func sendToInfoPopup() {
+        presentPopup(UIStoryboardName: "InfoPopup", WithIdentifier: "InfoPopup", VC: self)
+    }
     
     func changeBackgroundColor(colorString : String) {
         switch colorString {
@@ -126,15 +143,7 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         infoBtnOutlet.isHidden = true
     }
     
-    func sendToPremiumPopup() {
-        let sendToVC = UIStoryboard(name: "PremiumPopup", bundle: nil).instantiateViewController(withIdentifier: "PremiumPopup") as! PremiumPopupView
-        sendToVC.modalPresentationStyle = .currentContext
-        self.present(sendToVC, animated: true)
-    }
-    
-    func sendToInfoPopup() {
-        presentPopup(UIStoryboardName: "InfoPopup", WithIdentifier: "InfoPopup", VC: self)
-    }
+  
     
     @IBAction func infoBtnClicked(_ sender: UIButton) {
         gameWindowViewDelegate.infoBtnActions()

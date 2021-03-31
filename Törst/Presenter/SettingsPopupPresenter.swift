@@ -26,20 +26,17 @@ class SettingsPopupPresenter{
     func settingsBtnActions(senderTag: Int) {
         switch senderTag {
         case 0:
-            print("0")
             settingsPopupViewDelegate?.presentTermsAndConditions()
         case 1:
-            print("1")
             settingsPopupViewDelegate?.presentPrivacyPolicy()
         case 2:
-            print("2")
             IAPService.shared.restorePurchases()
             settingsPopupViewDelegate?.presentAlertPopup()
         case 3:
-            print("3")
             settingsPopupViewDelegate?.presentPremiumPopup()
         default:
           print("0")
+          settingsPopupViewDelegate?.presentPrivacyPolicy()
         }
     }
 }
