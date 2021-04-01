@@ -41,7 +41,6 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         sendToPopups()
-        sendToRateUsPopup()
     }
     
     
@@ -54,11 +53,13 @@ class GameWindowView: UIViewController, GameWindowViewDelegate {
         
         if numberOfTimes == 1 {
             sendToOnboardingView()
+            //Bad solution but does the job of not showing onboarding several times in same session. Thus the number of times is always +1.
             UserDefaults.standard.set(numberOfTimes+1, forKey: "numberOfTimes")
         }
         
-        if numberOfTimes == 3 {
+        if numberOfTimes == 4 {
             sendToRateUsPopup()
+            UserDefaults.standard.set(numberOfTimes+1, forKey: "numberOfTimes")
         }
         
     }
