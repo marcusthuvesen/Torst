@@ -108,69 +108,69 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
     func changeUIForIpad() {
-        //  for button in categoryOutlet {
-        //      button.titleLabel?.font =  UIFont(name: "AvenirNext-DemiBold", size: 35)
-        //      button.titleEdgeInsets.left = -300
-        //  }
-        //  for button in categoryOutlet {
-        //    if button.tag == 0 {
+          for button in categoryOutlets {
+              button.titleLabel?.font =  UIFont(name: "AvenirNext-DemiBold", size: 35)
+              button.titleEdgeInsets.left = -300
+          }
+          for button in categoryOutlets {
+            if button.tag == 0 {
                 //         button.imageEdgeInsets.left = 25
-        //       button.imageEdgeInsets.top = 20
-        //       button.imageEdgeInsets.bottom = 25
-        //   }
+               button.imageEdgeInsets.top = 20
+               button.imageEdgeInsets.bottom = 25
+           }
                 
-        //   else if button.tag == 1 {
-        //       button.imageEdgeInsets.left = -19
-        //       button.imageEdgeInsets.top = 5
-        //        button.imageEdgeInsets.bottom = 7
-        //   }
+           else if button.tag == 1 {
+               button.imageEdgeInsets.left = -19
+               button.imageEdgeInsets.top = 5
+                button.imageEdgeInsets.bottom = 7
+           }
                 
-        //   else if button.tag == 2 {
-        //       button.imageEdgeInsets.left = 15
-        //       button.imageEdgeInsets.top = 18
-        //       button.imageEdgeInsets.bottom = 18
-        //  }
+           else if button.tag == 2 {
+               button.imageEdgeInsets.left = 15
+               button.imageEdgeInsets.top = 18
+               button.imageEdgeInsets.bottom = 18
+          }
                 
-        //   else if button.tag == 3 {
-        //       button.imageEdgeInsets.left = -21
-        //   }
+           else if button.tag == 3 {
+               button.imageEdgeInsets.left = -21
+           }
                 
-        //    else{
-        //      button.imageEdgeInsets.left = -21
-        //      button.imageEdgeInsets.top = 20
-        //  }
-        //}
+            else{
+              button.imageEdgeInsets.left = -21
+              button.imageEdgeInsets.top = 20
+          }
+        }
     }
     
     func changeUIForIphone678() {
-        //  for button in categoryOutlet {
-        //     if button.tag == 0 {
-        //         button.imageEdgeInsets.left = 8
-        //      button.imageEdgeInsets.top = 8
-        //       button.imageEdgeInsets.bottom = 8
-        //   }
+          for button in categoryOutlets {
+             if button.tag == 0 {
+                 button.imageEdgeInsets.left = 8
+              button.imageEdgeInsets.top = 8
+               button.imageEdgeInsets.bottom = 8
+           }
                 
-        //   else if button.tag == 1 {
-        //       button.imageEdgeInsets.left = -10
-        //       button.imageEdgeInsets.top = 0
-        //       button.imageEdgeInsets.bottom = 0
-        //   }
-        //
-        //   else if button.tag == 2 {
-        //       button.imageEdgeInsets.left = 3
-        //       button.imageEdgeInsets.top = 6
-        //       button.imageEdgeInsets.bottom = 6
-        //   }
-        //
-        //   else if button.tag == 3 {
-        //        button.imageEdgeInsets.left = -9
-        //    }
+           else if button.tag == 1 {
+               button.imageEdgeInsets.left = -10
+               button.imageEdgeInsets.top = 0
+               button.imageEdgeInsets.bottom = 0
+           }
+        
+           else if button.tag == 2 {
+               button.imageEdgeInsets.left = 3
+               button.imageEdgeInsets.top = 6
+               button.imageEdgeInsets.bottom = 6
+           }
+        
+           else if button.tag == 3 {
+                button.imageEdgeInsets.left = -9
+            }
                 
-        //    else{
-        //        button.imageEdgeInsets.left = -9
-        //        button.imageEdgeInsets.top = 8
-        //    }
-        // }
+            else{
+                button.imageEdgeInsets.left = -9
+                button.imageEdgeInsets.top = 8
+            }
+         }
     }
     
     func sendToGameWindow() {
