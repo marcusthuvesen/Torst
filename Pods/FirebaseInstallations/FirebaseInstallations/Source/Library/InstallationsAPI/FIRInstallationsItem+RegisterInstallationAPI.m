@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-#import "FIRInstallationsItem+RegisterInstallationAPI.h"
+#import "FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsItem+RegisterInstallationAPI.h"
 
-#import "FIRInstallationsErrorUtil.h"
-#import "FIRInstallationsStoredAuthToken.h"
+#import "FirebaseInstallations/Source/Library/Errors/FIRInstallationsErrorUtil.h"
+#import "FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStoredAuthToken.h"
 
 @implementation FIRInstallationsItem (RegisterInstallationAPI)
 
@@ -140,3 +140,7 @@
 }
 
 @end
+
+/// Stub used to force the linker to include the categories in this file.
+void FIRInclude_FIRInstallationsItem_RegisterInstallationAPI_Category(void) {
+}

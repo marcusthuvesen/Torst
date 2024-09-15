@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "FIRInstallationsStore.h"
+#import "FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStore.h"
 
 #import <GoogleUtilities/GULUserDefaults.h>
 
@@ -26,9 +26,9 @@
 
 #import <GoogleUtilities/GULKeychainStorage.h>
 
-#import "FIRInstallationsErrorUtil.h"
-#import "FIRInstallationsItem.h"
-#import "FIRInstallationsStoredItem.h"
+#import "FirebaseInstallations/Source/Library/Errors/FIRInstallationsErrorUtil.h"
+#import "FirebaseInstallations/Source/Library/FIRInstallationsItem.h"
+#import "FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStoredItem.h"
 
 NSString *const kFIRInstallationsStoreUserDefaultsID = @"com.firebase.FIRInstallations";
 
@@ -60,9 +60,13 @@ NSString *const kFIRInstallationsStoreUserDefaultsID = @"com.firebase.FIRInstall
   NSString *itemID = [FIRInstallationsItem identifierWithAppID:appID appName:appName];
   return [self installationExistsForAppID:appID appName:appName]
       .then(^id(id result) {
-        return [self.secureStorage getObjectForKey:itemID
-                                       objectClass:[FIRInstallationsStoredItem class]
-                                       accessGroup:self.accessGroup];
+        return [FBLPromise
+            wrapObjectOrErrorCompletion:^(FBLPromiseObjectOrErrorCompletion _Nonnull handler) {
+              [self.secureStorage getObjectForKey:itemID
+                                      objectClass:[FIRInstallationsStoredItem class]
+                                      accessGroup:self.accessGroup
+                                completionHandler:handler];
+            }];
       })
       .then(^id(FIRInstallationsStoredItem *_Nullable storedItem) {
         if (storedItem == nil) {
@@ -81,16 +85,26 @@ NSString *const kFIRInstallationsStoreUserDefaultsID = @"com.firebase.FIRInstall
   NSString *identifier = [installationItem identifier];
 
   return
-      [self.secureStorage setObject:storedItem forKey:identifier accessGroup:self.accessGroup].then(
-          ^id(id result) {
-            return [self setInstallationExists:YES forItemWithIdentifier:identifier];
-          });
+      [FBLPromise wrapObjectOrErrorCompletion:^(
+                      FBLPromiseObjectOrErrorCompletion _Nonnull handler) {
+        [self.secureStorage setObject:storedItem
+                               forKey:identifier
+                          accessGroup:self.accessGroup
+                    completionHandler:handler];
+      }].then(^id(id __unused unusedResult) {
+        return [self setInstallationExists:YES forItemWithIdentifier:identifier];
+      });
 }
 
 - (FBLPromise<NSNull *> *)removeInstallationForAppID:(NSString *)appID appName:(NSString *)appName {
   NSString *identifier = [FIRInstallationsItem identifierWithAppID:appID appName:appName];
-  return [self.secureStorage removeObjectForKey:identifier accessGroup:self.accessGroup].then(
-      ^id(id result) {
+
+  return
+      [FBLPromise wrapErrorCompletion:^(FBLPromiseErrorCompletion _Nonnull handler) {
+        [self.secureStorage removeObjectForKey:identifier
+                                   accessGroup:self.accessGroup
+                             completionHandler:handler];
+      }].then(^id(id __unused result) {
         return [self setInstallationExists:NO forItemWithIdentifier:identifier];
       });
 }

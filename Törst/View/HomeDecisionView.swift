@@ -12,14 +12,13 @@ import SwiftGifOrigin
 
 class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
-    @IBOutlet var decisionBtnOutlets: [UIButton]!
-    @IBOutlet var decisionButtonImages: [UIButton]!
+    let homeDecisionViewDelegate = HomeDecisionPresenter()
     
-    @IBOutlet weak var mixerBtnOutlet: UIButton!
+    @IBOutlet var categoryOutlets: [UIButton]!
+    
     @IBOutlet weak var lockImage: UIImageView!
     
-    let homeDecisionViewDelegate = HomeDecisionPresenter()
-    var alreadyShownAlert = false
+    @IBOutlet weak var settingsOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,27 +34,11 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         homeDecisionViewDelegate.checkIfPaidUserToChangeUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        showPopupAlert()
-    }
-    
+   
     override var shouldAutorotate: Bool {
         true
     }
-    
-    func showPopupAlert() {
-        
-        if alreadyShownAlert { return }
-
-        let alert = UIAlertController(title: "Varning", message: "Drick ansvarsfullt. Genom att fortsätta, samtycker du till att du själv ansvarar för eventuella konsekvenser som kan uppstå genom att appen används", preferredStyle: UIAlertController.Style.alert)
-      
-        alert.addAction(UIAlertAction(title: "Okej", style: UIAlertAction.Style.default, handler: nil))
-        
-        alert.overrideUserInterfaceStyle = .dark
-     
-        alreadyShownAlert = true
-        self.present(alert, animated: true, completion: nil)
-    }
+   
     
     func setupHomeDecisionDelegate(){
         homeDecisionViewDelegate.setHomeDecisionViewDelegate(homeDecisionViewDelegate : self)
@@ -70,13 +53,13 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
     func setupHomeDecisionUI() {
-        for button in decisionBtnOutlets {
-            button.homeDecisionOutlet_UI()
-        }
-        for button in decisionButtonImages {
+          for button in categoryOutlets {
+              button.homeDecisionOutlet_UI()
+         }
+         for button in categoryOutlets {
             button.titleLabel?.minimumScaleFactor = 0.5
             button.titleLabel?.adjustsFontSizeToFitWidth = true
-            button.contentMode = .scaleAspectFit
+            button.contentMode = .scaleAspectFill
         }
         
         setupGradientLayer()
@@ -85,52 +68,38 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     
     func checkIfShouldShowGif() {
         if GlobalVariables.showMixGif {
-            let gif = UIImage.gif(name: "mixerGif")
-            mixerBtnOutlet.imageView?.animationImages = gif?.images
-            mixerBtnOutlet.imageView?.animationDuration = gif!.duration
-            mixerBtnOutlet.imageView?.animationRepeatCount = 1
-            mixerBtnOutlet.imageView?.startAnimating()
             
-            UIView.animate(withDuration: 1.0, delay: 0.3, options: [], animations: {
-                self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 3, y: 3)
-            }, completion: nil)
-            
-            UIView.animate(withDuration: 1.0, delay: 1.3, options: [], animations: {
-                self.mixerBtnOutlet.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            }, completion: nil)
-            
-            GlobalVariables.showMixGif = false
         }
     }
     
     func animateClickedBtn(senderTag: Int) {
        
-        /*
+        
         UIView.animate(withDuration: 0.4, delay: 0.0, options: [], animations: {
-            self.decisionButtonImages[senderTag].transform = CGAffineTransform(scaleX: 3, y: 3)
+                 self.categoryOutlets[senderTag].transform = CGAffineTransform(scaleX: 3, y: 3)
         }, completion: nil)
         
         UIView.animate(withDuration: 0.4, delay: 0.4, options: [], animations: {
-            self.decisionButtonImages[senderTag].transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                self.categoryOutlets[senderTag].transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
-        */
         
-        /*
+        
+        
         UIView.animate(withDuration: 0.4, delay: 0.0, options: [], animations: {
-            self.decisionButtonImages[senderTag].transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/8))
+               self.categoryOutlets[senderTag].transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/8))
         }, completion: nil)
         
         UIView.animate(withDuration: 0.4, delay: 0.5, options: [], animations: {
-            self.decisionButtonImages[senderTag].transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/8))
+               self.categoryOutlets[senderTag].transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/8))
         }, completion: nil)
-        */
+        
     }
     
     func changeUIBasedOnDevice() {
         let deviceType = UIDevice.modelName
         
         if deviceType.contains("8") || deviceType.contains("7") || deviceType.contains("6") {
-            changeUIForIphone678()
+            //changeUIForIphone678()
         }
         
         if deviceType.contains("iPad") {
@@ -139,69 +108,69 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
     }
     
     func changeUIForIpad() {
-        for button in decisionBtnOutlets{
-            button.titleLabel?.font =  UIFont(name: "AvenirNext-DemiBold", size: 35)
-            button.titleEdgeInsets.left = -300
-        }
-        for button in decisionButtonImages{
-            if button.tag == 0 {
-                button.imageEdgeInsets.left = 25
-                button.imageEdgeInsets.top = 20
-                button.imageEdgeInsets.bottom = 25
-            }
+        //  for button in categoryOutlet {
+        //      button.titleLabel?.font =  UIFont(name: "AvenirNext-DemiBold", size: 35)
+        //      button.titleEdgeInsets.left = -300
+        //  }
+        //  for button in categoryOutlet {
+        //    if button.tag == 0 {
+                //         button.imageEdgeInsets.left = 25
+        //       button.imageEdgeInsets.top = 20
+        //       button.imageEdgeInsets.bottom = 25
+        //   }
                 
-            else if button.tag == 1 {
-                button.imageEdgeInsets.left = -19
-                button.imageEdgeInsets.top = 5
-                button.imageEdgeInsets.bottom = 7
-            }
+        //   else if button.tag == 1 {
+        //       button.imageEdgeInsets.left = -19
+        //       button.imageEdgeInsets.top = 5
+        //        button.imageEdgeInsets.bottom = 7
+        //   }
                 
-            else if button.tag == 2 {
-                button.imageEdgeInsets.left = 15
-                button.imageEdgeInsets.top = 18
-                button.imageEdgeInsets.bottom = 18
-            }
+        //   else if button.tag == 2 {
+        //       button.imageEdgeInsets.left = 15
+        //       button.imageEdgeInsets.top = 18
+        //       button.imageEdgeInsets.bottom = 18
+        //  }
                 
-            else if button.tag == 3 {
-                button.imageEdgeInsets.left = -21
-            }
+        //   else if button.tag == 3 {
+        //       button.imageEdgeInsets.left = -21
+        //   }
                 
-            else{
-                button.imageEdgeInsets.left = -21
-                button.imageEdgeInsets.top = 20
-            }
-        }
+        //    else{
+        //      button.imageEdgeInsets.left = -21
+        //      button.imageEdgeInsets.top = 20
+        //  }
+        //}
     }
     
     func changeUIForIphone678() {
-        for button in decisionButtonImages{
-            if button.tag == 0 {
-                button.imageEdgeInsets.left = 8
-                button.imageEdgeInsets.top = 8
-                button.imageEdgeInsets.bottom = 8
-            }
+        //  for button in categoryOutlet {
+        //     if button.tag == 0 {
+        //         button.imageEdgeInsets.left = 8
+        //      button.imageEdgeInsets.top = 8
+        //       button.imageEdgeInsets.bottom = 8
+        //   }
                 
-            else if button.tag == 1 {
-                button.imageEdgeInsets.left = -10
-                button.imageEdgeInsets.top = 0
-                button.imageEdgeInsets.bottom = 0
-            }
+        //   else if button.tag == 1 {
+        //       button.imageEdgeInsets.left = -10
+        //       button.imageEdgeInsets.top = 0
+        //       button.imageEdgeInsets.bottom = 0
+        //   }
+        //
+        //   else if button.tag == 2 {
+        //       button.imageEdgeInsets.left = 3
+        //       button.imageEdgeInsets.top = 6
+        //       button.imageEdgeInsets.bottom = 6
+        //   }
+        //
+        //   else if button.tag == 3 {
+        //        button.imageEdgeInsets.left = -9
+        //    }
                 
-            else if button.tag == 2 {
-                button.imageEdgeInsets.left = 3
-                button.imageEdgeInsets.top = 6
-                button.imageEdgeInsets.bottom = 6
-            }
-                
-            else if button.tag == 3 {
-                button.imageEdgeInsets.left = -9
-            }
-                
-            else{
-                button.imageEdgeInsets.left = -9
-                button.imageEdgeInsets.top = 8
-            }
-        }
+        //    else{
+        //        button.imageEdgeInsets.left = -9
+        //        button.imageEdgeInsets.top = 8
+        //    }
+        // }
     }
     
     func sendToGameWindow() {
@@ -220,10 +189,11 @@ class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {
         lockImage.isHidden = true
     }
     
-    @IBAction func decisionBtnClicked(_ sender: UIButton) {
+   
+    @IBAction func decisionButtonAction(_ sender: UIButton) {
         homeDecisionViewDelegate.decisionBtnSelected(senderTag: sender.tag)
     }
-    
+
     @IBAction func settingsBtnClicked(_ sender: UIButton) {
         presentPopup(UIStoryboardName: "SettingsPopup", WithIdentifier: "SettingsPopup", VC: self)
     }

@@ -12,9 +12,11 @@ import Firebase
 import StoreKit
 import SwiftyStoreKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, SKPaymentTransactionObserver {
    
+    var window: UIWindow?
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
     }
@@ -53,9 +55,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SKPaymentTransactionObser
         UserDefaults.standard.set(numberOfTimes+1, forKey: "numberOfTimes")
     }
     
+    
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         .all
     }
+  
  
     
     

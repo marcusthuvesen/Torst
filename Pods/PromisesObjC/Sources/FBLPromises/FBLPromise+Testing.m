@@ -40,7 +40,6 @@ BOOL FBLWaitForPromisesWithTimeout(NSTimeInterval timeout) {
 @dynamic isPending;
 @dynamic isFulfilled;
 @dynamic isRejected;
-@dynamic pendingObjects;
 @dynamic value;
 @dynamic error;
 
@@ -54,3 +53,6 @@ BOOL FBLWaitForPromisesWithTimeout(NSTimeInterval timeout) {
 }
 
 @end
+
+/** Stub used to force the linker to include the categories in this file. */
+void FBLIncludeTestingCategory(void) {}
