@@ -30,17 +30,17 @@ class InfoPopupPresenter{
         var rulesImageString = ""
         switch GlobalVariables.gameType {
         case "JagHarAldrig":
-            rulesImageString = "drinks"
+            rulesImageString = "jagharaldrig"
         case "Pekleken":
-            rulesImageString = "Hand"
+            rulesImageString = "hand"
         case "RyggMotRygg":
-            rulesImageString = "chairs2"
+            rulesImageString = "chairs"
         case "Utmaningar":
-            rulesImageString = "Arms"
+            rulesImageString = "arms"
         case "Mix":
             rulesImageString = "mix"
         default:
-            rulesImageString = "drinks"
+            rulesImageString = "jagharaldrig"
         }
         
         self.infoPopupViewDelegate?.setRulesImageToUI(rulesImgString : rulesImageString)
