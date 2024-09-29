@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import FirebaseDatabase
-import Firebase
+import FirebaseCore
 import StoreKit
 import SwiftyStoreKit
 

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseDatabase
 import SwiftGifOrigin
 
 class HomeDecisionView: UIViewController, HomeDecisionViewDelegate {

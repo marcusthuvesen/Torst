@@ -1,17 +1,17 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'Törst' do
+target 'Torst' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Törst
+  # Pods for Torst
 
-	pod 'Firebase/Analytics'
-	pod 'Firebase/Database'
-	pod 'TPInAppReceipt'
-	pod 'SwiftyStoreKit'
-	pod 'SwiftGifOrigin'
+	pod 'FirebaseCore'
+	pod 'FirebaseDatabase'
+  	pod 'TPInAppReceipt'
+  	pod 'SwiftyStoreKit'
+ 	pod 'SwiftGifOrigin'
 
 post_install do |installer|
     installer.generated_projects.each do |project|

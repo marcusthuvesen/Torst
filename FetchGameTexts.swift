@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseCore
 import FirebaseDatabase
 
 struct FetchGameTexts {

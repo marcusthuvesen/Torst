@@ -46,14 +46,15 @@
 		25EEBB9F2C9640E0004D31A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C97BE12460643600DEE132 /* SceneDelegate.swift */; };
 		25F8ADB62479AFD600BF82AA /* ProvideGameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8ADB52479AFD600BF82AA /* ProvideGameRules.swift */; };
 		25F8ADB82479B30600BF82AA /* InfoPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F8ADB72479B30600BF82AA /* InfoPopupPresenter.swift */; };
+		3B8E4237848798233A142EA4 /* Pods_Torst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFD9DE02457F70876E87207 /* Pods_Torst.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01255E863B5BEFED9E46754A /* Pods-Törst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Törst.debug.xcconfig"; path = "Target Support Files/Pods-Törst/Pods-Törst.debug.xcconfig"; sourceTree = "<group>"; };
+		04E896C074B3A9CB62FA0E0A /* Pods-Torst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Torst.debug.xcconfig"; path = "Target Support Files/Pods-Torst/Pods-Torst.debug.xcconfig"; sourceTree = "<group>"; };
 		2500EF77247D9CFA005FCCF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2509004C2614EAF900FEA8CD /* RateUsPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RateUsPopUp.storyboard; sourceTree = "<group>"; };
 		2509004E2614F17400FEA8CD /* RateUsPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateUsPopUpView.swift; sourceTree = "<group>"; };
-		250900502615C08000FEA8CD /* Törst.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Törst.entitlements"; sourceTree = "<group>"; };
+		250900502615C08000FEA8CD /* Torst.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Torst.entitlements; sourceTree = "<group>"; };
 		253FE8D624DDDBFD00F74983 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		254759F6248FA8EA003C0BF8 /* SettingsPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsPopup.storyboard; sourceTree = "<group>"; };
 		254759F8248FA980003C0BF8 /* SettingsPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopupView.swift; sourceTree = "<group>"; };
@@ -82,7 +83,7 @@
 		2573B2A42493B70400E6FFD8 /* CheckPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPurchases.swift; sourceTree = "<group>"; };
 		2573B2A62493F68500E6FFD8 /* PremiumCategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumCategorySelectionView.swift; sourceTree = "<group>"; };
 		25B60BEE2478627C00B2A735 /* View_UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_UI.swift; sourceTree = "<group>"; };
-		25C97BDC2460643600DEE132 /* Törst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Törst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25C97BDC2460643600DEE132 /* Torst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Torst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C97BDF2460643600DEE132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		25C97BE12460643600DEE132 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		25C97BE82460643F00DEE132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +93,8 @@
 		25D90EFF2474322A00F0B7AF /* InfoPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPopupView.swift; sourceTree = "<group>"; };
 		25F8ADB52479AFD600BF82AA /* ProvideGameRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvideGameRules.swift; sourceTree = "<group>"; };
 		25F8ADB72479B30600BF82AA /* InfoPopupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPopupPresenter.swift; sourceTree = "<group>"; };
-		EC9544E7AC95C8CFBFBC2C9E /* Pods-Törst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Törst.release.xcconfig"; path = "Target Support Files/Pods-Törst/Pods-Törst.release.xcconfig"; sourceTree = "<group>"; };
+		5218C0286DF027915CB99D20 /* Pods-Torst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Torst.release.xcconfig"; path = "Target Support Files/Pods-Torst/Pods-Torst.release.xcconfig"; sourceTree = "<group>"; };
+		6FFD9DE02457F70876E87207 /* Pods_Torst.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Torst.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2500EF78247D9CFA005FCCF5 /* StoreKit.framework in Frameworks */,
+				3B8E4237848798233A142EA4 /* Pods_Torst.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +134,7 @@
 		25C97BDD2460643600DEE132 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25C97BDC2460643600DEE132 /* Törst.app */,
+				25C97BDC2460643600DEE132 /* Torst.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,7 +144,7 @@
 			children = (
 				25C97BE12460643600DEE132 /* SceneDelegate.swift */,
 				25D443872C84985B003BAF94 /* Network */,
-				250900502615C08000FEA8CD /* Törst.entitlements */,
+				250900502615C08000FEA8CD /* Torst.entitlements */,
 				25C97BF924614FCB00DEE132 /* SupportFiles */,
 				25C97BF624614F9A00DEE132 /* Model */,
 				25C97BF524614F6000DEE132 /* View */,
@@ -231,8 +234,8 @@
 		5A551562A64AEF359077FA7F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				01255E863B5BEFED9E46754A /* Pods-Törst.debug.xcconfig */,
-				EC9544E7AC95C8CFBFBC2C9E /* Pods-Törst.release.xcconfig */,
+				04E896C074B3A9CB62FA0E0A /* Pods-Torst.debug.xcconfig */,
+				5218C0286DF027915CB99D20 /* Pods-Torst.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				2500EF77247D9CFA005FCCF5 /* StoreKit.framework */,
+				6FFD9DE02457F70876E87207 /* Pods_Torst.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -248,23 +252,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		25C97BDB2460643600DEE132 /* Törst */ = {
+		25C97BDB2460643600DEE132 /* Torst */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25C97BF02460643F00DEE132 /* Build configuration list for PBXNativeTarget "Törst" */;
+			buildConfigurationList = 25C97BF02460643F00DEE132 /* Build configuration list for PBXNativeTarget "Torst" */;
 			buildPhases = (
-				353A3CC70B5F6497AF9DD75F /* [CP] Check Pods Manifest.lock */,
+				55E3066CE97F34C0ACD6E76B /* [CP] Check Pods Manifest.lock */,
 				25C97BD82460643600DEE132 /* Sources */,
 				25C97BD92460643600DEE132 /* Frameworks */,
 				25C97BDA2460643600DEE132 /* Resources */,
-				EAF2E430B8B3DA1BD57FE1C3 /* [CP] Embed Pods Frameworks */,
+				7B790E52274E12E1FA1FDDF0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Törst";
+			name = Torst;
 			productName = "Törst";
-			productReference = 25C97BDC2460643600DEE132 /* Törst.app */;
+			productReference = 25C97BDC2460643600DEE132 /* Torst.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -295,7 +299,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				25C97BDB2460643600DEE132 /* Törst */,
+				25C97BDB2460643600DEE132 /* Torst */,
 			);
 		};
 /* End PBXProject section */
@@ -320,7 +324,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		353A3CC70B5F6497AF9DD75F /* [CP] Check Pods Manifest.lock */ = {
+		55E3066CE97F34C0ACD6E76B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -335,28 +339,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Törst-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Torst-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EAF2E430B8B3DA1BD57FE1C3 /* [CP] Embed Pods Frameworks */ = {
+		7B790E52274E12E1FA1FDDF0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Törst/Pods-Törst-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Torst/Pods-Torst-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Törst/Pods-Törst-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Torst/Pods-Torst-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Törst/Pods-Törst-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Torst/Pods-Torst-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -517,21 +521,22 @@
 		};
 		25C97BF12460643F00DEE132 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01255E863B5BEFED9E46754A /* Pods-Törst.debug.xcconfig */;
+			baseConfigurationReference = 04E896C074B3A9CB62FA0E0A /* Pods-Torst.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Törst/Törst.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Törst/Torst.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.03;
+				CURRENT_PROJECT_VERSION = 202409262225;
 				DEVELOPMENT_TEAM = 4CTKXD59TF;
-				INFOPLIST_FILE = "Törst/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
+				INFOPLIST_FILE = "Törst/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Törst";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.41;
 				PRODUCT_BUNDLE_IDENTIFIER = se.marcusthuvesen.TorstSpel;
 				PRODUCT_MODULE_NAME = Torst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,21 +548,22 @@
 		};
 		25C97BF22460643F00DEE132 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC9544E7AC95C8CFBFBC2C9E /* Pods-Törst.release.xcconfig */;
+			baseConfigurationReference = 5218C0286DF027915CB99D20 /* Pods-Torst.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Törst/Törst.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Törst/Torst.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.03;
+				CURRENT_PROJECT_VERSION = 202409262225;
 				DEVELOPMENT_TEAM = 4CTKXD59TF;
-				INFOPLIST_FILE = "Törst/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
+				INFOPLIST_FILE = "Törst/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Törst";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.41;
 				PRODUCT_BUNDLE_IDENTIFIER = se.marcusthuvesen.TorstSpel;
 				PRODUCT_MODULE_NAME = Torst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -579,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25C97BF02460643F00DEE132 /* Build configuration list for PBXNativeTarget "Törst" */ = {
+		25C97BF02460643F00DEE132 /* Build configuration list for PBXNativeTarget "Torst" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25C97BF12460643F00DEE132 /* Debug */,
